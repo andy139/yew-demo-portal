@@ -7,7 +7,7 @@ export default function Footer() {
       <div className="max-w-6xl mx-auto px-6 foot-inner">
         <div>
           <span className="foot-mark">
-            yew<span className="dot">.</span>
+            yew<span className="dot">.</span><span className="sub">payments</span>
           </span>
           <p className="foot-tag">Software for yew.</p>
         </div>
@@ -39,7 +39,7 @@ export default function Footer() {
         </div>
       </div>
       <div className="max-w-6xl mx-auto px-6 foot-bottom">
-        <p>© {year} Yew. Born and Raised in San Francisco. Family ran.</p>
+        <p>© {year} yew. payments. Born and raised in San Francisco. Family ran.</p>
         <p className="label" style={{ fontSize: 10 }}>Counter-side software</p>
       </div>
     </footer>

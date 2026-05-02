@@ -1,40 +1,42 @@
 import type { Metadata } from "next";
-import { Fraunces, Inter, JetBrains_Mono } from "next/font/google";
+import { Instrument_Serif, Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
 import ThreeCTAStrip from "@/components/ThreeCTAStrip";
-import CursorFollower from "@/components/CursorFollower";
 import PageWipe from "@/components/PageWipe";
+import StickyCTA from "@/components/StickyCTA";
+import BatchFoot from "@/components/BatchFoot";
 
-const fraunces = Fraunces({
+const instrumentSerif = Instrument_Serif({
   variable: "--font-display",
   subsets: ["latin"],
-  axes: ["opsz", "SOFT"],
+  weight: "400",
+  style: ["normal", "italic"],
   display: "swap",
 });
 
-const inter = Inter({
+const geist = Geist({
   variable: "--font-body",
   subsets: ["latin"],
   display: "swap",
 });
 
-const jetbrains = JetBrains_Mono({
+const geistMono = Geist_Mono({
   variable: "--font-mono",
   subsets: ["latin"],
   display: "swap",
 });
 
 export const metadata: Metadata = {
-  title: "Yew. Software for yew.",
+  title: "yew. payments — software for family auto shops",
   description:
-    "Yew. Payments and software for auto shops, designed by someone who worked the counter. Drop-in for FAPS-eligible shops. Charge from any bay. Settle next day.",
+    "yew. payments. Drop-in payments + console for shops who'd rather work the counter than work the software. FAPS Interchange-Plus, no reader rental, charge from any bay.",
   metadataBase: new URL("https://demo.yewsoftware.com"),
   openGraph: {
-    title: "Yew. Software for yew.",
+    title: "yew. payments — software for family auto shops",
     description:
-      "Payments and software for auto shops, designed by someone who worked the counter.",
+      "Drop-in payments + console for shops who'd rather work the counter than work the software.",
     type: "website",
   },
 };
@@ -47,15 +49,16 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${fraunces.variable} ${inter.variable} ${jetbrains.variable} h-full antialiased`}
+      className={`${instrumentSerif.variable} ${geist.variable} ${geistMono.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">
         <PageWipe />
-        <CursorFollower />
         <Nav />
         <main className="flex-1">{children}</main>
         <ThreeCTAStrip />
         <Footer />
+        <BatchFoot />
+        <StickyCTA />
       </body>
     </html>
   );

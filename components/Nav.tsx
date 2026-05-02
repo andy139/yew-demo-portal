@@ -21,9 +21,8 @@ export default function Nav() {
       <div className="max-w-6xl mx-auto px-6 nav-inner">
         <Link href="/" className="nav-logo">
           <span className="word">
-            yew<span className="dot">.</span>
+            yew<span className="dot">.</span><span className="sub">payments</span>
           </span>
-          <span className="label" style={{ fontSize: 9 }}>payments</span>
         </Link>
         <nav className="nav-links">
           {links.map((l) => (
