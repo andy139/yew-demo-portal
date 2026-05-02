@@ -48,7 +48,7 @@ export default function Page() {
           End of day, two batch totals: one off the terminal, one off ShopMonkey. They are supposed to match. They almost never do. A typo on transaction four, a missed cash-discount on transaction nine, a refund on transaction eleven that got entered twice. The cashier prints both reports, lays them side by side, and hand-matches line items.
         </p>
         <p>
-          The most common end-of-day at A&amp;C, long before I ever sat behind that counter, was a sentence that started with <em className="italic">&ldquo;I think we&apos;re &#36;42 off somewhere.&rdquo;</em> The note went into a notebook. Nobody ever found the &#36;42. Frank&apos;s been a mechanic for almost thirty years and running A&amp;C on that workflow for over a decade.
+          The most common end-of-day at A&amp;C, long before I ever sat behind that counter, was a sentence that started with <em className="italic">&ldquo;I think we&apos;re &#36;42 off somewhere.&rdquo;</em> The note went into a notebook. Nobody ever found the &#36;42. Frank&apos;s been a mechanic for over thirty years and running A&amp;C on that workflow for over a decade.
         </p>
 
         {/* 4. The native-terminal trap */}

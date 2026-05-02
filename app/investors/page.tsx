@@ -24,7 +24,7 @@ export default function Page() {
           One shop in San Francisco. One paying customer. One workflow nobody else in the category fixes.
         </p>
         <p className="text-[color:var(--muted)] mt-5 max-w-2xl">
-          Frank runs A&amp;C Auto Clinic in the Bayview. He&apos;s been a mechanic for almost thirty years. Before Yew: every card sale meant reading totals off ShopMonkey, doing 3% cash-discount math on a calculator, typing the result into a PAX A80 by hand. End of day, two reports never matched. He kept a notebook of <em className="italic">&ldquo;we&apos;re &#36;42 off somewhere.&rdquo;</em>
+          Frank runs A&amp;C Auto Clinic in the Bayview. He&apos;s been a mechanic for over thirty years. Before Yew: every card sale meant reading totals off ShopMonkey, doing 3% cash-discount math on a calculator, typing the result into a PAX A80 by hand. End of day, two reports never matched. He kept a notebook of <em className="italic">&ldquo;we&apos;re &#36;42 off somewhere.&rdquo;</em>
         </p>
         <p className="text-[color:var(--muted)] mt-4 max-w-2xl">
           Yew fixes the workflow without giving up the margin. We resell First American on Interchange-Plus, layer the software on top, and integrate with ShopMonkey for shops that want both. <Link href="/story" className="underline decoration-[color:var(--secondary)] underline-offset-2">Read the full origin →</Link>
