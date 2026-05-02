@@ -1,65 +1,73 @@
-import Image from "next/image";
+import Link from "next/link";
+import HeroWorkOrder from "@/components/HeroWorkOrder";
+import AudienceCards from "@/components/AudienceCards";
+import TrustStrip from "@/components/TrustStrip";
 
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
+    <>
+      {/* Hero */}
+      <section className="max-w-6xl mx-auto px-6 pt-16 md:pt-24 pb-20 md:pb-28">
+        <div className="grid md:grid-cols-12 gap-10 md:gap-16 items-center">
+          <div className="md:col-span-7">
+            <p className="label mb-6">Yew · payments + software</p>
+            <h1 className="font-display text-4xl sm:text-5xl md:text-6xl leading-[1.05] tracking-tight max-w-2xl">
+              Yew. Payments and software for auto shops, designed by{" "}
+              <em className="italic text-[color:var(--secondary)]">someone who worked the counter.</em>
+            </h1>
+            <p className="text-lg md:text-xl text-[color:var(--muted)] mt-6 max-w-xl leading-relaxed">
+              Drop-in for FAPS-eligible shops. Charge from any bay. Settle next day. No reader rental.
+            </p>
+            <div className="mt-8 flex flex-wrap gap-3">
+              <Link href="/demo" className="btn-primary">Try the live demo →</Link>
+              <Link href="/savings" className="btn-secondary">Calculate your savings</Link>
+            </div>
+            <p className="text-xs text-[color:var(--muted)] mt-6">
+              Live in production at A&amp;C Auto Clinic, San Francisco.
+            </p>
+          </div>
+
+          <div className="md:col-span-5">
+            <HeroWorkOrder />
+          </div>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+      </section>
+
+      <TrustStrip />
+      <AudienceCards />
+
+      {/* Mid section — the moat preview */}
+      <section className="max-w-6xl mx-auto px-6 py-20">
+        <div className="grid md:grid-cols-2 gap-12 items-center">
+          <div>
+            <p className="label mb-4">The moat</p>
+            <h2 className="font-display text-3xl md:text-5xl leading-tight">
+              Most software in this category puts the cashier on a tablet. <em className="italic text-[color:var(--secondary)]">Yew puts the terminals on the network.</em>
+            </h2>
+            <p className="text-[color:var(--muted)] mt-6 max-w-lg">
+              Charge from any bay. Reprint a receipt from the front counter. Reconcile from home. The Yew gateway makes every PAX A80 in the shop addressable from any computer on the LAN.
+            </p>
+            <Link href="/the-gateway" className="btn-secondary mt-8">See how the gateway works →</Link>
+          </div>
+          <div className="rounded-2xl border border-[color:var(--rule)] bg-white p-8">
+            <p className="label mb-4">Compare</p>
+            <ul className="space-y-3 text-sm">
+              <li className="flex items-baseline justify-between gap-4 pb-3 border-b border-[color:var(--rule)]">
+                <span>Mitchell1 SE</span>
+                <span className="text-[color:var(--muted)] text-right">back-office walk required</span>
+              </li>
+              <li className="flex items-baseline justify-between gap-4 pb-3 border-b border-[color:var(--rule)]">
+                <span>Tekmetric / Shopmonkey</span>
+                <span className="text-[color:var(--muted)] text-right">tablet-bound, one terminal per tablet</span>
+              </li>
+              <li className="flex items-baseline justify-between gap-4">
+                <span className="font-medium">Yew</span>
+                <span className="text-[color:var(--secondary)] text-right">any computer drives any terminal</span>
+              </li>
+            </ul>
+          </div>
         </div>
-      </main>
-    </div>
+      </section>
+    </>
   );
 }

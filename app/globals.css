@@ -1,26 +1,121 @@
 @import "tailwindcss";
 
+/* Yew brand tokens — single source of truth */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --bg: #F4F1EB;
+  --accent: #E8B84C;
+  --accent-deep: #D4A13A;
+  --secondary: #8A4B2A;
+  --text: #1A1A1A;
+  --muted: #6B6760;
+  --rule: #D9D3C7;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-bg: var(--bg);
+  --color-accent: var(--accent);
+  --color-accent-deep: var(--accent-deep);
+  --color-secondary: var(--secondary);
+  --color-text: var(--text);
+  --color-muted: var(--muted);
+  --color-rule: var(--rule);
+
+  --font-display: var(--font-display);
+  --font-body: var(--font-body);
+  --font-mono: var(--font-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  background: var(--bg);
+  color: var(--text);
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-body), ui-sans-serif, system-ui, sans-serif;
+  font-feature-settings: "ss01", "cv11";
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* Display headings — Fraunces */
+h1, h2, h3, h4, .font-display {
+  font-family: var(--font-display), Georgia, serif;
+  letter-spacing: -0.01em;
+}
+
+/* Mono labels — JetBrains Mono uppercase tracked */
+.label {
+  font-family: var(--font-mono), ui-monospace, SFMono-Regular, monospace;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  font-size: 0.72rem;
+  color: var(--muted);
+}
+
+/* Subtle rule */
+.rule {
+  border-color: var(--rule);
+}
+
+/* Selection */
+::selection {
+  background: var(--accent);
+  color: var(--text);
+}
+
+/* Buttons */
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.85rem 1.4rem;
+  background: var(--text);
+  color: var(--bg);
+  border: 1px solid var(--text);
+  border-radius: 999px;
+  font-weight: 500;
+  transition: background 160ms ease, transform 160ms ease;
+}
+.btn-primary:hover {
+  background: var(--secondary);
+  border-color: var(--secondary);
+}
+
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.85rem 1.4rem;
+  background: transparent;
+  color: var(--text);
+  border: 1px solid var(--rule);
+  border-radius: 999px;
+  font-weight: 500;
+  transition: background 160ms ease, border-color 160ms ease;
+}
+.btn-secondary:hover {
+  border-color: var(--text);
+  background: rgba(26, 26, 26, 0.04);
+}
+
+.btn-accent {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.85rem 1.4rem;
+  background: var(--accent);
+  color: var(--text);
+  border: 1px solid var(--accent);
+  border-radius: 999px;
+  font-weight: 500;
+  transition: background 160ms ease, border-color 160ms ease;
+}
+.btn-accent:hover {
+  background: var(--accent-deep);
+  border-color: var(--accent-deep);
 }

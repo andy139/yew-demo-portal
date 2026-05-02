@@ -1,0 +1,27 @@
+export default function TrustStrip() {
+  const partners = ["First American Payment Systems", "PAX Technology", "Shopmonkey", "Neon"];
+  return (
+    <section className="border-y border-[color:var(--rule)] bg-white/50">
+      <div className="max-w-6xl mx-auto px-6 py-10">
+        <div className="flex flex-col md:flex-row items-start md:items-center md:justify-between gap-6">
+          <div>
+            <p className="label mb-2">Live in production</p>
+            <p className="font-display text-lg">
+              Live at <span className="text-[color:var(--secondary)] italic">A&amp;C Auto Clinic</span> — San Francisco, since 2026.
+            </p>
+          </div>
+          <div className="flex flex-wrap gap-x-6 gap-y-2 items-center">
+            {partners.map((p) => (
+              <span
+                key={p}
+                className="text-xs text-[color:var(--muted)] tracking-wide"
+              >
+                {p}
+              </span>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
