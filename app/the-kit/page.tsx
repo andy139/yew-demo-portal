@@ -69,6 +69,20 @@ export default function Page() {
           <Link href="/demo" className="btn-primary">Try the live demo →</Link>
         </div>
       </div>
+
+      {/* Pre-built Yew device — separate option */}
+      <div className="mt-6 rounded-2xl border-2 border-[color:var(--text)] bg-[color:var(--accent)]/15 p-8 md:p-10">
+        <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+          <div>
+            <p className="label mb-3">Or, skip the install</p>
+            <p className="font-display text-2xl">We&apos;ll ship you the whole thing pre-built.</p>
+            <p className="text-[color:var(--text)]/80 mt-2 max-w-xl">
+              Want a turnkey Yew device? We send a pre-imaged mini-PC with the gateway and console already running. No installation. No IT step. Plug it into your shop network, plug in the terminals, you&apos;re live. Bay Area shops, we&apos;ll drop it off and set it up on your counter.
+            </p>
+          </div>
+          <Link href="/talk?audience=shop" className="btn-secondary">Ask about pre-built →</Link>
+        </div>
+      </div>
     </div>
   );
 }
