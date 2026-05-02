@@ -45,6 +45,14 @@ h1, h2, h3, h4, .font-display {
   letter-spacing: -0.01em;
 }
 
+/* Fraunces italic has aggressive right-side bearing on some glyphs (t, f, l, k);
+   trailing italic words butt into following plain text. Add a hair of right
+   padding to every italic emphasis to keep "your statement is" from rendering
+   as "your statementis". */
+em.italic {
+  padding-right: 0.08em;
+}
+
 /* Mono labels — JetBrains Mono uppercase tracked */
 .label {
   font-family: var(--font-mono), ui-monospace, SFMono-Regular, monospace;
