@@ -289,6 +289,47 @@ h1, h2, h3, h4, .font-display {
   padding: 4px 0;
 }
 
+/* Subpage anchoring stat — single big number after the lede on
+   conversion-funnel subpages. Smaller cousin of .hero-stat. */
+.subpage-stat {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 24px 28px;
+  align-items: baseline;
+  padding: 28px 0 32px;
+  margin: 32px 0 8px;
+  border-top: 1px solid var(--rule);
+  border-bottom: 1px solid var(--rule);
+}
+.subpage-stat .num {
+  font-family: var(--font-display), Georgia, serif;
+  font-size: clamp(48px, 7vw, 88px);
+  line-height: 0.95;
+  letter-spacing: -0.04em;
+  font-variant-numeric: tabular-nums;
+  color: var(--text);
+}
+.subpage-stat .num em {
+  font-style: italic;
+  color: var(--secondary);
+}
+.subpage-stat .cap {
+  font-size: 16px;
+  color: var(--muted);
+  max-width: 38ch;
+  line-height: 1.55;
+  align-self: end;
+  padding-bottom: 8px;
+}
+.subpage-stat .cap strong {
+  color: var(--text);
+  font-weight: 500;
+}
+@media (max-width: 640px) {
+  .subpage-stat { grid-template-columns: 1fr; gap: 12px; }
+  .subpage-stat .cap { padding-bottom: 0; }
+}
+
 /* Le Labo batch stamp -------------------------------------------- */
 .stamp {
   font-family: var(--font-mono), ui-monospace, monospace;

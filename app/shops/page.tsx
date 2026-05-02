@@ -39,6 +39,13 @@ export default function Page() {
         <Link href="/story" className="underline decoration-[color:var(--secondary)] underline-offset-2">Read where yew. started →</Link>
       </p>
 
+      <div className="subpage-stat">
+        <div className="num"><em>30 min</em></div>
+        <div className="cap">
+          From box to your <strong>first card sale</strong>. Drop in the PAX A80, run the gateway installer on a computer you already own, take the next customer&apos;s card. No reader rental, no IT step.
+        </div>
+      </div>
+
       <div className="mt-16 space-y-6">
         <p className="label">Three things shop owners told us</p>
         {pains.map((p, i) => (
