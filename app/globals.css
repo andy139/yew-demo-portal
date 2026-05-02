@@ -115,6 +115,10 @@ h1, h2, h3, h4, .font-display {
               box-shadow 220ms var(--ease-out);
   position: relative;
   white-space: nowrap;
+  min-height: 44px;
+}
+@media (max-width: 720px) {
+  .btn-primary, .btn-secondary, .btn-accent { padding: 12px 20px; }
 }
 .btn-primary:active, .btn-secondary:active, .btn-accent:active { transform: scale(0.98); }
 
@@ -267,6 +271,24 @@ h1, h2, h3, h4, .font-display {
   100% { transform: translateX(100%); }
 }
 
+/* Inline body links — comfortable mobile tap target */
+@media (max-width: 720px) {
+  main p a:not(.btn-primary):not(.btn-secondary):not(.btn-accent),
+  main li a:not(.btn-primary):not(.btn-secondary):not(.btn-accent),
+  .hero-stat a,
+  .demo-shell a:not(.btn-primary):not(.btn-secondary):not(.btn-accent) {
+    display: inline-block;
+    padding: 8px 0;
+    line-height: 1.4;
+  }
+}
+.gw-lede a,
+.editorial p a,
+.story-shell p a {
+  display: inline-block;
+  padding: 4px 0;
+}
+
 /* Le Labo batch stamp -------------------------------------------- */
 .stamp {
   font-family: var(--font-mono), ui-monospace, monospace;
@@ -291,7 +313,8 @@ h1, h2, h3, h4, .font-display {
   padding: var(--s-6) 0 var(--s-6);
   position: relative;
 }
-@media (max-width: 720px) { .hero-v2 { padding: var(--s-5) 0; } }
+@media (max-width: 900px) { .hero-v2 { padding: var(--s-5) 0 var(--s-5); } }
+@media (max-width: 720px) { .hero-v2 { padding: 40px 0 56px; } }
 
 .hero-v2-grid {
   display: grid;
@@ -305,6 +328,7 @@ h1, h2, h3, h4, .font-display {
 
 .hero-rail { max-width: 60ch; }
 .hero-stamp { margin-bottom: 56px; }
+@media (max-width: 720px) { .hero-stamp { margin-bottom: 32px; } }
 
 .hero-h1-v2 {
   font-family: var(--font-display), Georgia, serif;
@@ -386,6 +410,8 @@ h1, h2, h3, h4, .font-display {
 }
 .hero-stat .stat-link {
   color: var(--text);
+  display: inline-block;
+  padding: 8px 0;
   border-bottom: 1px solid var(--rule);
   transition: border-color 200ms var(--ease-out);
 }
@@ -504,8 +530,10 @@ h1, h2, h3, h4, .font-display {
 }
 .bignum:last-child { border-right: none; }
 @media (max-width: 720px) {
-  .bignum { border-right: none; border-bottom: 1px solid var(--rule); padding: 24px 0; }
+  .bignum { border-right: none; border-bottom: 1px solid var(--rule); padding: 20px 0; }
   .bignum:last-child { border-bottom: none; }
+  .bignum .v { font-size: clamp(36px, 12vw, 56px); }
+  .bignum .l { margin-top: 8px; }
 }
 .bignum .v {
   font-family: var(--font-display), Georgia, serif;
@@ -956,7 +984,7 @@ h1, h2, h3, h4, .font-display {
 
 /* Section heads -------------------------------------------------- */
 .section { padding: 96px 0; }
-@media (max-width: 720px) { .section { padding: 64px 0; } }
+@media (max-width: 720px) { .section { padding: 56px 0; } }
 .section-head {
   display: grid;
   grid-template-columns: 1fr auto;
@@ -1177,8 +1205,13 @@ h1, h2, h3, h4, .font-display {
   padding: 0;
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 4px;
   color: color-mix(in oklab, var(--text) 80%, transparent);
+}
+.foot ul a {
+  display: inline-block;
+  padding: 8px 0;
+  min-height: 36px;
 }
 .foot ul a:hover { color: var(--secondary); }
 .foot-mark {
@@ -1629,11 +1662,164 @@ h1, h2, h3, h4, .font-display {
 
 .reveal {
   opacity: 0;
-  transform: translateY(12px);
-  transition: opacity 600ms var(--ease-out), transform 700ms var(--ease-out);
-  will-change: transform;
+  transform: translateY(40px);
+  transition: opacity 900ms var(--ease-out), transform 1100ms var(--ease-out);
+  will-change: transform, opacity;
 }
 .reveal.is-in { opacity: 1; transform: translateY(0); }
+
+/* Reveal variants for emphasis */
+.reveal-lg {
+  opacity: 0;
+  transform: translateY(64px);
+  transition: opacity 1000ms var(--ease-out), transform 1300ms var(--ease-out);
+  will-change: transform, opacity;
+}
+.reveal-lg.is-in { opacity: 1; transform: translateY(0); }
+
+.reveal-tilt {
+  opacity: 0;
+  transform: translateY(40px) rotateX(8deg);
+  transform-origin: center top;
+  transition: opacity 900ms var(--ease-out), transform 1100ms var(--ease-out);
+  will-change: transform, opacity;
+}
+.reveal-tilt.is-in { opacity: 1; transform: translateY(0) rotateX(0deg); }
+
+/* Section divider: full-bleed custard rule that draws across as you scroll past */
+.section-rule {
+  position: relative;
+  height: 1px;
+  margin: 0;
+  overflow: visible;
+}
+.section-rule::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: var(--rule);
+  transform: scaleX(0.4);
+  transform-origin: left center;
+  transition: transform 1200ms var(--ease-out);
+}
+.section-rule.is-in::before {
+  transform: scaleX(1);
+}
+.section-rule::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: -1px;
+  bottom: -1px;
+  width: 0;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    var(--accent) 50%,
+    transparent 100%
+  );
+  filter: blur(2px);
+  opacity: 0;
+  transition: width 1200ms var(--ease-out), opacity 600ms var(--ease-out);
+}
+.section-rule.is-in::after {
+  width: 100%;
+  opacity: 0.6;
+}
+.section-rule.is-in.has-fired::after {
+  opacity: 0;
+  transition: opacity 1200ms var(--ease-out) 800ms;
+}
+
+/* Animated mono label — stamp-rule draws on viewport-enter */
+.label-anim {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+}
+.label-anim::before {
+  content: "";
+  width: 0;
+  height: 1px;
+  background: var(--secondary);
+  transition: width 600ms var(--ease-out);
+}
+.label-anim.is-in::before { width: 28px; }
+
+/* Hero stat — settle pulse */
+.hero-stat .num em.is-settle {
+  animation: stat-pulse 800ms var(--ease-out);
+}
+@keyframes stat-pulse {
+  0%   { color: var(--accent-deep); transform: scale(1.04); }
+  100% { color: var(--secondary); transform: scale(1); }
+}
+.hero-stat .num em {
+  display: inline-block;
+  transition: color 600ms var(--ease-out), transform 600ms var(--ease-out);
+}
+
+/* Moat compare-list row stagger */
+.compare-list li {
+  opacity: 0;
+  transform: translateX(-12px);
+  transition: opacity 600ms var(--ease-out), transform 700ms var(--ease-out);
+}
+.compare-card.fade-up.is-in .compare-list li { opacity: 1; transform: translateX(0); }
+.compare-card.fade-up.is-in .compare-list li:nth-child(1) { transition-delay: 80ms; }
+.compare-card.fade-up.is-in .compare-list li:nth-child(2) { transition-delay: 220ms; }
+.compare-card.fade-up.is-in .compare-list li:nth-child(3) { transition-delay: 380ms; }
+.compare-card.fade-up.is-in .compare-list li.is-yew {
+  transition-delay: 520ms;
+}
+.compare-card.fade-up.is-in .compare-list li.is-yew::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: var(--accent);
+  opacity: 0;
+  pointer-events: none;
+  animation: row-flash 1400ms var(--ease-out) 600ms;
+}
+.compare-list li.is-yew { position: relative; }
+@keyframes row-flash {
+  0%   { opacity: 0; }
+  35%  { opacity: 0.18; }
+  100% { opacity: 0; }
+}
+
+/* Audience cards — bigger lift, custard glow on hover */
+.aud-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 18px;
+  background: radial-gradient(
+    60% 80% at 50% 0%,
+    color-mix(in oklab, var(--accent) 16%, transparent) 0%,
+    transparent 70%
+  );
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 320ms var(--ease-out);
+}
+.aud-card:hover::after { opacity: 1; }
+
+/* Trust-strip partner reveal */
+.trust-partners.fade-up { display: flex; }
+.trust-partners.fade-up span {
+  opacity: 0;
+  transform: translateY(8px);
+  transition: opacity 500ms var(--ease-out), transform 600ms var(--ease-out);
+}
+.trust-partners.fade-up.is-in span { opacity: 1; transform: translateY(0); }
+.trust-partners.fade-up.is-in span:nth-child(1) { transition-delay: 80ms; }
+.trust-partners.fade-up.is-in span:nth-child(2) { transition-delay: 140ms; }
+.trust-partners.fade-up.is-in span:nth-child(3) { transition-delay: 200ms; }
+.trust-partners.fade-up.is-in span:nth-child(4) { transition-delay: 260ms; }
+.trust-partners.fade-up.is-in span:nth-child(5) { transition-delay: 320ms; }
+.trust-partners.fade-up.is-in span:nth-child(6) { transition-delay: 380ms; }
+.trust-partners.fade-up.is-in span:nth-child(7) { transition-delay: 440ms; }
 
 /* Reduced motion */
 @media (prefers-reduced-motion: reduce) {
