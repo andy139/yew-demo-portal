@@ -63,6 +63,13 @@ export default function Page() {
         A guided tour. every screen a cashier touches between opening the doors and closing the batch.
       </p>
 
+      <div className="subpage-stat">
+        <div className="num"><em>60 sec</em></div>
+        <div className="cap">
+          <strong>from install to first card sale.</strong> Drop the gateway installer on a computer you already own. Plug in a PAX A80. The next customer&apos;s card runs through the console. That&apos;s how A&amp;C went live, on a Tuesday at 11:42 AM.
+        </div>
+      </div>
+
       <div className="mt-16 space-y-12">
         {tour.map((t, i) => (
           <Reveal key={t.n} threshold={0.2}>
