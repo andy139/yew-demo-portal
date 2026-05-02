@@ -9,18 +9,21 @@ const cards = [
     eyebrow: "Family auto shops",
     title: "Software that fits the way your shop actually works.",
     body: "Drop-in for FAPS-eligible shops. Charge from any bay. Settle next day. No reader rental. Optional ShopMonkey integration.",
+    cta: "How it fits",
   },
   {
     href: "/partners",
     eyebrow: "Channel partners",
     title: "A software product to bring to your book.",
     body: "FAPS reps and hardware resellers. Splits negotiable, deal-reg honored. yew. is processor-agnostic by design.",
+    cta: "Reseller economics",
   },
   {
     href: "/investors",
     eyebrow: "Investors",
     title: "Family auto shops, finally on modern software.",
     body: "Roughly 250,000 independent shops in the US, most family-run, most on a decade-old stack. Toast did this for restaurants.",
+    cta: "The math",
   },
 ];
 
@@ -50,7 +53,7 @@ export default function AudienceCards() {
                   <p className="aud-title">{c.title}</p>
                   <p className="aud-body">{c.body}</p>
                   <span className="aud-arrow">
-                    Read more <span className="arrow">→</span>
+                    {c.cta} <span className="arrow">→</span>
                   </span>
                   <span className="underline-draw" />
                 </Link>
