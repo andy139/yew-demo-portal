@@ -28,17 +28,17 @@ export default function Page() {
     <div className="max-w-6xl mx-auto px-6 py-20">
       <p className="label mb-6">For family auto shops</p>
       <h1 className="font-display text-4xl md:text-6xl leading-tight max-w-3xl">
-        Built for my dad&apos;s shop. <em className="italic text-[color:var(--secondary)]">Now yours.</em>
+        Counter-side software, <em className="italic text-[color:var(--secondary)]">designed by someone who actually rang up the customer.</em>
       </h1>
       <p className="text-lg text-[color:var(--muted)] mt-6 max-w-2xl">
-        Yew started at A&amp;C Auto Clinic — Frank&apos;s shop in Bayview, San Francisco. I worked the counter there before I wrote the first line of Yew. The software is designed for the cashier-side of the shop — receipts, refunds, batch close, customer messaging — not the wrench-side.
+        Yew is designed for the cashier-side of the shop — receipts, refunds, batch close, customer messaging — not the wrench-side. If you read totals off ShopMonkey, do cash-discount math on a calculator, type the result into a PAX A80, and reconcile the two by hand at end of day, Yew was built for that.
       </p>
       <p className="text-base text-[color:var(--muted)] mt-4 max-w-2xl">
-        If you read totals off ShopMonkey, do cash-discount math on a calculator, type the result into a PAX A80, and reconcile the two by hand at end of day — Yew was built for that. <Link href="/story" className="underline decoration-[color:var(--secondary)] underline-offset-2">Read why →</Link>
+        <Link href="/story" className="underline decoration-[color:var(--secondary)] underline-offset-2">Read where Yew started →</Link>
       </p>
 
       <div className="mt-16 space-y-6">
-        <p className="label">Three things shop owners (including Frank) told us</p>
+        <p className="label">Three things shop owners told us</p>
         {pains.map((p, i) => (
           <div
             key={i}

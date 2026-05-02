@@ -5,7 +5,7 @@ const cards = [
     href: "/shops",
     eyebrow: "Family auto shops",
     title: "Your $1,000 ticket costs $9.50 less to settle.",
-    body: "Drop-in for FAPS-eligible shops. Charge from any bay. Settle next day. No reader rental. Built around the way Frank actually rings up customers at A&C.",
+    body: "Drop-in for FAPS-eligible shops. Charge from any bay. Settle next day. No reader rental. Optional ShopMonkey integration over webhooks + API.",
   },
   {
     href: "/partners",

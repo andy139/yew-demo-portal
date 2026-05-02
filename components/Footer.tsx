@@ -39,7 +39,7 @@ export default function Footer() {
       </div>
       <div className="border-t border-[color:var(--rule)]">
         <div className="max-w-6xl mx-auto px-6 py-6 flex flex-col md:flex-row gap-3 items-start md:items-center justify-between text-xs text-[color:var(--muted)]">
-          <p>© {year} Yew. Built in San Francisco for Frank&apos;s shop. Live at A&amp;C Auto Clinic.</p>
+          <p>© {year} Yew. Built in San Francisco. Live at A&amp;C Auto Clinic.</p>
           <p className="label !text-[10px]">Counter-side software</p>
         </div>
       </div>
