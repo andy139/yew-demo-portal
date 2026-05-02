@@ -64,7 +64,7 @@ export default function Page() {
             <li className="flex gap-3"><span className="text-[color:var(--secondary)]">·</span><span>Counter-side cashier console. not another tablet POS</span></li>
             <li className="flex gap-3"><span className="text-[color:var(--secondary)]">·</span><span>Multi-bay terminal coverage on a single LAN gateway</span></li>
             <li className="flex gap-3"><span className="text-[color:var(--secondary)]">·</span><span>FAPS resold today; Finix graduation at ~50 shops</span></li>
-            <li className="flex gap-3"><span className="text-[color:var(--secondary)]">·</span><span>SAQ-P2PE scope (PAX semi-integration)</span></li>
+            <li className="flex gap-3"><span className="text-[color:var(--secondary)]">·</span><span>POSLink semi-integration · SAQ-P2PE scope</span></li>
             <li className="flex gap-3"><span className="text-[color:var(--secondary)]">·</span><span>Live in production with a paying shop, San Francisco</span></li>
           </ul>
         </div>

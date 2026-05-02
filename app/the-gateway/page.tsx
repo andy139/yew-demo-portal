@@ -21,6 +21,9 @@ export default function Page() {
       <p className="text-base text-[color:var(--muted)] mt-4 max-w-2xl">
         And the gateway itself is software, not a box. Run the installer on any always-on computer in the shop. Most shops use a desktop or mini-PC they already own. <em className="italic">No dedicated hardware required.</em>
       </p>
+      <p className="text-sm text-[color:var(--muted)] mt-3 max-w-2xl">
+        Under the hood: the gateway speaks POSLink directly to every PAX A80 on the LAN. That&apos;s the same standard semi-integration protocol PAX-certified vendors use. We didn&apos;t reinvent the wire.
+      </p>
 
       {/* Diagram */}
       <div className="mt-16 rounded-2xl border border-[color:var(--rule)] bg-white p-8 md:p-12">

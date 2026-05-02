@@ -9,9 +9,9 @@ const panels = [
   {
     label: "Hardware",
     title: "PAX A80",
-    sub: "EMV chip · contactless · swipe · NFC",
+    sub: "EMV chip · contactless · swipe · NFC · POSLink semi-integration",
     body:
-      "A countertop terminal certified to FAPS, P2PE-encrypted end to end. One A80 per bay if you want bay-to-bay charging. No reader rental, no monthly hardware fee. You own the terminal outright.",
+      "A countertop terminal certified to FAPS, P2PE-encrypted end to end. Yew talks to the A80 over POSLink — the standard PAX semi-integration protocol — wire-verified against live production. One A80 per bay if you want bay-to-bay charging. No reader rental, no monthly hardware fee. You own the terminal outright.",
   },
   {
     label: "Software",
