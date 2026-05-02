@@ -39,6 +39,13 @@ export default function Page() {
         yew. is a counter-side software product wrapped around FAPS Interchange-Plus pricing. If you&apos;re a FAPS rep or a hardware reseller serving independent auto repair, we&apos;d like to talk.
       </p>
 
+      <div className="subpage-stat">
+        <div className="num"><em>0</em></div>
+        <div className="cap">
+          <strong>deal-reg conflicts.</strong> yew. plugs into your existing FAPS merchants without competing on the relationship. The shop owner keeps you as their rep. You keep the residual for as long as the shop runs the software.
+        </div>
+      </div>
+
       <div className="mt-16 grid md:grid-cols-3 gap-4">
         {blocks.map((b, i) => (
           <Reveal key={b.label} delay={i * 90} threshold={0.15}>
