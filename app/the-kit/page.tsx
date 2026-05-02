@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export const metadata = {
   title: "The Kit — Yew",
-  description: "Three pieces. One per shop. Plug-in install in under 30 minutes.",
+  description: "Two pieces of software, one piece of hardware. The terminal is the only thing you have to buy from us.",
 };
 
 const panels = [
@@ -11,21 +11,21 @@ const panels = [
     title: "PAX A80",
     sub: "EMV chip · contactless · swipe · NFC",
     body:
-      "A countertop terminal certified to FAPS, P2PE-encrypted end to end. We ship one A80 per bay. No reader rental, no monthly hardware fee — you own the terminal outright.",
+      "A countertop terminal certified to FAPS, P2PE-encrypted end to end. One A80 per bay if you want bay-to-bay charging. No reader rental, no monthly hardware fee — you own the terminal outright.",
   },
   {
-    label: "Network",
+    label: "Software",
     title: "Yew gateway",
-    sub: "Small Linux box on the shop LAN",
+    sub: "Installer · runs on a computer you already own",
     body:
-      "The piece nobody else ships. The gateway sits on the same network as the terminals and exposes them to every cashier console in the shop. Marginal hardware cost: $0 — the box runs on the same hardware as your existing router.",
+      "The piece nobody else ships. Yew's gateway is software, not hardware. Run our installer on any always-on computer in the shop — desktop, mini-PC, the office machine — and it auto-detects the LAN, finds your A80s, registers them, and brings the cashier console online. Uptime tracks the host computer. Want set-it-and-forget-it? We'll ship a pre-imaged mini-PC. Most shops use what they have.",
   },
   {
     label: "Software",
     title: "Yew console",
     sub: "Cashier · customer view · dashboard · batch close",
     body:
-      "Browser-based, runs on the front-counter PC, the manager's laptop, or a tablet. Take a sale, fire a refund, tip-adjust, or close the day's batch from anywhere on the network.",
+      "Browser-based, hosted by us. Runs on the front-counter PC, the manager's laptop, or a tablet. Take a sale, fire a refund, tip-adjust, or close the day's batch from anywhere on the network.",
   },
 ];
 
@@ -33,11 +33,11 @@ export default function Page() {
   return (
     <div className="max-w-6xl mx-auto px-6 py-20">
       <p className="label mb-6">The kit</p>
-      <h1 className="font-display text-4xl md:text-6xl leading-tight max-w-3xl">
-        Three pieces. One per shop. <em className="italic text-[color:var(--secondary)]">Plug-in install in under 30 minutes.</em>
+      <h1 className="font-display text-4xl md:text-6xl leading-tight max-w-4xl">
+        Two pieces of software. One piece of hardware. <em className="italic text-[color:var(--secondary)]">Installer-driven setup.</em>
       </h1>
       <p className="text-lg text-[color:var(--muted)] mt-6 max-w-2xl">
-        We bring the hardware, the network bridge, and the software to your floor. You bring the bays.
+        The terminal is the only thing you have to buy from us. The gateway runs on a computer you already own.
       </p>
 
       <div className="mt-16 grid md:grid-cols-3 gap-6">
@@ -61,9 +61,9 @@ export default function Page() {
       <div className="mt-16 rounded-2xl border border-[color:var(--rule)] bg-white p-8 md:p-10">
         <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
           <div>
-            <p className="font-display text-2xl">Setup is the same on every shop floor.</p>
+            <p className="font-display text-2xl">Setup is one installer.</p>
             <p className="text-[color:var(--muted)] mt-2 max-w-xl">
-              We ship the gateway pre-configured, you plug in the terminals, we run a 15-minute remote walkthrough. You take your first card payment that afternoon.
+              Run the Yew gateway installer on the always-on computer of your choice. Plug in the terminals. We run a 15-minute remote walkthrough. You take your first card payment that afternoon.
             </p>
           </div>
           <Link href="/demo" className="btn-primary">Try the live demo →</Link>

@@ -18,6 +18,9 @@ export default function Page() {
       <p className="text-lg text-[color:var(--muted)] mt-6 max-w-2xl">
         Most software in this category puts the cashier on a tablet. Yew&apos;s gateway puts the terminals on the network — every PAX A80 in the shop is addressable from any computer on the LAN.
       </p>
+      <p className="text-base text-[color:var(--muted)] mt-4 max-w-2xl">
+        And the gateway itself is software, not a box. Run the installer on any always-on computer in the shop. Most shops use a desktop or mini-PC they already own. <em className="italic">No dedicated hardware required.</em>
+      </p>
 
       {/* Diagram */}
       <div className="mt-16 rounded-2xl border border-[color:var(--rule)] bg-white p-8 md:p-12">
@@ -56,7 +59,7 @@ export default function Page() {
         </svg>
 
         <p className="text-sm text-[color:var(--muted)] mt-8 max-w-2xl">
-          One gateway, any number of terminals. Any computer on the shop network drives any A80. No tablet pairing, no per-station setup.
+          One gateway install, any number of terminals. Any computer on the shop network drives any A80. No tablet pairing, no per-station setup, no dedicated box to buy.
         </p>
       </div>
 
