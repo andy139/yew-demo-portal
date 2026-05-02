@@ -1,4 +1,5 @@
 import Link from "next/link";
+import KitIllustration from "@/components/KitIllustration";
 
 export const metadata = {
   title: "The Kit | Yew",
@@ -10,6 +11,7 @@ const panels = [
     label: "Hardware",
     title: "PAX A80",
     sub: "EMV chip · contactless · swipe · NFC · PCI PTS 5.x",
+    illustration: "terminal" as const,
     body:
       "A countertop terminal with EMV L1/L2/L3-certified hardware and PCI PTS 5.x. Yew is built on the PAX POSLink SDK with a Semi-Integrated architecture, which means card data flows from the terminal straight to the processor — never through Yew's servers. One A80 per bay if you want bay-to-bay charging. No reader rental, no monthly hardware fee. You own the terminal outright.",
   },
@@ -17,6 +19,7 @@ const panels = [
     label: "Software",
     title: "Yew gateway",
     sub: "Installer · runs on a computer you already own",
+    illustration: "gateway" as const,
     body:
       "The piece most of this category misses. Yew's gateway is software, not hardware. Run our installer on any always-on computer in the shop (desktop, mini-PC, the office machine) and it auto-detects the LAN, finds your A80s, registers them, and brings the cashier console online. Uptime tracks the host computer. Want set-it-and-forget-it? We'll ship a pre-imaged mini-PC. Most shops use what they have.",
   },
@@ -24,6 +27,7 @@ const panels = [
     label: "Software",
     title: "Yew console",
     sub: "Cashier · customer view · dashboard · batch close",
+    illustration: "console" as const,
     body:
       "Browser-based, hosted by us. Runs on the front-counter PC, the manager's laptop, or a tablet. Take a sale, fire a refund, tip-adjust, or close the day's batch from anywhere on the network.",
   },
@@ -47,9 +51,9 @@ export default function Page() {
             className="rounded-2xl border border-[color:var(--rule)] bg-white p-7 flex flex-col"
           >
             <p className="label mb-5">{p.label}</p>
-            {/* Photo placeholder */}
-            <div className="aspect-[4/3] rounded-xl bg-[color:var(--bg)] border border-[color:var(--rule)] mb-6 flex items-center justify-center">
-              <span className="label">photo · {p.title}</span>
+            {/* Illustration — swap for real product photo when ready */}
+            <div className="aspect-[4/3] rounded-xl bg-[color:var(--bg)] border border-[color:var(--rule)] mb-6 overflow-hidden">
+              <KitIllustration kind={p.illustration} />
             </div>
             <h2 className="font-display text-2xl mb-1">{p.title}</h2>
             <p className="text-sm text-[color:var(--secondary)] italic mb-4">{p.sub}</p>
