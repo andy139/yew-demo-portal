@@ -1533,6 +1533,25 @@ body { padding-bottom: 80px; }
   color: var(--muted);
   font-style: italic;
 }
+.calc-no-friction {
+  margin: 12px 0 0;
+  font-family: var(--font-mono), monospace;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  font-size: 11px;
+  color: var(--secondary);
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+.calc-no-friction::before {
+  content: "";
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--accent);
+}
 .calc-explain {
   font-size: 16px;
   color: var(--muted);

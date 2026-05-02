@@ -229,6 +229,9 @@ export default function SavingsCalculator() {
             <div className={`calc-amount ${flash ? "is-flash" : ""}`} aria-live="polite">
               ${fmt(animated)}<span className="per">/mo</span>
             </div>
+            <p className="calc-no-friction">
+              No setup fee. No termination fee. No contract.
+            </p>
             <p className="calc-explain">
               That&apos;s <span className="strong">${fmt(result.annual)}</span> a year. Across an estimated{" "}
               <span className="strong">{fmt(result.txns)}</span> transactions.
