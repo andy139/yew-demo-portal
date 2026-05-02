@@ -1,7 +1,7 @@
 import Link from "next/link";
 
 export const metadata = {
-  title: "Story — Yew",
+  title: "Story | Yew",
   description:
     "Why Yew exists. A specific work order at A&C Auto Clinic, the math the cashier did every time, and the fix.",
 };
@@ -17,7 +17,7 @@ export default function Page() {
       <div className="mt-10 space-y-6 text-lg leading-relaxed text-[color:var(--text)]/90">
         {/* 1. The scene */}
         <p>
-          A&amp;C Auto Clinic, Bayview, San Francisco. My dad Frank&apos;s shop. A 2014 Camry rolls in at eight in the morning with a brake job. By noon the work is done and the customer is back at the counter. ShopMonkey is open on the laptop in the back office. The PAX A80 card terminal sits next to the receipt printer. The two are not talking to each other.
+          A&amp;C Auto Clinic, Bayview, San Francisco. Frank&apos;s shop. A 2014 Camry rolls in at eight in the morning with a brake job. By noon the work is done and the customer is back at the counter. ShopMonkey is open on the laptop in the back office. The PAX A80 card terminal sits next to the receipt printer. The two are not talking to each other.
         </p>
         <p>
           The cashier&apos;s actual sequence, every time:
@@ -25,7 +25,7 @@ export default function Page() {
         <ol className="list-decimal pl-6 space-y-2 text-[color:var(--text)]/90">
           <li>Open ShopMonkey, find the work order, read the total off the screen.</li>
           <li>Ask the customer how they&apos;re paying.</li>
-          <li>If cash, apply the 3% cash discount — sometimes against the pre-tax subtotal, sometimes against the post-tax total, depending on how the order was written.</li>
+          <li>If cash, apply the 3% cash discount, sometimes against the pre-tax subtotal, sometimes against the post-tax total, depending on how the order was written.</li>
           <li>Type the discounted figure into a calculator. Verify.</li>
           <li>Type the final number into the PAX A80 by hand.</li>
           <li>Run the card. Wait. Print the receipt.</li>
@@ -48,12 +48,12 @@ export default function Page() {
           End of day, two batch totals: one off the terminal, one off ShopMonkey. They are supposed to match. They almost never do. A typo on transaction four, a missed cash-discount on transaction nine, a refund on transaction eleven that got entered twice. The cashier prints both reports, lays them side by side, and hand-matches line items.
         </p>
         <p>
-          The most common end-of-day at A&amp;C — long before I ever sat behind that counter — was a sentence that started with <em className="italic">&ldquo;I think we&apos;re &#36;42 off — somewhere.&rdquo;</em> The note went into a notebook. Nobody ever found the &#36;42. Frank&apos;s been running the shop on that workflow for over a decade.
+          The most common end-of-day at A&amp;C, long before I ever sat behind that counter, was a sentence that started with <em className="italic">&ldquo;I think we&apos;re &#36;42 off somewhere.&rdquo;</em> The note went into a notebook. Nobody ever found the &#36;42. Frank&apos;s been running the shop on that workflow for over a decade.
         </p>
 
         {/* 4. The native-terminal trap */}
         <p>
-          ShopMonkey sells a way out of the typing. Its native integrated payments push the total straight to a terminal — no calculator, no double entry, no end-of-day mismatch. The catch is the rate. Switching to ShopMonkey&apos;s payments product would have cost A&amp;C roughly <strong>[$X/yr]</strong> more than what they pay through First American on Interchange-Plus. The convenience came priced as a tax on every card transaction for the rest of the shop&apos;s life.
+          ShopMonkey sells a way out of the typing. Its native integrated payments push the total straight to a terminal: no calculator, no double entry, no end-of-day mismatch. The catch is the rate. Switching to ShopMonkey&apos;s payments product would have cost A&amp;C roughly <strong>[$X/yr]</strong> more than what they pay through First American on Interchange-Plus. The convenience came priced as a tax on every card transaction for the rest of the shop&apos;s life.
         </p>
         <p>
           A&amp;C couldn&apos;t take the easy way out without giving up margin. So the typing continued.
@@ -61,7 +61,7 @@ export default function Page() {
 
         {/* 5. The fix */}
         <p>
-          Yew threads the needle. ShopMonkey integration without the ShopMonkey markup. The cashier picks the work order in Yew, picks <em className="italic">cash</em> or <em className="italic">card</em>, and the price recalculates correctly — discount applied, tax aligned, no calculator. The terminal lives on the network, not glued to one machine, so any computer in the shop can charge any bay&apos;s PAX A80. The end-of-day report reconciles itself, because both sides of the report came from the same system.
+          Yew threads the needle: ShopMonkey integration without the ShopMonkey markup. The cashier picks the work order in Yew, picks <em className="italic">cash</em> or <em className="italic">card</em>, and the price recalculates correctly: discount applied, tax aligned, no calculator. The terminal lives on the network, not glued to one machine, so any computer in the shop can charge any bay&apos;s PAX A80. The end-of-day report reconciles itself, because both sides of the report came from the same system.
         </p>
         <p>
           Pricing stays on First American Interchange-Plus. The savings calculator on this site is the same math A&amp;C ran the day they switched.
@@ -69,10 +69,10 @@ export default function Page() {
 
         {/* 6. Why this matters for Yew */}
         <p>
-          I sat behind that counter for less than three months. Long enough to ring up a couple hundred customers. Long enough to do the cash-discount math by hand more times than I could stand. Long enough to know my dad shouldn&apos;t still be doing it on his own a decade in. I went home and started writing.
+          I sat behind that counter for less than three months. Long enough to ring up a couple hundred customers. Long enough to do the cash-discount math by hand more times than I could stand. Long enough to know Frank shouldn&apos;t still be doing it on his own a decade in. I went home and started writing.
         </p>
         <p>
-          The first version of Yew was for Frank — one shop, one cashier, one calculator I wanted to throw out a window. A&amp;C is customer zero. The next 50 shops will be other family-run mechanic shops, built by someone who actually rang up the customer at his dad&apos;s.
+          The first version of Yew was for Frank: one shop, one cashier, one calculator I wanted to throw out a window. A&amp;C is customer zero. The next 50 shops will be other family-run mechanic shops, built by someone who actually rang up the customer.
         </p>
       </div>
 

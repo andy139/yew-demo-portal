@@ -36,7 +36,7 @@ export default function Home() {
       <TrustStrip />
       <AudienceCards />
 
-      {/* Mid section — the moat preview */}
+      {/* Mid section. the moat preview */}
       <section className="max-w-6xl mx-auto px-6 py-20">
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div>

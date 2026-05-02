@@ -1,7 +1,7 @@
 import Link from "next/link";
 
 export const metadata = {
-  title: "The Software — Yew",
+  title: "The Software | Yew",
   description: "A guided tour of Yew's cashier console, customer view, batch close, refunds, and diagnostics.",
 };
 
@@ -18,7 +18,7 @@ const tour = [
     title: "Customer-facing display",
     sub: "Dual-screen flow",
     body:
-      "The customer sees the same line items the cashier sees, on a second screen at the counter. No surprises at the bottom of the receipt — and no awkward squinting at the cashier's monitor.",
+      "The customer sees the same line items the cashier sees, on a second screen at the counter. No surprises at the bottom of the receipt. and no awkward squinting at the cashier's monitor.",
   },
   {
     n: "03",
@@ -46,7 +46,7 @@ const tour = [
     title: "Diagnostics drawer",
     sub: "When something goes sideways",
     body:
-      "Sim status, terminal latency, recent frames. The same drawer Andy uses to debug a wedged terminal at A&C — every shop owner gets it. No more black-box payments.",
+      "Sim status, terminal latency, recent frames. The same drawer Andy uses to debug a wedged terminal at A&C. every shop owner gets it. No more black-box payments.",
   },
 ];
 
@@ -58,7 +58,7 @@ export default function Page() {
         Six steps. <em className="italic text-[color:var(--secondary)]">A full day on the floor.</em>
       </h1>
       <p className="text-lg text-[color:var(--muted)] mt-6 max-w-2xl">
-        A guided tour — every screen a cashier touches between opening the doors and closing the batch.
+        A guided tour. every screen a cashier touches between opening the doors and closing the batch.
       </p>
 
       <div className="mt-16 space-y-12">

@@ -1,7 +1,7 @@
 import DemoEmbed from "@/components/DemoEmbed";
 
 export const metadata = {
-  title: "Live Demo — Yew",
+  title: "Live Demo | Yew",
   description:
     "A live, sandboxed Yew cashier console paired with a mock PAX A80. Fire scenarios, watch the wire, refresh hourly.",
 };
@@ -28,13 +28,13 @@ export default function Page() {
             <div>
               <p className="font-medium mb-1">Left: cashier console</p>
               <p className="text-[color:var(--muted)]">
-                The same Yew app a counter person uses. Pick a repair order, pick a terminal, charge. This instance is sandboxed — no real money moves.
+                The same Yew app a counter person uses. Pick a repair order, pick a terminal, charge. This instance is sandboxed. no real money moves.
               </p>
             </div>
             <div>
               <p className="font-medium mb-1">Right: mock PAX A80</p>
               <p className="text-[color:var(--muted)]">
-                A faithful simulator of the actual terminal we ship — same prompts, same frames, same approval flow. Hosted on Fly.io.
+                A faithful simulator of the actual terminal we ship. same prompts, same frames, same approval flow. Hosted on Fly.io.
               </p>
             </div>
             <div>

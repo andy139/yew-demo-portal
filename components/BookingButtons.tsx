@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import { useSearchParams } from "next/navigation";
 
-// Placeholder URLs — Andy will swap real Tally / Calendly links later.
+// Placeholder URLs. Andy will swap real Tally / Calendly links later.
 const LINKS = {
   shop: {
     title: "Pilot your shop",
@@ -13,7 +13,7 @@ const LINKS = {
   },
   partner: {
     title: "Become a partner",
-    sub: "FAPS reps and hardware resellers — let's talk reseller economics + white-label hooks.",
+    sub: "FAPS reps and hardware resellers, let's talk reseller economics + white-label hooks.",
     href: "https://tally.so/r/yew-partner",
     cta: "Open the partner form →",
   },

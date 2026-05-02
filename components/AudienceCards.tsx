@@ -11,7 +11,7 @@ const cards = [
     href: "/partners",
     eyebrow: "Channel partners",
     title: "Reseller economics + white-label hooks.",
-    body: "Talk to us about the FAPS book. Yew is processor-agnostic by design — Finix-graduation at scale is a config flip, not a rebuild.",
+    body: "Talk to us about the FAPS book. Yew is processor-agnostic by design. Finix-graduation at scale is a config flip, not a rebuild.",
   },
 ];
 

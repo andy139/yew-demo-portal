@@ -1,7 +1,7 @@
 import Link from "next/link";
 
 export const metadata = {
-  title: "For channel partners — Yew",
+  title: "For channel partners | Yew",
   description:
     "FAPS reps, hardware resellers, and white-label opportunities for vertical-payments software.",
 };
@@ -11,19 +11,19 @@ const blocks = [
     label: "Reseller economics",
     title: "Built around the FAPS book.",
     body:
-      "Yew is reseller-friendly by design. Bring us your FAPS book, we plug into the same merchant accounts, and shop owners keep their existing relationships. Splits are negotiated per partner — not buried under three layers of platform fees.",
+      "Yew is reseller-friendly by design. Bring us your FAPS book, we plug into the same merchant accounts, and shop owners keep their existing relationships. Splits are negotiated per partner. not buried under three layers of platform fees.",
   },
   {
     label: "White-label hooks",
     title: "Your brand on the front, our stack underneath.",
     body:
-      "The cashier console, customer-facing display, and reconciliation reports all support partner-branded skinning. We&apos;re not trying to be a consumer brand — we&apos;re a counter-side payments stack other people can stand in front of.",
+      "The cashier console, customer-facing display, and reconciliation reports all support partner-branded skinning. We&apos;re not trying to be a consumer brand. we&apos;re a counter-side payments stack other people can stand in front of.",
   },
   {
     label: "Processor-agnostic",
     title: "Year-0 FAPS. Year-2 Finix-graduation is a config flip.",
     body:
-      "Yew is processor-agnostic at the architecture level. We start on FAPS because that&apos;s where the volume is — but graduating to Finix at scale is a config flip, not a rebuild. That&apos;s deliberate hedging against any single processor's reputational tail.",
+      "Yew is processor-agnostic at the architecture level. We start on FAPS because that&apos;s where the volume is. but graduating to Finix at scale is a config flip, not a rebuild. That&apos;s deliberate hedging against any single processor's reputational tail.",
   },
 ];
 
@@ -55,13 +55,13 @@ export default function Page() {
             Software keeps the merchant. <em className="italic text-[color:var(--secondary)]">You keep the residual.</em>
           </h2>
           <p className="text-[color:var(--muted)] mt-6">
-            Standalone payments products lose merchants the moment somebody else underprices them. Software-led payments are sticky — and the residual is yours for as long as the shop runs Yew.
+            Standalone payments products lose merchants the moment somebody else underprices them. Software-led payments are sticky. and the residual is yours for as long as the shop runs Yew.
           </p>
         </div>
         <div className="rounded-2xl border border-[color:var(--rule)] bg-white p-7">
           <p className="label mb-4">Talking points</p>
           <ul className="space-y-3 text-sm">
-            <li className="flex gap-3"><span className="text-[color:var(--secondary)]">·</span><span>Counter-side cashier console — not another tablet POS</span></li>
+            <li className="flex gap-3"><span className="text-[color:var(--secondary)]">·</span><span>Counter-side cashier console. not another tablet POS</span></li>
             <li className="flex gap-3"><span className="text-[color:var(--secondary)]">·</span><span>Multi-bay terminal coverage on a single LAN gateway</span></li>
             <li className="flex gap-3"><span className="text-[color:var(--secondary)]">·</span><span>FAPS resold today; Finix graduation at ~50 shops</span></li>
             <li className="flex gap-3"><span className="text-[color:var(--secondary)]">·</span><span>SAQ-P2PE scope (PAX semi-integration)</span></li>

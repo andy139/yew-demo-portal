@@ -1,7 +1,7 @@
 import Link from "next/link";
 
 export const metadata = {
-  title: "The Kit — Yew",
+  title: "The Kit | Yew",
   description: "Two pieces of software, one piece of hardware. The terminal is the only thing you have to buy from us.",
 };
 
@@ -11,14 +11,14 @@ const panels = [
     title: "PAX A80",
     sub: "EMV chip · contactless · swipe · NFC",
     body:
-      "A countertop terminal certified to FAPS, P2PE-encrypted end to end. One A80 per bay if you want bay-to-bay charging. No reader rental, no monthly hardware fee — you own the terminal outright.",
+      "A countertop terminal certified to FAPS, P2PE-encrypted end to end. One A80 per bay if you want bay-to-bay charging. No reader rental, no monthly hardware fee. You own the terminal outright.",
   },
   {
     label: "Software",
     title: "Yew gateway",
     sub: "Installer · runs on a computer you already own",
     body:
-      "The piece nobody else ships. Yew's gateway is software, not hardware. Run our installer on any always-on computer in the shop — desktop, mini-PC, the office machine — and it auto-detects the LAN, finds your A80s, registers them, and brings the cashier console online. Uptime tracks the host computer. Want set-it-and-forget-it? We'll ship a pre-imaged mini-PC. Most shops use what they have.",
+      "The piece nobody else ships. Yew's gateway is software, not hardware. Run our installer on any always-on computer in the shop (desktop, mini-PC, the office machine) and it auto-detects the LAN, finds your A80s, registers them, and brings the cashier console online. Uptime tracks the host computer. Want set-it-and-forget-it? We'll ship a pre-imaged mini-PC. Most shops use what they have.",
   },
   {
     label: "Software",

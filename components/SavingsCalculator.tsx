@@ -27,7 +27,7 @@ export default function SavingsCalculator() {
 
     if (V === 0) return null;
 
-    // Conservative formula — pure rate-delta on volume.
+    // Conservative formula. pure rate-delta on volume.
     // monthly_savings = V * (R/100 - IC+ benchmark)
     // Per-transaction $0.10 deltas tend to wash out with FAPS interchange-plus
     // pricing in this category, so we ignore them in the headline.
@@ -146,7 +146,7 @@ export default function SavingsCalculator() {
           <div className="flex-1 flex flex-col justify-center">
             <p className="font-display text-2xl mb-3">Already at IC+ rates?</p>
             <p className="text-[color:var(--muted)] mb-6">
-              You&apos;re running tight. Talk to us anyway — we have shop owners switching for the software, not just the rate.
+              You&apos;re running tight. Talk to us anyway. we have shop owners switching for the software, not just the rate.
             </p>
             <a href="/talk?audience=shop" className="btn-primary self-start">Talk to us →</a>
           </div>

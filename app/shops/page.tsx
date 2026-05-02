@@ -1,7 +1,7 @@
 import Link from "next/link";
 
 export const metadata = {
-  title: "For family auto shops — Yew",
+  title: "For family auto shops | Yew",
   description: "Counter-side software for family-run mechanic shops. Built for Frank's shop. Now your shop's.",
 };
 
@@ -14,7 +14,7 @@ const pains = [
   {
     quote: "I pay 2.9% + 30¢ to my processor and another $300/mo to my SMS.",
     answer:
-      "Yew is FAPS Interchange-Plus, resold. Customer messaging — receipts, approvals, ready-for-pickup — comes built in, no extra SaaS line item.",
+      "Yew is FAPS Interchange-Plus, resold. Customer messaging (receipts, approvals, ready-for-pickup) comes built in, no extra SaaS line item.",
   },
   {
     quote: "I have to walk to the back office to charge a card.",
@@ -31,7 +31,7 @@ export default function Page() {
         Counter-side software, <em className="italic text-[color:var(--secondary)]">designed by someone who actually rang up the customer.</em>
       </h1>
       <p className="text-lg text-[color:var(--muted)] mt-6 max-w-2xl">
-        Yew is designed for the cashier-side of the shop — receipts, refunds, batch close, customer messaging — not the wrench-side. If you read totals off ShopMonkey, do cash-discount math on a calculator, type the result into a PAX A80, and reconcile the two by hand at end of day, Yew was built for that.
+        Yew is designed for the cashier-side of the shop: receipts, refunds, batch close, customer messaging. Not the wrench-side. If you read totals off ShopMonkey, do cash-discount math on a calculator, type the result into a PAX A80, and reconcile the two by hand at end of day, Yew was built for that.
       </p>
       <p className="text-base text-[color:var(--muted)] mt-4 max-w-2xl">
         <Link href="/story" className="underline decoration-[color:var(--secondary)] underline-offset-2">Read where Yew started →</Link>
@@ -63,7 +63,7 @@ export default function Page() {
           Already on ShopMonkey? <em className="italic text-[color:var(--secondary)]">Plug it into Yew.</em>
         </p>
         <p className="text-[color:var(--muted)] mt-4 max-w-2xl">
-          Yew connects to ShopMonkey via webhooks and API. Extra setup — we walk you through it — but once it&apos;s wired up, your most recent ShopMonkey work orders show up live in the Yew portal. The cashier picks the work order, picks cash or card, fires the charge. Refunds, batch closes, and reconciliations flow back to ShopMonkey automatically. No tab-switching, no double entry.
+          Yew connects to ShopMonkey via webhooks and API. Extra setup (we walk you through it), but once it&apos;s wired up, your most recent ShopMonkey work orders show up live in the Yew portal. The cashier picks the work order, picks cash or card, fires the charge. Refunds, batch closes, and reconciliations flow back to ShopMonkey automatically. No tab-switching, no double entry.
         </p>
         <p className="text-sm text-[color:var(--muted)] mt-4 max-w-2xl italic">
           (Shopmonkey-on-its-own works fine. The integration is for shops that want both dashboards in one place.)

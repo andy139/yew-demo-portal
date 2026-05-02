@@ -25,12 +25,12 @@ const jetbrains = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Yew — Software for yew.",
+  title: "Yew. Software for yew.",
   description:
     "Yew. Payments and software for auto shops, designed by someone who worked the counter. Drop-in for FAPS-eligible shops. Charge from any bay. Settle next day.",
   metadataBase: new URL("https://demo.yewsoftware.com"),
   openGraph: {
-    title: "Yew — Software for yew.",
+    title: "Yew. Software for yew.",
     description:
       "Payments and software for auto shops, designed by someone who worked the counter.",
     type: "website",

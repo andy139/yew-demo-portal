@@ -7,7 +7,7 @@ export default function TrustStrip() {
           <div>
             <p className="label mb-2">Live in production</p>
             <p className="font-display text-lg">
-              Live at <span className="text-[color:var(--secondary)] italic">A&amp;C Auto Clinic</span> — San Francisco, since 2026.
+              Live at <span className="text-[color:var(--secondary)] italic">A&amp;C Auto Clinic</span>. San Francisco, since 2026.
             </p>
           </div>
           <div className="flex flex-wrap gap-x-6 gap-y-2 items-center">
