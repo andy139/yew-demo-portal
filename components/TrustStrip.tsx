@@ -5,9 +5,9 @@ export default function TrustStrip() {
       <div className="max-w-6xl mx-auto px-6 py-10">
         <div className="flex flex-col md:flex-row items-start md:items-center md:justify-between gap-6">
           <div>
-            <p className="label mb-2">Live in production</p>
+            <p className="label mb-2">Now serving</p>
             <p className="font-display text-lg">
-              <span className="text-[color:var(--secondary)] italic">San Francisco</span>, in production since 2026.
+              <span className="text-[color:var(--secondary)] italic">Bay Area</span> auto shops.
             </p>
           </div>
           <div className="flex flex-wrap gap-x-6 gap-y-2 items-center">
