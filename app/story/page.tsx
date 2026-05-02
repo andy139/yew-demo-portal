@@ -3,7 +3,7 @@ import Link from "next/link";
 export const metadata = {
   title: "Story — Yew",
   description:
-    "Yew is named for Andy's sister Yvon. The yew tree means resilience. The product is software for the real economy.",
+    "Why Yew exists. A specific work order at A&C Auto Clinic, the math the cashier did every time, and the fix.",
 };
 
 export default function Page() {
@@ -11,36 +11,68 @@ export default function Page() {
     <article className="max-w-3xl mx-auto px-6 py-20">
       <p className="label mb-6">Story</p>
       <h1 className="font-display text-4xl md:text-6xl leading-tight">
-        I worked the counter <em className="italic text-[color:var(--secondary)]">before I wrote the software.</em>
+        Yew exists because <em className="italic text-[color:var(--secondary)]">someone watched the workflow break.</em>
       </h1>
 
       <div className="mt-10 space-y-6 text-lg leading-relaxed text-[color:var(--text)]/90">
+        {/* 1. The scene */}
         <p>
-          I&apos;m Andy. Yew is named after my sister Yvon — the yew tree, in Celtic tradition, means resilience. That&apos;s the brand and that&apos;s the bet.
+          A&amp;C Auto Clinic, Bayview, San Francisco. A 2014 Camry rolls in at eight in the morning with a brake job. By noon the work is done and the customer is back at the counter. ShopMonkey is open on the laptop in the back office. The PAX A80 card terminal sits next to the receipt printer. The two are not talking to each other.
+        </p>
+        <p>
+          The cashier&apos;s actual sequence, every time:
+        </p>
+        <ol className="list-decimal pl-6 space-y-2 text-[color:var(--text)]/90">
+          <li>Open ShopMonkey, find the work order, read the total off the screen.</li>
+          <li>Ask the customer how they&apos;re paying.</li>
+          <li>If cash, apply the 3% cash discount — sometimes against the pre-tax subtotal, sometimes against the post-tax total, depending on how the order was written.</li>
+          <li>Type the discounted figure into a calculator. Verify.</li>
+          <li>Type the final number into the PAX A80 by hand.</li>
+          <li>Run the card. Wait. Print the receipt.</li>
+          <li>Walk back to ShopMonkey and mark the work order paid.</li>
+        </ol>
+        <p>
+          Seven steps. Two screens. One calculator. Every customer.
         </p>
 
+        {/* 2. The math */}
         <p>
-          For years I worked the counter at A&amp;C Auto Clinic, my dad&apos;s independent repair shop in the Bayview, San Francisco. I rang up customers. I ran cards on a 2009 terminal that still had the carbon-paper imprinter taped to the side. I walked to the back office every time someone wanted to pay with a card from the waiting room.
+          The math is not hard. It is just constant. Cash discount means listed price minus 3%, which the cashier owes the customer the moment they say &ldquo;cash.&rdquo; A &#36;487.50 ticket becomes &#36;472.88. A &#36;1,204.16 ticket becomes &#36;1,168.04. <em className="italic">Sometimes</em> the discount is on the subtotal and tax recomputes. <em className="italic">Sometimes</em> it&apos;s on the total. The rule depends on how the work order was written, and the cashier has to remember which.
+        </p>
+        <p>
+          None of that math lives inside the terminal. The PAX A80 only knows the number you typed. So the cashier types it. Per transaction. Every time.
         </p>
 
+        {/* 3. The reconciliation */}
         <p>
-          When I started writing the software, I didn&apos;t start with parts catalogs or technician scheduling. I started with the cashier. The receipt printer. The card swipe. The thirty-foot walk back to the manager&apos;s desk. The shop owner squinting at a Square dashboard at midnight trying to figure out why one batch was short.
+          End of day, two batch totals: one off the terminal, one off ShopMonkey. They are supposed to match. They almost never do. A typo on transaction four, a missed cash-discount on transaction nine, a refund on transaction eleven that got entered twice. The cashier prints both reports, lays them side by side, and hand-matches line items.
+        </p>
+        <p>
+          The most common end-of-day at A&amp;C, for years, was a sentence that started with <em className="italic">&ldquo;I think we&apos;re &#36;42 off — somewhere.&rdquo;</em> The note went into a notebook. Nobody ever found the &#36;42.
         </p>
 
+        {/* 4. The native-terminal trap */}
         <p>
-          Most software in this category is built by people who&apos;ve toured a shop floor. Yew is built by someone who clocked in on one. That&apos;s the difference, and it&apos;s the only thing I&apos;m really selling.
+          ShopMonkey sells a way out of the typing. Its native integrated payments push the total straight to a terminal — no calculator, no double entry, no end-of-day mismatch. The catch is the rate. Switching to ShopMonkey&apos;s payments product would have cost A&amp;C roughly <strong>[$X/yr]</strong> more than what they pay through First American on Interchange-Plus. The convenience came priced as a tax on every card transaction for the rest of the shop&apos;s life.
+        </p>
+        <p>
+          A&amp;C couldn&apos;t take the easy way out without giving up margin. So the typing continued.
         </p>
 
+        {/* 5. The fix */}
         <p>
-          A&amp;C is customer zero. We measure savings against a real prior-processor statement — not a hypothetical, not a model. The calculator on the /savings page is the same math I showed my dad the day we switched.
+          Yew threads the needle. ShopMonkey integration without the ShopMonkey markup. The cashier picks the work order in Yew, picks <em className="italic">cash</em> or <em className="italic">card</em>, and the price recalculates correctly — discount applied, tax aligned, no calculator. The terminal lives on the network, not glued to one machine, so any computer in the shop can charge any bay&apos;s PAX A80. The end-of-day report reconciles itself, because both sides of the report came from the same system.
+        </p>
+        <p>
+          Pricing stays on First American Interchange-Plus. The savings calculator on this site is the same math A&amp;C ran the day they switched.
         </p>
 
+        {/* 6. Why this matters for Yew */}
         <p>
-          Yew is going to expand — tire shops are next, then detail shops — but the playbook stays the same. Pick a vertical with paper-receipt economics. Show up with software a cashier would actually use. Wrap modern payments around it.
+          This is not a vertical-SaaS bet sourced from a market-research deck. It is software that exists because someone watched a workflow break in person, every day, for years. Andy worked the counter at A&amp;C before he wrote a line of Yew. The first version was for one shop. A&amp;C is customer zero.
         </p>
-
         <p>
-          Software for the real economy. That&apos;s the whole brief.
+          The next 50 shops will get the same product, built by someone who actually rang up the customer.
         </p>
       </div>
 

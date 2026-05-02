@@ -88,7 +88,10 @@ export default function Page() {
           A&amp;C Auto Clinic — San Francisco. <em className="italic text-[color:var(--secondary)]">Live since 2026.</em>
         </p>
         <p className="text-[color:var(--muted)] mt-4 max-w-2xl">
-          Andy&apos;s dad runs A&amp;C — it&apos;s our customer zero. We measure savings against a real prior-processor statement, not a hypothetical. The /savings page calculator is the same math Andy showed A&amp;C the day they switched.
+          A&amp;C is customer zero. The product exists because Andy watched the cashier there read totals off ShopMonkey, do 3% cash-discount math on a calculator, type the result into a PAX A80, and reconcile the two systems by hand at end of day — for years. Switching to ShopMonkey&apos;s native integrated payments would have eliminated the typing at a markup that cost roughly <strong>[$X/yr]</strong> more than First American Interchange-Plus.
+        </p>
+        <p className="text-[color:var(--muted)] mt-4 max-w-2xl">
+          Yew is the version that integrates without the markup. Savings on the /savings page are measured against A&amp;C&apos;s actual prior-processor statement, not a hypothetical. <Link href="/story" className="underline decoration-[color:var(--secondary)] underline-offset-2">Read the workflow break in detail →</Link>
         </p>
       </div>
 

@@ -33,6 +33,9 @@ export default function Page() {
       <p className="text-lg text-[color:var(--muted)] mt-6 max-w-2xl">
         Andy worked the counter at A&amp;C Auto Clinic before he wrote the first line of Yew. The software is designed for the cashier-side of the shop — receipts, refunds, batch close, customer messaging — not the wrench-side.
       </p>
+      <p className="text-base text-[color:var(--muted)] mt-4 max-w-2xl">
+        If you read totals off ShopMonkey, do cash-discount math on a calculator, type the result into a PAX A80, and reconcile the two by hand at end of day — Yew was built for that. <Link href="/story" className="underline decoration-[color:var(--secondary)] underline-offset-2">Read why →</Link>
+      </p>
 
       <div className="mt-16 space-y-6">
         <p className="label">Three things shop owners told us</p>
