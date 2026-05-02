@@ -14,7 +14,7 @@ export default function Page() {
         Two doors. <em className="italic text-[color:var(--secondary)]">Pick the one that fits.</em>
       </h1>
       <p className="text-lg text-[color:var(--muted)] mt-6 max-w-2xl">
-        Every form goes to Andy directly. Replies usually within a business day, Pacific time.
+        Every form goes straight to the team. Replies usually within a business day, Pacific time.
       </p>
 
       <div className="mt-16">

@@ -65,7 +65,7 @@ export default function Page() {
             <li className="flex gap-3"><span className="text-[color:var(--secondary)]">·</span><span>Multi-bay terminal coverage on a single LAN gateway</span></li>
             <li className="flex gap-3"><span className="text-[color:var(--secondary)]">·</span><span>FAPS resold today; Finix graduation at ~50 shops</span></li>
             <li className="flex gap-3"><span className="text-[color:var(--secondary)]">·</span><span>SAQ-P2PE scope (PAX semi-integration)</span></li>
-            <li className="flex gap-3"><span className="text-[color:var(--secondary)]">·</span><span>Live in production at A&amp;C Auto Clinic, San Francisco</span></li>
+            <li className="flex gap-3"><span className="text-[color:var(--secondary)]">·</span><span>Live in production with a paying shop, San Francisco</span></li>
           </ul>
         </div>
       </div>

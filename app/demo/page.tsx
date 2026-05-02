@@ -15,7 +15,7 @@ export default function Page() {
           A real console. A mock A80. <em className="italic text-[color:var(--secondary)]">Fire whatever you want.</em>
         </h1>
         <p className="text-lg text-[color:var(--muted)] mt-6 max-w-2xl">
-          Pre-loaded with the A&amp;C demo shop and three demo terminals. Hit a scenario button, watch the right pane mirror what a real PAX A80 would show on the shop floor. State resets at the top of every hour.
+          Pre-loaded with a demo shop and three demo terminals. Hit a scenario button, watch the right pane mirror what a real PAX A80 would show on the shop floor. State resets at the top of every hour.
         </p>
       </section>
 

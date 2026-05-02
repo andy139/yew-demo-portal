@@ -46,7 +46,7 @@ export default function SavingsCalculator() {
   async function onSubmit(e: React.FormEvent) {
     e.preventDefault();
     if (!email || !email.includes("@")) {
-      setError("Need a real email so Andy can reply.");
+      setError("Need a real email so we can reply.");
       return;
     }
     setError(null);
@@ -170,7 +170,7 @@ export default function SavingsCalculator() {
           <p className="label mb-2">Get a custom quote</p>
           {submitted ? (
             <p className="text-sm text-[color:var(--secondary)] py-2">
-              Got it. Andy will reply within a business day.
+              Got it. We&apos;ll reply within a business day.
             </p>
           ) : (
             <>
