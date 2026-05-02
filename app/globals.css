@@ -506,11 +506,27 @@ h1, h2, h3, h4, .font-display {
 .sticky-cta.is-shown { transform: translateX(-50%) translateY(0); }
 .sticky-cta .stamp { color: rgba(244,241,235,0.55); letter-spacing: 0.22em; }
 .sticky-cta .stamp .stamp-rule { background: rgba(244,241,235,0.3); }
-.sticky-cta .btn-accent { padding: 10px 18px; font-size: 13px; }
-@media (max-width: 600px) {
-  .sticky-cta { padding: 6px 6px 6px 16px; gap: 10px; }
+.sticky-cta .btn-accent { padding: 10px 18px; font-size: 13px; min-height: 38px; }
+@media (max-width: 720px) {
+  .sticky-cta {
+    padding: 6px 6px 6px 14px;
+    gap: 10px;
+    bottom: 16px;
+    max-width: calc(100vw - 24px);
+  }
   .sticky-cta .stamp { display: none; }
+  .sticky-cta .btn-accent { padding: 9px 14px; font-size: 12px; }
 }
+@media (max-width: 380px) {
+  .sticky-cta { padding: 4px; }
+  .sticky-cta .btn-accent { padding: 9px 14px; }
+}
+
+/* Buffer at the bottom of the page so the sticky CTA never permanently
+   occludes the last bit of content (moat CTA was getting buried on
+   smaller phones). Real footer / batch-foot still render below this. */
+body { padding-bottom: 80px; }
+@media (max-width: 720px) { body { padding-bottom: 76px; } }
 
 /* Batch footer (Le Labo) ----------------------------------------- */
 .batch-foot {
