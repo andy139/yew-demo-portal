@@ -12,11 +12,10 @@ export default function Home() {
           <div className="md:col-span-7">
             <p className="label mb-6">Yew · payments + software for family auto shops</p>
             <h1 className="font-display text-4xl sm:text-5xl md:text-6xl leading-[1.05] tracking-tight max-w-2xl">
-              Counter-side payments and software,{" "}
-              <em className="italic text-[color:var(--secondary)]">for family auto shops.</em>
+              Payments and software for family auto shops.
             </h1>
             <p className="text-lg md:text-xl text-[color:var(--muted)] mt-6 max-w-xl leading-relaxed">
-              Drop-in for FAPS-eligible shops. Charge from any bay. Settle next day. No reader rental. Optional ShopMonkey integration.
+              Built for the way your shop actually rings up customers. Charge from any bay. Settle next day. No reader rental. Optional ShopMonkey integration.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
               <Link href="/demo" className="btn-primary">Try the live demo →</Link>

@@ -4,14 +4,20 @@ const cards = [
   {
     href: "/shops",
     eyebrow: "Family auto shops",
-    title: "Your $1,000 ticket costs $9.50 less to settle.",
-    body: "Drop-in for FAPS-eligible shops. Charge from any bay. Settle next day. No reader rental. Optional ShopMonkey integration over webhooks + API.",
+    title: "Software that fits the way your shop actually works.",
+    body: "Drop-in for FAPS-eligible shops. Charge from any bay. Settle next day. No reader rental. Optional ShopMonkey integration.",
   },
   {
     href: "/partners",
     eyebrow: "Channel partners",
-    title: "Reseller economics + white-label hooks.",
-    body: "Talk to us about the FAPS book. Yew is processor-agnostic by design. Finix-graduation at scale is a config flip, not a rebuild.",
+    title: "A software product to bring to your book.",
+    body: "FAPS reps and hardware resellers. Splits negotiable, deal-reg honored. Yew is processor-agnostic by design.",
+  },
+  {
+    href: "/investors",
+    eyebrow: "Investors",
+    title: "Family auto shops, finally on modern software.",
+    body: "Roughly 250,000 independent shops in the US, most family-run, most on a decade-old stack. Toast did this for restaurants.",
   },
 ];
 
@@ -22,15 +28,15 @@ export default function AudienceCards() {
         <div>
           <p className="label mb-3">Who Yew is for</p>
           <h2 className="font-display text-3xl md:text-5xl max-w-2xl">
-            Family-run shops first. <em className="italic text-[color:var(--secondary)]">Then everyone else.</em>
+            Family-run shops, the partners who serve them, the investors who back them.
           </h2>
         </div>
         <p className="hidden md:block text-sm text-[color:var(--muted)] max-w-xs">
-          Yew is a counter-side payments stack and a software product. Pick the door that fits.
+          Three doors. Same shop. Pick the one that fits.
         </p>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
         {cards.map((c) => (
           <Link
             key={c.href}

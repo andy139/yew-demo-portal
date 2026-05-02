@@ -28,10 +28,10 @@ export default function Page() {
     <div className="max-w-6xl mx-auto px-6 py-20">
       <p className="label mb-6">For family auto shops</p>
       <h1 className="font-display text-4xl md:text-6xl leading-tight max-w-3xl">
-        Counter-side software, <em className="italic text-[color:var(--secondary)]">designed by someone who actually rang up the customer.</em>
+        Software that fits the way your shop actually works.
       </h1>
       <p className="text-lg text-[color:var(--muted)] mt-6 max-w-2xl">
-        Yew is designed for the cashier-side of the shop: receipts, refunds, batch close, customer messaging. Not the wrench-side. If you read totals off ShopMonkey, do cash-discount math on a calculator, type the result into a PAX A80, and reconcile the two by hand at end of day, Yew was built for that.
+        Yew handles the front-of-house: receipts, refunds, end-of-day, customer messaging. Not the wrench-side. If you read totals off ShopMonkey, do 3% cash-discount math on a calculator, type the result into a card terminal, and reconcile by hand at the end of the night, Yew was built for that.
       </p>
       <p className="text-base text-[color:var(--muted)] mt-4 max-w-2xl">
         <Link href="/story" className="underline decoration-[color:var(--secondary)] underline-offset-2">Read where Yew started →</Link>

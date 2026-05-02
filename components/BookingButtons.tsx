@@ -17,6 +17,12 @@ const LINKS = {
     href: "https://tally.so/r/yew-partner",
     cta: "Open the partner form →",
   },
+  investor: {
+    title: "Talk to investors",
+    sub: "Vertical SaaS with payments built in. 30-minute walkthrough.",
+    href: "https://calendly.com/yew/investor",
+    cta: "Book on the calendar →",
+  },
 } as const;
 
 type Audience = keyof typeof LINKS;
@@ -34,7 +40,7 @@ export default function BookingButtons() {
   }, [initial]);
 
   return (
-    <div className="grid md:grid-cols-2 gap-4">
+    <div className="grid md:grid-cols-3 gap-4">
       {(Object.keys(LINKS) as Audience[]).map((aud) => {
         const l = LINKS[aud];
         const active = highlight === aud;

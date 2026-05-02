@@ -26,6 +26,7 @@ export default function Footer() {
           <ul className="space-y-2 text-[color:var(--text)]/80">
             <li><Link href="/shops">Family auto shops</Link></li>
             <li><Link href="/partners">Channel partners</Link></li>
+            <li><Link href="/investors">Investors</Link></li>
           </ul>
         </div>
         <div>
