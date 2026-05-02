@@ -1,9 +1,10 @@
 import Link from "next/link";
+import Reveal from "@/components/Reveal";
 
 export const metadata = {
-  title: "For investors | Yew",
+  title: "For investors | yew. payments",
   description:
-    "Yew is family auto shops, finally on modern software. The wedge, the math, where we're going.",
+    "yew. is family auto shops, finally on modern software. The wedge, the math, where we're going.",
 };
 
 export default function Page() {
@@ -11,12 +12,13 @@ export default function Page() {
     <div className="max-w-4xl mx-auto px-6 py-20">
       <p className="label mb-6">For investors and partners</p>
       <h1 className="font-display text-4xl md:text-6xl leading-tight max-w-3xl">
-        Yew is family auto shops, finally on modern software.
+        <em className="display-em">yew.</em> is family auto shops, finally on modern software.
       </h1>
       <p className="text-lg text-[color:var(--muted)] mt-6 max-w-2xl">
-        The independent auto repair industry in the US is roughly 250,000 shops. Most are family-run. Most are on software they bought a decade ago. Toast did this for restaurants. Yew is doing it for the wrench-side of Main Street.
+        The independent auto repair industry in the US is roughly 250,000 shops. Most are family-run. Most are on software they bought a decade ago. Toast did this for restaurants. yew. is doing it for the wrench-side of Main Street.
       </p>
 
+      <Reveal threshold={0.15}>
       {/* Wedge */}
       <div className="mt-16 rounded-2xl border border-[color:var(--rule)] bg-white p-8 md:p-10">
         <p className="label mb-4">The wedge</p>
@@ -24,13 +26,16 @@ export default function Page() {
           One shop in San Francisco. One paying customer. One workflow nobody else in the category fixes.
         </p>
         <p className="text-[color:var(--muted)] mt-5 max-w-2xl">
-          Frank runs A&amp;C Auto Clinic in the Bayview. He&apos;s been a mechanic for over thirty years. Before Yew: every card sale meant reading totals off ShopMonkey, doing 3% cash-discount math on a calculator, typing the result into a PAX A80 by hand. End of day, two reports never matched. He kept a notebook of <em className="italic">&ldquo;we&apos;re &#36;42 off somewhere.&rdquo;</em>
+          Frank runs A&amp;C Auto Clinic in the Bayview. He&apos;s been a mechanic for over thirty years. Before yew.: every card sale meant reading totals off ShopMonkey, doing 3% cash-discount math on a calculator, typing the result into a PAX A80 by hand. End of day, two reports never matched. He kept a notebook of <em className="italic">&ldquo;we&apos;re &#36;42 off somewhere.&rdquo;</em>
         </p>
         <p className="text-[color:var(--muted)] mt-4 max-w-2xl">
-          Yew fixes the workflow without giving up the margin. We resell First American on Interchange-Plus, layer the software on top, and integrate with ShopMonkey for shops that want both. <Link href="/story" className="underline decoration-[color:var(--secondary)] underline-offset-2">Read the full origin →</Link>
+          yew. fixes the workflow without giving up the margin. We resell First American on Interchange-Plus, layer the software on top, and integrate with ShopMonkey for shops that want both. <Link href="/story" className="underline decoration-[color:var(--secondary)] underline-offset-2">Read the full origin →</Link>
         </p>
       </div>
 
+      </Reveal>
+
+      <Reveal threshold={0.15}>
       {/* Plan */}
       <div className="mt-10 rounded-2xl border border-[color:var(--rule)] bg-white p-8 md:p-10">
         <p className="label mb-6">Where we&apos;re going</p>
@@ -41,7 +46,7 @@ export default function Page() {
           </li>
           <li className="grid md:grid-cols-12 gap-4 items-baseline">
             <span className="label md:col-span-2">Year 1</span>
-            <span className="md:col-span-10 text-[color:var(--text)]/90">~50 family-run mechanic shops on Yew, resold through First American.</span>
+            <span className="md:col-span-10 text-[color:var(--text)]/90">~50 family-run mechanic shops on yew., resold through First American.</span>
           </li>
           <li className="grid md:grid-cols-12 gap-4 items-baseline">
             <span className="label md:col-span-2">Year 2</span>
@@ -50,6 +55,9 @@ export default function Page() {
         </ul>
       </div>
 
+      </Reveal>
+
+      <Reveal threshold={0.15}>
       {/* What we're looking for */}
       <div className="mt-10 rounded-2xl border border-[color:var(--rule)] bg-white p-8 md:p-10">
         <p className="label mb-6">Who we want to talk to</p>
@@ -68,6 +76,8 @@ export default function Page() {
           </li>
         </ul>
       </div>
+
+      </Reveal>
 
       <div className="mt-16 flex flex-wrap gap-3">
         <Link href="/talk?audience=investor" className="btn-primary">Set up a call →</Link>

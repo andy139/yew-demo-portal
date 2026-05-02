@@ -2,7 +2,11 @@
 
 import { useEffect, useMemo, useRef, useState } from "react";
 
-const IC_PLUS_BENCHMARK = 0.0151;
+// Typical First American Interchange-Plus all-in effective rate for auto repair
+// shops (interchange ~1.5% + assessments ~0.13% + processor markup ~0.2-0.4%).
+// A&C's actual March statement runs 1.68%. We benchmark against 1.8% as the
+// representative figure most shops will land at.
+const IC_PLUS_BENCHMARK = 0.018;
 
 function fmt(n: number) {
   return Math.round(n).toLocaleString("en-US");
@@ -214,7 +218,7 @@ export default function SavingsCalculator() {
               fontSize: 16,
             }}
           >
-            Enter your numbers. We&apos;ll show the delta against the FAPS Interchange-Plus benchmark (1.51%).
+            Enter your numbers. We&apos;ll show the delta against the FAPS Interchange-Plus benchmark (1.8%).
           </div>
         ) : (
           <>
@@ -227,7 +231,7 @@ export default function SavingsCalculator() {
             </p>
             <div className="calc-rule" />
             <p className="calc-fineprint">
-              Math: monthly volume × (your rate − 1.51% IC+ benchmark). Rounded. Final pricing is custom-quoted on your actual statement; we keep some negotiation room rather than posting a headline rate.
+              Math: monthly volume × (your rate − 1.8% IC+ benchmark). 1.8% is the typical all-in First American Interchange-Plus rate for auto repair (interchange + assessments + processor markup). A&amp;C runs 1.68% on their actual mix. Final pricing is custom-quoted on your statement.
             </p>
           </>
         )}

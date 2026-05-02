@@ -2,9 +2,9 @@ import Link from "next/link";
 import GatewayDiagram from "@/components/GatewayDiagram";
 
 export const metadata = {
-  title: "The Gateway | Yew",
+  title: "The Gateway | yew. payments",
   description:
-    "Most software in this category puts the cashier on a tablet. Yew puts the terminals on the network.",
+    "Most software in this category puts the cashier on a tablet. yew. puts the terminals on the network.",
 };
 
 export default function Page() {
@@ -17,7 +17,7 @@ export default function Page() {
           <em className="display-em">Reconcile from home.</em>
         </h1>
         <p className="gw-lede fade-up is-in" style={{ transitionDelay: "200ms" }}>
-          Most software in this category puts the cashier on a tablet. Yew&apos;s gateway puts the terminals on the network: every PAX A80 in the shop is addressable from any computer on the LAN.
+          Most software in this category puts the cashier on a tablet. yew.&apos;s gateway puts the terminals on the network: every PAX A80 in the shop is addressable from any computer on the LAN.
         </p>
         <p className="gw-lede fade-up is-in" style={{ transitionDelay: "320ms" }}>
           And the gateway itself is software, not a box. Run the installer on any always-on computer in the shop. Most shops use a desktop or mini-PC they already own.{" "}
@@ -43,7 +43,7 @@ export default function Page() {
           </p>
         </div>
         <div className="card is-yew">
-          <span className="label">Yew</span>
+          <span className="label">yew.</span>
           <p className="h">Any computer drives any terminal.</p>
           <p>
             Front counter, manager&apos;s laptop, the techs&apos; phone. All of them can fire a sale to any A80 on the floor.

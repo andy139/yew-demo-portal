@@ -1,7 +1,8 @@
 import Link from "next/link";
+import Reveal from "@/components/Reveal";
 
 export const metadata = {
-  title: "For channel partners | Yew",
+  title: "For channel partners | yew. payments",
   description:
     "FAPS reps, hardware resellers, and white-label opportunities for vertical-payments software.",
 };
@@ -11,7 +12,7 @@ const blocks = [
     label: "Reseller economics",
     title: "Built around the FAPS book.",
     body:
-      "Yew is reseller-friendly by design. Bring us your FAPS book, we plug into the same merchant accounts, and shop owners keep their existing relationships. Splits are negotiated per partner. not buried under three layers of platform fees.",
+      "yew. is reseller-friendly by design. Bring us your FAPS book, we plug into the same merchant accounts, and shop owners keep their existing relationships. Splits are negotiated per partner. not buried under three layers of platform fees.",
   },
   {
     label: "White-label hooks",
@@ -23,7 +24,7 @@ const blocks = [
     label: "Built to graduate processors",
     title: "Year-0 FAPS. Year-2 we want Finix.",
     body:
-      "Today, Yew is FAPS-only. We resell because volume and paperwork are easier in Year 0. The architecture — POSLink to the terminal plus a thin processor adapter — is set up so graduating to Finix later is meant to be a config change, not a rebuild. That's the plan; we're honest it isn't proven yet.",
+      "Today, yew. is FAPS-only. We resell because volume and paperwork are easier in Year 0. The architecture — POSLink to the terminal plus a thin processor adapter — is set up so graduating to Finix later is meant to be a config change, not a rebuild. That's the plan; we're honest it isn't proven yet.",
   },
 ];
 
@@ -35,16 +36,18 @@ export default function Page() {
         We don&apos;t want to <em className="italic text-[color:var(--secondary)]">replace</em> your relationships. We want to <em className="italic text-[color:var(--secondary)]">deepen</em> them.
       </h1>
       <p className="text-lg text-[color:var(--muted)] mt-6 max-w-2xl">
-        Yew is a counter-side software product wrapped around FAPS Interchange-Plus pricing. If you&apos;re a FAPS rep or a hardware reseller serving independent auto repair, we&apos;d like to talk.
+        yew. is a counter-side software product wrapped around FAPS Interchange-Plus pricing. If you&apos;re a FAPS rep or a hardware reseller serving independent auto repair, we&apos;d like to talk.
       </p>
 
       <div className="mt-16 grid md:grid-cols-3 gap-4">
-        {blocks.map((b) => (
-          <div key={b.label} className="rounded-2xl border border-[color:var(--rule)] bg-white p-7">
-            <p className="label mb-4">{b.label}</p>
-            <p className="font-display text-2xl mb-4 leading-snug">{b.title}</p>
-            <p className="text-sm text-[color:var(--muted)] leading-relaxed">{b.body}</p>
-          </div>
+        {blocks.map((b, i) => (
+          <Reveal key={b.label} delay={i * 90} threshold={0.15}>
+            <div className="rounded-2xl border border-[color:var(--rule)] bg-white p-7 h-full">
+              <p className="label mb-4">{b.label}</p>
+              <p className="font-display text-2xl mb-4 leading-snug">{b.title}</p>
+              <p className="text-sm text-[color:var(--muted)] leading-relaxed">{b.body}</p>
+            </div>
+          </Reveal>
         ))}
       </div>
 
@@ -55,7 +58,7 @@ export default function Page() {
             Software keeps the merchant. <em className="italic text-[color:var(--secondary)]">You keep the residual.</em>
           </h2>
           <p className="text-[color:var(--muted)] mt-6">
-            Standalone payments products lose merchants the moment somebody else underprices them. Software-led payments are sticky. and the residual is yours for as long as the shop runs Yew.
+            Standalone payments products lose merchants the moment somebody else underprices them. Software-led payments are sticky. and the residual is yours for as long as the shop runs yew.
           </p>
         </div>
         <div className="rounded-2xl border border-[color:var(--rule)] bg-white p-7">

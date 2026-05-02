@@ -2,9 +2,9 @@ import Link from "next/link";
 import SavingsCalculator from "@/components/SavingsCalculator";
 
 export const metadata = {
-  title: "Savings | Yew",
+  title: "Savings | yew. payments",
   description:
-    "Calculate what you'd save on FAPS Interchange-Plus through Yew, against your current effective rate.",
+    "Calculate what you'd save on FAPS Interchange-Plus through yew., against your current effective rate.",
 };
 
 export default function Page() {
@@ -16,7 +16,7 @@ export default function Page() {
         <em className="display-em">FAPS Interchange-Plus</em>?
       </h1>
       <p className="gw-lede fade-up is-in" style={{ transitionDelay: "200ms" }}>
-        Punch in your numbers. We&apos;ll math the delta against the IC+ benchmark (1.51%). No commitment, no hidden setup.
+        Punch in your numbers. We&apos;ll math the delta against the typical First American Interchange-Plus rate for auto repair (1.8% all-in). A&amp;C&apos;s actual statement runs 1.68%. No commitment, no hidden setup.
       </p>
 
       <SavingsCalculator />

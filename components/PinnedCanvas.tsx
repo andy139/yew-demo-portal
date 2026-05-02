@@ -48,7 +48,7 @@ export default function PinnedCanvas() {
       <div className="pin-stage">
         <div className="pin-canvas">
           <div className="pin-side-stamp">
-            <span>Yew · before / after</span>
+            <span>yew. · before / after</span>
             <span>
               {String(idx + 1).padStart(2, "0")} / {String(FRAMES.length).padStart(2, "0")}
             </span>
@@ -190,7 +190,7 @@ export default function PinnedCanvas() {
                       <span className="amt" style={{ color: "var(--muted)" }}>−$62.34</span>
                     </div>
                     <div className="row">
-                      <span>Yew margin</span>
+                      <span>yew. margin</span>
                       <span className="amt" style={{ color: "var(--muted)" }}>−$8.20</span>
                     </div>
                     <div className="row" style={{ fontWeight: 600 }}>

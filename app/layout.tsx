@@ -7,6 +7,7 @@ import ThreeCTAStrip from "@/components/ThreeCTAStrip";
 import PageWipe from "@/components/PageWipe";
 import StickyCTA from "@/components/StickyCTA";
 import BatchFoot from "@/components/BatchFoot";
+import ScrollProgress from "@/components/ScrollProgress";
 
 const instrumentSerif = Instrument_Serif({
   variable: "--font-display",
@@ -52,6 +53,7 @@ export default function RootLayout({
       className={`${instrumentSerif.variable} ${geist.variable} ${geistMono.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">
+        <ScrollProgress />
         <PageWipe />
         <Nav />
         <main className="flex-1">{children}</main>

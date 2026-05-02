@@ -33,7 +33,7 @@ function FallbackPreview() {
     <div className="max-w-6xl mx-auto px-6 demo-shell">
       <div className="demo-banner">
         <span className="live-dot" />
-        Demo refreshes every hour · last updated 3 min ago
+        Preview · live console + mock A80 wiring up this weekend
       </div>
 
       <div className="demo-frame">
@@ -179,7 +179,7 @@ export default function DemoEmbed() {
     <div className="max-w-6xl mx-auto px-6 demo-shell">
       <div className="demo-banner">
         <span className="live-dot" />
-        Demo refreshes every hour. Nothing here touches real money.
+        Live preview · sandboxed. Nothing here touches real money.
       </div>
 
       <div className="grid lg:grid-cols-2 gap-4 mt-6">

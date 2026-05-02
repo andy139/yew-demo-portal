@@ -14,7 +14,7 @@ const cards = [
     href: "/partners",
     eyebrow: "Channel partners",
     title: "A software product to bring to your book.",
-    body: "FAPS reps and hardware resellers. Splits negotiable, deal-reg honored. Yew is processor-agnostic by design.",
+    body: "FAPS reps and hardware resellers. Splits negotiable, deal-reg honored. yew. is processor-agnostic by design.",
   },
   {
     href: "/investors",
@@ -31,7 +31,7 @@ export default function AudienceCards() {
         <>
           <div className="section-head">
             <div>
-              <span className="label">Who Yew is for</span>
+              <span className="label">Who yew. is for</span>
               <h2 className="section-h2">
                 Family-run shops, the partners who serve them, the investors who back them.
               </h2>

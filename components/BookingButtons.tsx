@@ -21,7 +21,7 @@ const LINKS = {
   },
   investor: {
     title: "Set up a call",
-    sub: "Vertical SaaS with payments built in. 30-minute walkthrough of where Yew is and where it's going.",
+    sub: "Vertical SaaS with payments built in. 30-minute walkthrough of where yew. is and where it's going.",
     href: "mailto:andy@yewsoftware.com?subject=Investor%20call%20%E2%80%94%20%5Byour%20fund%5D&body=Fund%20%2F%20your%20name%3A%0AStage%20%2F%20check%20size%3A%0AAvailability%20next%20two%20weeks%3A%0A",
     cta: "Email to set up a call",
   },

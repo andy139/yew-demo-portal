@@ -15,10 +15,11 @@ const WORDS = [
   { t: "run.", em: true },
 ];
 
+const SAVINGS_TARGET = 10800;
+
 export default function HeroV2() {
   const [isIn, setIsIn] = useState(false);
-  const [statTriggered, setStatTriggered] = useState(false);
-  const [dollars, setDollars] = useState(0);
+  const [savings, setSavings] = useState(0);
   const statRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
@@ -29,35 +30,32 @@ export default function HeroV2() {
   useEffect(() => {
     const el = statRef.current;
     if (!el) return;
+    let triggered = false;
+    let raf = 0;
     const io = new IntersectionObserver(
       ([e]) => {
-        if (e.isIntersecting) {
-          setStatTriggered(true);
-          io.disconnect();
+        if (!e.isIntersecting || triggered) return;
+        triggered = true;
+        io.disconnect();
+        const start = performance.now();
+        const duration = 1200;
+        function step(now: number) {
+          const t = Math.min(1, (now - start) / duration);
+          const eased = 1 - Math.pow(1 - t, 3);
+          setSavings(Math.round(SAVINGS_TARGET * eased));
+          if (t < 1) raf = requestAnimationFrame(step);
+          else setSavings(SAVINGS_TARGET);
         }
+        raf = requestAnimationFrame(step);
       },
-      { threshold: 0.4 },
+      { threshold: 0.3 },
     );
     io.observe(el);
-    return () => io.disconnect();
+    return () => {
+      io.disconnect();
+      if (raf) cancelAnimationFrame(raf);
+    };
   }, []);
-
-  useEffect(() => {
-    if (!statTriggered) return;
-    const start = performance.now();
-    const target = 2.4;
-    const duration = 1100;
-    let raf = 0;
-    function step(now: number) {
-      const t = Math.min(1, (now - start) / duration);
-      const eased = 1 - Math.pow(1 - t, 3);
-      setDollars(target * eased);
-      if (t < 1) raf = requestAnimationFrame(step);
-      else setDollars(target);
-    }
-    raf = requestAnimationFrame(step);
-    return () => cancelAnimationFrame(raf);
-  }, [statTriggered]);
 
   return (
     <section className={`hero-v2 ${isIn ? "is-in" : ""}`}>
@@ -87,10 +85,11 @@ export default function HeroV2() {
 
             <div className="hero-stat" ref={statRef}>
               <div className="num">
-                <em>${dollars.toFixed(1)}M</em>
+                <em>${savings.toLocaleString("en-US")}</em>
+                <span className="num-per">/year</span>
               </div>
               <div className="stat-cap">
-                of Bay Area auto repair volume processed through Yew, year-to-date. Drop-in payments + console for shops who&apos;d rather work the counter than work the software.
+                what a shop doing $100k/month on 2.7% effective saves moving to First American Interchange-Plus through yew. A&amp;C runs at 1.68% all-in. Run your own statement through <Link href="/savings" className="stat-link">the calculator</Link>.
               </div>
             </div>
 
@@ -104,13 +103,13 @@ export default function HeroV2() {
             </div>
 
             <div className="hero-proof">
-              <span className="label">Now serving</span>
+              <span className="label">Customer zero</span>
               <p className="shops">
                 <em>A&amp;C Auto Clinic</em>
-                <span>Bayview</span>
-                <span>Mission Garage</span>
-                <span>Sunset Motors</span>
-                <span>Bayview Tire</span>
+                <span className="loc">Bayview, San Francisco</span>
+              </p>
+              <p className="proof-meta">
+                The next 50 are other family-run mechanic shops. Pilot slots open now.
               </p>
             </div>
           </div>

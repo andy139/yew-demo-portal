@@ -1,8 +1,10 @@
 import Link from "next/link";
+import Reveal from "@/components/Reveal";
 
 export const metadata = {
-  title: "The Software | Yew",
-  description: "A guided tour of Yew's cashier console, customer view, batch close, refunds, and diagnostics.",
+  title: "The Software | yew. payments",
+  description:
+    "A guided tour of yew.'s cashier console, customer view, batch close, refunds, and diagnostics.",
 };
 
 const tour = [
@@ -11,7 +13,7 @@ const tour = [
     title: "Take a sale",
     sub: "Cashier console",
     body:
-      "Pick a repair order. Pick a terminal. Hit charge. The selected A80 wakes up, the cardholder taps or dips, and the console flips to authorized. Most shops take their first card sale on Yew within 60 seconds of install.",
+      "Pick a repair order. Pick a terminal. Hit charge. The selected A80 wakes up, the cardholder taps or dips, and the console flips to authorized. Most shops take their first card sale on yew. within 60 seconds of install.",
   },
   {
     n: "02",
@@ -25,7 +27,7 @@ const tour = [
     title: "Daily batch close",
     sub: "Reconciliation",
     body:
-      "End of day, hit close batch. Yew tallies every authorization, deposits to your bank in the morning, and sends the reconciliation report straight to your accountant.",
+      "End of day, hit close batch. yew. tallies every authorization, deposits to your bank in the morning, and sends the reconciliation report straight to your accountant.",
   },
   {
     n: "04",
@@ -39,7 +41,7 @@ const tour = [
     title: "Tip-adjust post-signature",
     sub: "Service-industry-grade",
     body:
-      "Customer signed for $100, then handed a tip in cash? Adjust the authorization before settlement. Most processors charge a fee for this; Yew does not.",
+      "Customer signed for $100, then handed a tip in cash? Adjust the authorization before settlement. Most processors charge a fee for this; yew. does not.",
   },
   {
     n: "06",
@@ -63,16 +65,18 @@ export default function Page() {
 
       <div className="mt-16 space-y-12">
         {tour.map((t, i) => (
-          <div key={t.n} className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
-            <div className={i % 2 === 1 ? "md:order-2" : ""}>
-              <p className="label mb-3">{t.n} · {t.sub}</p>
-              <h2 className="font-display text-3xl md:text-4xl mb-4">{t.title}</h2>
-              <p className="text-[color:var(--muted)] leading-relaxed">{t.body}</p>
+          <Reveal key={t.n} threshold={0.2}>
+            <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
+              <div className={i % 2 === 1 ? "md:order-2" : ""}>
+                <p className="label mb-3">{t.n} · {t.sub}</p>
+                <h2 className="font-display text-3xl md:text-4xl mb-4">{t.title}</h2>
+                <p className="text-[color:var(--muted)] leading-relaxed">{t.body}</p>
+              </div>
+              <div className={`rounded-2xl border border-[color:var(--rule)] bg-white aspect-video flex items-center justify-center ${i % 2 === 1 ? "md:order-1" : ""}`}>
+                <span className="label">screencast · {t.n}</span>
+              </div>
             </div>
-            <div className={`rounded-2xl border border-[color:var(--rule)] bg-white aspect-video flex items-center justify-center ${i % 2 === 1 ? "md:order-1" : ""}`}>
-              <span className="label">screencast · {t.n}</span>
-            </div>
-          </div>
+          </Reveal>
         ))}
       </div>
 

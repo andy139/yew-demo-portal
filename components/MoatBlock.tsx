@@ -12,7 +12,7 @@ export default function MoatBlock() {
             <span className="label">The moat</span>
             <h2 className="section-h2" style={{ marginTop: 12 }}>
               Most software in this category puts the cashier on a tablet.{" "}
-              <em className="display-em">Yew puts the terminals on the network.</em>
+              <em className="display-em">yew. puts the terminals on the network.</em>
             </h2>
             <p
               style={{
@@ -22,7 +22,7 @@ export default function MoatBlock() {
                 lineHeight: 1.6,
               }}
             >
-              Charge from any bay. Reprint a receipt from the front counter. Reconcile from home. The Yew gateway makes every PAX A80 in the shop addressable from any computer on the LAN.
+              Charge from any bay. Reprint a receipt from the front counter. Reconcile from home. The yew. gateway makes every PAX A80 in the shop addressable from any computer on the LAN.
             </p>
             <Link
               href="/the-gateway"
@@ -49,7 +49,7 @@ export default function MoatBlock() {
                 <span className="right">tablet-bound, one terminal per tablet</span>
               </li>
               <li className="is-yew">
-                <span>Yew</span>
+                <span>yew.</span>
                 <span className="right">any computer drives any terminal</span>
               </li>
             </ul>
