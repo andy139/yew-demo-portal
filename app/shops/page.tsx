@@ -56,6 +56,21 @@ export default function Page() {
         ))}
       </div>
 
+      {/* In-person Bay Area demo */}
+      <div className="mt-20 rounded-2xl border-2 border-[color:var(--text)] bg-[color:var(--accent)]/15 p-8 md:p-10">
+        <p className="label mb-4">Bay Area shops</p>
+        <p className="font-display text-3xl md:text-4xl leading-tight max-w-3xl">
+          Andy will drive to your shop and run the demo on your counter.
+        </p>
+        <p className="text-[color:var(--text)]/80 mt-4 max-w-2xl">
+          If your shop is in the Bay Area, we don&apos;t do Zoom demos. Andy shows up, plugs in a PAX A80 next to your existing setup, and walks the cashier through a live charge with a real card. You see the math, the network, the receipt, and the reconciliation, on your floor, in 45 minutes. Then you decide.
+        </p>
+        <div className="mt-6 flex flex-wrap gap-3">
+          <Link href="/talk?audience=shop" className="btn-primary">Book the in-shop demo →</Link>
+          <Link href="/savings" className="btn-secondary">Run the calculator first</Link>
+        </div>
+      </div>
+
       {/* ShopMonkey integration */}
       <div className="mt-20 rounded-2xl border border-[color:var(--rule)] bg-white p-8 md:p-10">
         <p className="label mb-4">ShopMonkey integration · optional</p>

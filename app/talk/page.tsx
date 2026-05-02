@@ -16,6 +16,9 @@ export default function Page() {
       <p className="text-lg text-[color:var(--muted)] mt-6 max-w-2xl">
         Every form goes straight to the team. Replies usually within a business day, Pacific time.
       </p>
+      <p className="text-base text-[color:var(--muted)] mt-3 max-w-2xl">
+        <span className="font-medium text-[color:var(--text)]">Bay Area shops:</span> Andy will drive to you and run the demo on your counter. No Zoom, no slides, no remote screenshare. Mention your zip code on the form.
+      </p>
 
       <div className="mt-16">
         <Suspense
