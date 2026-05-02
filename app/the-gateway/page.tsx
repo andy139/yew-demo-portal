@@ -25,6 +25,13 @@ export default function Page() {
         </p>
       </section>
 
+      <div className="subpage-stat">
+        <div className="num"><em>1</em></div>
+        <div className="cap">
+          <strong>install. Any number of A80s on the LAN.</strong> One gateway runs as a Node service on a computer you already own. Front counter, manager&apos;s laptop, the techs&apos; phone — all of them charge any bay&apos;s terminal through it.
+        </div>
+      </div>
+
       <GatewayDiagram />
 
       <div className="compare-3">
