@@ -22,7 +22,7 @@ export default function Page() {
         And the gateway itself is software, not a box. Run the installer on any always-on computer in the shop. Most shops use a desktop or mini-PC they already own. <em className="italic">No dedicated hardware required.</em>
       </p>
       <p className="text-sm text-[color:var(--muted)] mt-3 max-w-2xl">
-        Under the hood: the gateway speaks POSLink directly to every PAX A80 on the LAN. That&apos;s the same standard semi-integration protocol PAX-certified vendors use. We didn&apos;t reinvent the wire.
+        Under the hood: the gateway speaks POSLink directly to every PAX A80 on the LAN. POSLink is PAX&apos;s standard semi-integration SDK. We didn&apos;t reinvent the wire.
       </p>
 
       {/* Diagram */}

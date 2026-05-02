@@ -9,9 +9,9 @@ const panels = [
   {
     label: "Hardware",
     title: "PAX A80",
-    sub: "EMV chip · contactless · swipe · NFC · POSLink semi-integration",
+    sub: "EMV chip · contactless · swipe · NFC · PCI PTS 5.x",
     body:
-      "A countertop terminal certified to FAPS, P2PE-encrypted end to end. Yew talks to the A80 over POSLink — the standard PAX semi-integration protocol — wire-verified against live production. One A80 per bay if you want bay-to-bay charging. No reader rental, no monthly hardware fee. You own the terminal outright.",
+      "A countertop terminal with EMV L1/L2/L3-certified hardware and PCI PTS 5.x. Yew is built on the PAX POSLink SDK with a Semi-Integrated architecture, which means card data flows from the terminal straight to the processor — never through Yew's servers. One A80 per bay if you want bay-to-bay charging. No reader rental, no monthly hardware fee. You own the terminal outright.",
   },
   {
     label: "Software",
