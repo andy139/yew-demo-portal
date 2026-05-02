@@ -428,6 +428,20 @@ h1, h2, h3, h4, .font-display {
 }
 .hero-v2.is-in .hero-cta { opacity: 1; transform: translateY(0); }
 
+/* On mobile, primary CTA gets full width — single thumb-target instead
+   of two competing pills. Digital Applied: +6% lift for prominent
+   above-fold CTA on mobile. Secondary stacks below at full width too. */
+@media (max-width: 720px) {
+  .hero-cta { flex-direction: column; align-items: stretch; gap: 10px; }
+  .hero-cta .btn-primary,
+  .hero-cta .btn-secondary,
+  .hero-cta .btn-accent {
+    width: 100%;
+    justify-content: center;
+    padding: 14px 20px;
+  }
+}
+
 .hero-proof {
   margin-top: 40px;
   padding-top: 32px;
