@@ -11,13 +11,13 @@ export default function Page() {
     <article className="max-w-3xl mx-auto px-6 py-20">
       <p className="label mb-6">Story</p>
       <h1 className="font-display text-4xl md:text-6xl leading-tight">
-        Yew exists because <em className="italic text-[color:var(--secondary)]">someone watched the workflow break.</em>
+        I built Yew because <em className="italic text-[color:var(--secondary)]">my dad shouldn&apos;t have to type prices into a card terminal seven times a day.</em>
       </h1>
 
       <div className="mt-10 space-y-6 text-lg leading-relaxed text-[color:var(--text)]/90">
         {/* 1. The scene */}
         <p>
-          A&amp;C Auto Clinic, Bayview, San Francisco. A 2014 Camry rolls in at eight in the morning with a brake job. By noon the work is done and the customer is back at the counter. ShopMonkey is open on the laptop in the back office. The PAX A80 card terminal sits next to the receipt printer. The two are not talking to each other.
+          A&amp;C Auto Clinic, Bayview, San Francisco. My dad Frank&apos;s shop. A 2014 Camry rolls in at eight in the morning with a brake job. By noon the work is done and the customer is back at the counter. ShopMonkey is open on the laptop in the back office. The PAX A80 card terminal sits next to the receipt printer. The two are not talking to each other.
         </p>
         <p>
           The cashier&apos;s actual sequence, every time:
@@ -48,7 +48,7 @@ export default function Page() {
           End of day, two batch totals: one off the terminal, one off ShopMonkey. They are supposed to match. They almost never do. A typo on transaction four, a missed cash-discount on transaction nine, a refund on transaction eleven that got entered twice. The cashier prints both reports, lays them side by side, and hand-matches line items.
         </p>
         <p>
-          The most common end-of-day at A&amp;C, for years, was a sentence that started with <em className="italic">&ldquo;I think we&apos;re &#36;42 off — somewhere.&rdquo;</em> The note went into a notebook. Nobody ever found the &#36;42.
+          The most common end-of-day at A&amp;C — long before I ever sat behind that counter — was a sentence that started with <em className="italic">&ldquo;I think we&apos;re &#36;42 off — somewhere.&rdquo;</em> The note went into a notebook. Nobody ever found the &#36;42. Frank&apos;s been running the shop on that workflow for over a decade.
         </p>
 
         {/* 4. The native-terminal trap */}
@@ -69,15 +69,15 @@ export default function Page() {
 
         {/* 6. Why this matters for Yew */}
         <p>
-          This is not a vertical-SaaS bet sourced from a market-research deck. It is software that exists because someone watched a workflow break in person, every day, for years. Andy worked the counter at A&amp;C before he wrote a line of Yew. The first version was for one shop. A&amp;C is customer zero.
+          I sat behind that counter for less than three months. Long enough to ring up a couple hundred customers. Long enough to do the cash-discount math by hand more times than I could stand. Long enough to know my dad shouldn&apos;t still be doing it on his own a decade in. I went home and started writing.
         </p>
         <p>
-          The next 50 shops will get the same product, built by someone who actually rang up the customer.
+          The first version of Yew was for Frank — one shop, one cashier, one calculator I wanted to throw out a window. A&amp;C is customer zero. The next 50 shops will be other family-run mechanic shops, built by someone who actually rang up the customer at his dad&apos;s.
         </p>
       </div>
 
       <div className="mt-16 pt-10 border-t border-[color:var(--rule)] flex flex-wrap gap-3">
-        <Link href="/talk?audience=investor" className="btn-primary">Talk to Andy →</Link>
+        <Link href="/talk?audience=shop" className="btn-primary">Pilot your shop →</Link>
         <Link href="/demo" className="btn-secondary">See the live demo</Link>
       </div>
     </article>

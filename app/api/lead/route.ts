@@ -2,7 +2,7 @@ import { NextResponse } from "next/server";
 
 type LeadBody = {
   email?: string;
-  audience?: "shop" | "partner" | "investor" | string;
+  audience?: "shop" | "partner" | string;
   payload?: Record<string, unknown>;
 };
 

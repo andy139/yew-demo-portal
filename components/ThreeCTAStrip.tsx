@@ -13,12 +13,6 @@ const ctas = [
     sub: "Reseller economics + white-label hooks.",
     icon: "handshake",
   },
-  {
-    href: "/talk?audience=investor",
-    title: "Talk to investors",
-    sub: "Vertical SaaS + payments.",
-    icon: "chart",
-  },
 ];
 
 function Icon({ name }: { name: string }) {
@@ -29,21 +23,11 @@ function Icon({ name }: { name: string }) {
       </svg>
     );
   }
-  if (name === "handshake") {
-    return (
-      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-        <path d="M11 17l3 3 7-7-3-3" />
-        <path d="M3 10l7-7 3 3-7 7z" />
-        <path d="M9 13l3 3" />
-      </svg>
-    );
-  }
   return (
     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-      <path d="M3 21h18" />
-      <rect x="5" y="13" width="3" height="6" />
-      <rect x="11" y="9" width="3" height="10" />
-      <rect x="17" y="5" width="3" height="14" />
+      <path d="M11 17l3 3 7-7-3-3" />
+      <path d="M3 10l7-7 3 3-7 7z" />
+      <path d="M9 13l3 3" />
     </svg>
   );
 }
@@ -52,11 +36,11 @@ export default function ThreeCTAStrip() {
   return (
     <section className="border-t border-[color:var(--rule)] bg-[color:var(--bg)]">
       <div className="max-w-6xl mx-auto px-6 py-16">
-        <p className="label mb-6">Three doors</p>
+        <p className="label mb-6">Two doors</p>
         <h2 className="font-display text-3xl md:text-4xl mb-10 max-w-2xl">
           Pick the one that <em className="italic text-[color:var(--secondary)]">fits</em>.
         </h2>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           {ctas.map((c) => (
             <Link
               key={c.href}

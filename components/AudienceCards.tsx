@@ -3,21 +3,15 @@ import Link from "next/link";
 const cards = [
   {
     href: "/shops",
-    eyebrow: "Shop owners",
+    eyebrow: "Family auto shops",
     title: "Your $1,000 ticket costs $9.50 less to settle.",
-    body: "Drop-in for FAPS-eligible shops. Charge from any bay. Settle next day. No reader rental.",
+    body: "Drop-in for FAPS-eligible shops. Charge from any bay. Settle next day. No reader rental. Built around the way Frank actually rings up customers at A&C.",
   },
   {
     href: "/partners",
     eyebrow: "Channel partners",
     title: "Reseller economics + white-label hooks.",
     body: "Talk to us about the FAPS book. Yew is processor-agnostic by design — Finix-graduation at scale is a config flip, not a rebuild.",
-  },
-  {
-    href: "/investors",
-    eyebrow: "Investors",
-    title: "Vertical SaaS plus payments.",
-    body: "Toast hit IPO at 6% restaurant penetration. Independent auto repair has near-zero modern-stack penetration today.",
   },
 ];
 
@@ -26,9 +20,9 @@ export default function AudienceCards() {
     <section className="max-w-6xl mx-auto px-6 py-24">
       <div className="flex items-end justify-between mb-10 gap-6">
         <div>
-          <p className="label mb-3">Who you are</p>
+          <p className="label mb-3">Who Yew is for</p>
           <h2 className="font-display text-3xl md:text-5xl max-w-2xl">
-            Three audiences. <em className="italic text-[color:var(--secondary)]">One floor.</em>
+            Family-run shops first. <em className="italic text-[color:var(--secondary)]">Then everyone else.</em>
           </h2>
         </div>
         <p className="hidden md:block text-sm text-[color:var(--muted)] max-w-xs">
@@ -36,7 +30,7 @@ export default function AudienceCards() {
         </p>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
         {cards.map((c) => (
           <Link
             key={c.href}

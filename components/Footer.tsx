@@ -8,7 +8,7 @@ export default function Footer() {
         <div className="col-span-2 md:col-span-1">
           <p className="font-display text-xl text-[color:var(--text)]">Yew</p>
           <p className="text-[color:var(--muted)] mt-2 max-w-xs italic">
-            Software for the real economy.
+            Software for yew.
           </p>
         </div>
         <div>
@@ -24,9 +24,8 @@ export default function Footer() {
         <div>
           <p className="label mb-3">Audience</p>
           <ul className="space-y-2 text-[color:var(--text)]/80">
-            <li><Link href="/shops">Shop owners</Link></li>
+            <li><Link href="/shops">Family auto shops</Link></li>
             <li><Link href="/partners">Channel partners</Link></li>
-            <li><Link href="/investors">Investors</Link></li>
           </ul>
         </div>
         <div>
@@ -40,7 +39,7 @@ export default function Footer() {
       </div>
       <div className="border-t border-[color:var(--rule)]">
         <div className="max-w-6xl mx-auto px-6 py-6 flex flex-col md:flex-row gap-3 items-start md:items-center justify-between text-xs text-[color:var(--muted)]">
-          <p>© {year} Yew. Built in San Francisco. Live at A&amp;C Auto Clinic.</p>
+          <p>© {year} Yew. Built in San Francisco for Frank&apos;s shop. Live at A&amp;C Auto Clinic.</p>
           <p className="label !text-[10px]">Counter-side software</p>
         </div>
       </div>

@@ -10,20 +10,20 @@ export default function Home() {
       <section className="max-w-6xl mx-auto px-6 pt-16 md:pt-24 pb-20 md:pb-28">
         <div className="grid md:grid-cols-12 gap-10 md:gap-16 items-center">
           <div className="md:col-span-7">
-            <p className="label mb-6">Yew · payments + software</p>
+            <p className="label mb-6">Yew · payments + software for family auto shops</p>
             <h1 className="font-display text-4xl sm:text-5xl md:text-6xl leading-[1.05] tracking-tight max-w-2xl">
-              Yew. Payments and software for auto shops, designed by{" "}
-              <em className="italic text-[color:var(--secondary)]">someone who worked the counter.</em>
+              Yew. Built for{" "}
+              <em className="italic text-[color:var(--secondary)]">my dad&apos;s auto shop.</em> Now your shop&apos;s.
             </h1>
             <p className="text-lg md:text-xl text-[color:var(--muted)] mt-6 max-w-xl leading-relaxed">
-              Drop-in for FAPS-eligible shops. Charge from any bay. Settle next day. No reader rental.
+              Yew started at A&amp;C Auto Clinic — Frank&apos;s shop in Bayview, San Francisco. We&apos;re rolling it out to family-run mechanic shops first. Drop-in for FAPS-eligible shops. Charge from any bay. Settle next day. No reader rental.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
               <Link href="/demo" className="btn-primary">Try the live demo →</Link>
               <Link href="/savings" className="btn-secondary">Calculate your savings</Link>
             </div>
             <p className="text-xs text-[color:var(--muted)] mt-6">
-              Live in production at A&amp;C Auto Clinic, San Francisco.
+              Live at A&amp;C Auto Clinic — Frank&apos;s shop in Bayview, San Francisco.
             </p>
           </div>
 

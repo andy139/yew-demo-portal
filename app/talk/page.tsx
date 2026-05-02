@@ -3,7 +3,7 @@ import BookingButtons from "@/components/BookingButtons";
 
 export const metadata = {
   title: "Talk to us — Yew",
-  description: "Three doors: pilot your shop, become a partner, or talk to investors.",
+  description: "Two doors: pilot your shop, or become a partner.",
 };
 
 export default function Page() {
@@ -11,7 +11,7 @@ export default function Page() {
     <div className="max-w-6xl mx-auto px-6 py-20">
       <p className="label mb-6">Talk to us</p>
       <h1 className="font-display text-4xl md:text-6xl leading-tight max-w-3xl">
-        Three doors. <em className="italic text-[color:var(--secondary)]">Pick the one that fits.</em>
+        Two doors. <em className="italic text-[color:var(--secondary)]">Pick the one that fits.</em>
       </h1>
       <p className="text-lg text-[color:var(--muted)] mt-6 max-w-2xl">
         Every form goes to Andy directly. Replies usually within a business day, Pacific time.
@@ -35,7 +35,7 @@ export default function Page() {
           </a>
         </p>
         <p className="text-[color:var(--muted)] mt-2 text-sm">
-          Mention which door you&apos;re coming through (shop · partner · investor) so I can route the reply.
+          Mention which door you&apos;re coming through (shop · partner) so I can route the reply.
         </p>
       </div>
     </div>
