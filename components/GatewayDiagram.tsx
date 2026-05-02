@@ -23,11 +23,15 @@ function nowStr() {
 export default function GatewayDiagram() {
   const [packets, setPackets] = useState<Packet[]>([]);
   const [log, setLog] = useState<LogRow[]>([]);
+  const cardRef = useRef<HTMLDivElement | null>(null);
   const idRef = useRef(0);
   const logIdRef = useRef(0);
 
   useEffect(() => {
+    const el = cardRef.current;
+    if (!el) return;
     let cancelled = false;
+    let started = false;
     const timers: ReturnType<typeof setTimeout>[] = [];
 
     function drop() {
@@ -53,15 +57,30 @@ export default function GatewayDiagram() {
       timers.push(setTimeout(drop, 3200 + Math.random() * 1800));
     }
 
-    timers.push(setTimeout(drop, 800));
+    const io = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting && !started) {
+          started = true;
+          io.disconnect();
+          // First packet flies the moment the user lands on the diagram —
+          // 350ms feels like the diagram is reacting to the user, not the
+          // clock. Subsequent packets drop on the natural 3.2-5s cadence.
+          timers.push(setTimeout(drop, 350));
+        }
+      },
+      { threshold: 0.25 },
+    );
+    io.observe(el);
+
     return () => {
       cancelled = true;
+      io.disconnect();
       timers.forEach((t) => clearTimeout(t));
     };
   }, []);
 
   return (
-    <div className="diagram-card">
+    <div className="diagram-card" ref={cardRef}>
       <div className="diagram-head">
         <span className="label">Floor diagram · live</span>
         <div className="diagram-meta">
