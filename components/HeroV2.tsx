@@ -80,7 +80,7 @@ export default function HeroV2() {
                       {w.t}
                     </span>
                   </span>
-                  {w.br ? <br /> : " "}
+                  {w.br ? <br className="hero-br-md" /> : " "}
                 </span>
               ))}
             </h1>

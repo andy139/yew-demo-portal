@@ -321,6 +321,9 @@ h1, h2, h3, h4, .font-display {
   font-style: italic;
   color: var(--secondary);
 }
+@media (max-width: 720px) {
+  .hero-h1-v2 .hero-br-md { display: none; }
+}
 
 .hero-stat {
   display: flex;
@@ -507,6 +510,13 @@ h1, h2, h3, h4, .font-display {
   overflow: hidden;
   box-shadow: 0 30px 60px -30px rgba(26,26,26,0.18);
 }
+@media (max-width: 720px) {
+  .pin-canvas {
+    aspect-ratio: auto;
+    height: min(78vh, 620px);
+    width: 92vw;
+  }
+}
 .pin-frame {
   position: absolute;
   inset: 0;
@@ -515,6 +525,9 @@ h1, h2, h3, h4, .font-display {
   opacity: 0;
   transition: opacity 240ms var(--ease-out);
   padding: 40px;
+}
+@media (max-width: 720px) {
+  .pin-frame { padding: 56px 18px 64px; }
 }
 .pin-frame.is-on { opacity: 1; }
 .pin-progress {
@@ -687,7 +700,7 @@ h1, h2, h3, h4, .font-display {
 }
 .wo-glow {
   position: absolute;
-  inset: -32px;
+  inset: -8px;
   background: radial-gradient(
     60% 60% at 70% 30%,
     color-mix(in oklab, var(--accent) 30%, transparent) 0%,
@@ -698,7 +711,6 @@ h1, h2, h3, h4, .font-display {
   pointer-events: none;
   opacity: 0.9;
 }
-@media (max-width: 900px) { .wo-glow { inset: -8px; } }
 
 .wo-card {
   position: relative;
