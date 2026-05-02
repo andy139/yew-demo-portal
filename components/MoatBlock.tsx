@@ -41,15 +41,15 @@ export default function MoatBlock() {
             </span>
             <ul className="compare-list">
               <li>
-                <span>Mitchell1 SE</span>
+                <span><span className="cmp-mark cmp-x" aria-hidden>×</span>Mitchell1 SE</span>
                 <span className="right">back-office walk required</span>
               </li>
               <li>
-                <span>Tekmetric / Shopmonkey</span>
+                <span><span className="cmp-mark cmp-x" aria-hidden>×</span>Tekmetric / Shopmonkey</span>
                 <span className="right">tablet-bound, one terminal per tablet</span>
               </li>
               <li className="is-yew">
-                <span>yew.</span>
+                <span><span className="cmp-mark cmp-check" aria-hidden>✓</span>yew.</span>
                 <span className="right">any computer drives any terminal</span>
               </li>
             </ul>

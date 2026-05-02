@@ -17,6 +17,11 @@ export default function Page() {
           <em className="display-em">yew.</em> was built around one specific workflow problem at one specific auto shop.
         </h1>
 
+        <figure className="story-photo">
+          <div className="story-photo-slot" data-slot="exterior" />
+          <figcaption>A&amp;C Auto Clinic — Bayview, SF.</figcaption>
+        </figure>
+
         <p>
           A&amp;C Auto Clinic, Bayview, San Francisco. Frank&apos;s shop. A 2014 Camry rolls in at eight in the morning with a brake job. By noon the work is done and the customer is back at the counter. ShopMonkey is open on the laptop in the back office. The PAX A80 card terminal sits next to the receipt printer. The two are not talking to each other.
         </p>
@@ -32,6 +37,11 @@ export default function Page() {
           <li>Run the card. Wait. Print the receipt.</li>
           <li>Walk back to ShopMonkey and mark the work order paid.</li>
         </ol>
+
+        <figure className="story-photo">
+          <div className="story-photo-slot" data-slot="counter-setup" />
+          <figcaption>The counter. PAX A80, laptop, calculator. Two screens that don&apos;t talk.</figcaption>
+        </figure>
 
         <p>Seven steps. Two screens. One calculator. Every customer.</p>
 
@@ -51,6 +61,11 @@ export default function Page() {
           The most common end-of-day at A&amp;C, long before I ever sat behind that counter, was a sentence that started with &ldquo;I think we&apos;re <MagicNumber>$42</MagicNumber> off somewhere.&rdquo;
         </p>
 
+        <figure className="story-photo">
+          <div className="story-photo-slot" data-slot="kitchen-table" />
+          <figcaption>Receipts, deposit slip, the &ldquo;$42 off&rdquo; notebook line. Every night.</figcaption>
+        </figure>
+
         <p>
           The note went into a notebook. Nobody ever found the $42. Frank&apos;s been a mechanic for over thirty years and running A&amp;C on that workflow for over a decade.
         </p>
@@ -63,6 +78,11 @@ export default function Page() {
           A&amp;C couldn&apos;t take the easy way out without giving up margin. So the typing continued.
         </p>
 
+        <figure className="story-photo">
+          <div className="story-photo-slot" data-slot="yew-console" />
+          <figcaption>The yew. console at A&amp;C — one screen, one tap, charge fires to the bay.</figcaption>
+        </figure>
+
         <p>
           yew. threads the needle: ShopMonkey integration without the ShopMonkey markup. The cashier picks the work order in yew., picks <em className="italic">cash</em> or <em className="italic">card</em>, and the price recalculates correctly: discount applied, tax aligned, no calculator. The terminal lives on the network, not glued to one machine, so any computer in the shop can charge any bay&apos;s PAX A80. The end-of-day report reconciles itself, because both sides of the report came from the same system.
         </p>
@@ -72,7 +92,7 @@ export default function Page() {
         </p>
 
         <p>
-          Andy sat behind that counter for less than three months. Long enough to ring up a couple hundred customers. Long enough to do the cash-discount math by hand more times than anyone should. Long enough to see that the shop owner, Frank, shouldn&apos;t still be doing it on his own a decade in.
+          Andy rang up a couple hundred customers at that counter before he&apos;d had enough. Enough of the cash-discount math. Enough of typing the same number into two systems. Enough of watching Frank, the shop owner, keep doing it alone a decade in.
         </p>
 
         <p>
@@ -84,6 +104,11 @@ export default function Page() {
         </p>
 
         <p style={{ color: "var(--muted)", fontStyle: "italic", marginTop: 32 }}>— Andy, founder</p>
+
+        <figure className="story-photo story-photo-closer">
+          <div className="story-photo-slot" data-slot="ac-streetscape" />
+          <figcaption>A&amp;C, on the block in Bayview.</figcaption>
+        </figure>
       </article>
 
       <div className="max-w-6xl mx-auto px-6">

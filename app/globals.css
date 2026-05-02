@@ -1204,6 +1204,31 @@ body { padding-bottom: 80px; }
 }
 .compare-list .right { color: var(--muted); text-align: right; }
 
+/* Win/loss prefix marks for compare-list rows. Phone scrollers parse the
+   visual signal in <100ms, before they even read the row label. */
+.cmp-mark {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 18px;
+  height: 18px;
+  margin-right: 10px;
+  border-radius: 50%;
+  font-family: var(--font-body), sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1;
+  vertical-align: -3px;
+}
+.cmp-mark.cmp-x {
+  background: color-mix(in oklab, var(--muted) 12%, transparent);
+  color: var(--muted);
+}
+.cmp-mark.cmp-check {
+  background: var(--accent);
+  color: var(--text);
+}
+
 /* Three CTA strip ------------------------------------------------ */
 .three-cta {
   border-top: 1px solid var(--rule);
@@ -1598,6 +1623,51 @@ body { padding-bottom: 80px; }
 .magic-num.is-pop {
   color: var(--accent-deep);
   transform: scale(2.4);
+}
+
+/* Story photo placeholders — Andy will swap each .story-photo-slot for
+   a real <Image>. The dashed border + label communicates "intentional
+   blank, not a broken render" and indicates what photo goes there. */
+.story-photo {
+  margin: 36px 0 32px;
+}
+.story-photo figcaption {
+  margin-top: 10px;
+  font-family: var(--font-mono), monospace;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  font-size: 11px;
+  color: var(--muted);
+  text-align: center;
+}
+.story-photo-slot {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  border: 1px dashed var(--rule);
+  border-radius: 14px;
+  background: var(--bg-deep);
+  overflow: hidden;
+}
+.story-photo-slot::before {
+  content: "PHOTO · " attr(data-slot);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: var(--font-mono), monospace;
+  text-transform: uppercase;
+  letter-spacing: 0.22em;
+  font-size: 11px;
+  color: var(--muted);
+  white-space: nowrap;
+}
+.story-photo-closer .story-photo-slot {
+  aspect-ratio: 16 / 9;
+}
+@media (max-width: 720px) {
+  .story-photo { margin: 28px 0; }
+  .story-photo-slot { aspect-ratio: 3 / 2; }
 }
 
 /* Demo page ------------------------------------------------------ */
