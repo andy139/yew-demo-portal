@@ -17,13 +17,13 @@ const blocks = [
     label: "White-label hooks",
     title: "Your brand on the front, our stack underneath.",
     body:
-      "The cashier console, customer-facing display, and reconciliation reports all support partner-branded skinning. We&apos;re not trying to be a consumer brand. we&apos;re a counter-side payments stack other people can stand in front of.",
+      "The cashier console, customer-facing display, and reconciliation reports all support partner-branded skinning. We're not trying to be a consumer brand. We're a counter-side payments stack other people can stand in front of.",
   },
   {
-    label: "Processor-agnostic",
-    title: "Year-0 FAPS. Year-2 Finix-graduation is a config flip.",
+    label: "Built to graduate processors",
+    title: "Year-0 FAPS. Year-2 we want Finix.",
     body:
-      "Yew is processor-agnostic at the architecture level. We start on FAPS because that&apos;s where the volume is. but graduating to Finix at scale is a config flip, not a rebuild. That&apos;s deliberate hedging against any single processor's reputational tail.",
+      "Today, Yew is FAPS-only. We resell because volume and paperwork are easier in Year 0. The architecture — POSLink to the terminal plus a thin processor adapter — is set up so graduating to Finix later is meant to be a config change, not a rebuild. That's the plan; we're honest it isn't proven yet.",
   },
 ];
 
@@ -63,7 +63,7 @@ export default function Page() {
           <ul className="space-y-3 text-sm">
             <li className="flex gap-3"><span className="text-[color:var(--secondary)]">·</span><span>Counter-side cashier console. not another tablet POS</span></li>
             <li className="flex gap-3"><span className="text-[color:var(--secondary)]">·</span><span>Multi-bay terminal coverage on a single LAN gateway</span></li>
-            <li className="flex gap-3"><span className="text-[color:var(--secondary)]">·</span><span>FAPS resold today; Finix graduation at ~50 shops</span></li>
+            <li className="flex gap-3"><span className="text-[color:var(--secondary)]">·</span><span>FAPS-only today; Finix graduation is the architectural goal</span></li>
             <li className="flex gap-3"><span className="text-[color:var(--secondary)]">·</span><span>Built on PAX POSLink SDK · Semi-Integrated architecture · PCI scope-reduced</span></li>
             <li className="flex gap-3"><span className="text-[color:var(--secondary)]">·</span><span>Live in production with a paying shop, San Francisco</span></li>
           </ul>
