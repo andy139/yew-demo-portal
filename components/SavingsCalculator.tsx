@@ -86,7 +86,11 @@ function MagneticBtn({
 }
 
 export default function SavingsCalculator() {
-  const [volume, setVolume] = useState("80000");
+  // Defaults align with the homepage hero claim: $100k/mo on 2.7% effective
+  // = $10,800/yr saved at the 1.8% IC+ benchmark. So a shop owner who
+  // tapped the calculator from the hero sees the same number that hooked
+  // them — continuity + trust. They can adjust to their own statement.
+  const [volume, setVolume] = useState("100000");
   const [ticket, setTicket] = useState("750");
   const [rate, setRate] = useState("2.7");
 
