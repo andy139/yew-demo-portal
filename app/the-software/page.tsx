@@ -55,7 +55,7 @@ export default function Page() {
     <div className="max-w-6xl mx-auto px-6 py-20">
       <p className="label mb-6">The software</p>
       <h1 className="font-display text-4xl md:text-6xl leading-tight max-w-4xl">
-        Six steps. <em className="italic text-[color:var(--secondary)]">A full day on the floor.</em>
+        Six steps. A full day on the floor.
       </h1>
       <p className="text-lg text-[color:var(--muted)] mt-6 max-w-2xl">
         A guided tour. every screen a cashier touches between opening the doors and closing the batch.
