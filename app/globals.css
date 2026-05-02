@@ -794,6 +794,36 @@ h1, h2, h3, h4, .font-display {
   z-index: 1;
 }
 
+/* Linear-style ambient shimmer — 1px tall custard gradient slides across
+   the top of the live work-order card every 6s. The single ambient-
+   motion technique cited in research as the 'alive software' signal. */
+.wo-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -40%;
+  height: 1px;
+  width: 40%;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    color-mix(in oklab, var(--accent) 65%, transparent) 50%,
+    transparent 100%
+  );
+  pointer-events: none;
+  z-index: 2;
+  animation: wo-shimmer 6s var(--ease-in-out) infinite;
+}
+@keyframes wo-shimmer {
+  0%   { transform: translateX(0); opacity: 0; }
+  20%  { opacity: 1; }
+  80%  { opacity: 1; }
+  100% { transform: translateX(350%); opacity: 0; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .wo-card::before { animation: none; opacity: 0; }
+}
+
 .wo-head {
   padding: 12px 18px;
   border-bottom: 1px solid var(--rule);
