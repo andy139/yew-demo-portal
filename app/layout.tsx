@@ -4,6 +4,8 @@ import "./globals.css";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
 import ThreeCTAStrip from "@/components/ThreeCTAStrip";
+import CursorFollower from "@/components/CursorFollower";
+import PageWipe from "@/components/PageWipe";
 
 const fraunces = Fraunces({
   variable: "--font-display",
@@ -48,6 +50,8 @@ export default function RootLayout({
       className={`${fraunces.variable} ${inter.variable} ${jetbrains.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">
+        <PageWipe />
+        <CursorFollower />
         <Nav />
         <main className="flex-1">{children}</main>
         <ThreeCTAStrip />

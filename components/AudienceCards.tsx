@@ -1,4 +1,7 @@
+"use client";
+
 import Link from "next/link";
+import InView from "./InView";
 
 const cards = [
   {
@@ -23,36 +26,37 @@ const cards = [
 
 export default function AudienceCards() {
   return (
-    <section className="max-w-6xl mx-auto px-6 py-24">
-      <div className="flex items-end justify-between mb-10 gap-6">
-        <div>
-          <p className="label mb-3">Who Yew is for</p>
-          <h2 className="font-display text-3xl md:text-5xl max-w-2xl">
-            Family-run shops, the partners who serve them, the investors who back them.
-          </h2>
-        </div>
-        <p className="hidden md:block text-sm text-[color:var(--muted)] max-w-xs">
-          Three doors. Same shop. Pick the one that fits.
-        </p>
-      </div>
-
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-        {cards.map((c) => (
-          <Link
-            key={c.href}
-            href={c.href}
-            className="group p-7 rounded-2xl border border-[color:var(--rule)] hover:border-[color:var(--text)] bg-white transition-all hover:-translate-y-0.5"
-          >
-            <p className="label mb-4">{c.eyebrow}</p>
-            <p className="font-display text-2xl mb-4 leading-snug">{c.title}</p>
-            <p className="text-sm text-[color:var(--muted)] mb-6">{c.body}</p>
-            <span className="text-sm font-medium text-[color:var(--text)] inline-flex items-center gap-1">
-              Read more
-              <span className="group-hover:translate-x-1 transition-transform">→</span>
-            </span>
-          </Link>
-        ))}
-      </div>
-    </section>
+    <InView className="max-w-6xl mx-auto px-6 section">
+      {(audIn) => (
+        <>
+          <div className="section-head">
+            <div>
+              <span className="label">Who Yew is for</span>
+              <h2 className="section-h2">
+                Family-run shops, the partners who serve them, the investors who back them.
+              </h2>
+            </div>
+            <p className="section-meta">Three doors. Same shop. Pick the one that fits.</p>
+          </div>
+          <div className="audience-grid">
+            {cards.map((c) => (
+              <Link
+                key={c.href}
+                href={c.href}
+                className={`aud-card ${audIn ? "is-in" : ""}`}
+              >
+                <span className="aud-eye">{c.eyebrow}</span>
+                <p className="aud-title">{c.title}</p>
+                <p className="aud-body">{c.body}</p>
+                <span className="aud-arrow">
+                  Read more <span className="arrow">→</span>
+                </span>
+                <span className="underline-draw" />
+              </Link>
+            ))}
+          </div>
+        </>
+      )}
+    </InView>
   );
 }

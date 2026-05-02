@@ -1,87 +1,119 @@
 "use client";
 
-import { motion, AnimatePresence } from "motion/react";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
-const steps = [
-  { id: 0, label: "Created", time: "12:14p", line: "RO #4127 · M. Hernandez 2018 Camry" },
-  { id: 1, label: "Charged", time: "12:14p", line: "Brake job + alignment · $487.50" },
-  { id: 2, label: "Approved", time: "12:14p", line: "→ Bay 2 terminal · approved" },
-  { id: 3, label: "Settled", time: "next day", line: "Settled to FAPS · Interchange-Plus" },
+const items = [
+  { line: "RO #4127 · M. Hernandez 2018 Camry", step: "Created", time: "12:14p" },
+  { line: "Brake job + alignment · $487.50", step: "Charged", time: "12:14p" },
+  { line: "→ Bay 2 terminal · approved ✓", step: "Approved", time: "12:14p" },
+  { line: "Settled to FAPS · Interchange-Plus", step: "Settled", time: "next day" },
 ];
 
 export default function HeroWorkOrder() {
-  const [active, setActive] = useState(0);
+  const [tick, setTick] = useState(0);
+  const [loop, setLoop] = useState(0);
+  const [pulseIdx, setPulseIdx] = useState(-1);
+  const [total, setTotal] = useState(0);
+  const offsets = useRef([0, 80, -60, 120]);
 
   useEffect(() => {
-    const t = setInterval(() => {
-      setActive((a) => (a + 1) % (steps.length + 1));
-    }, 1500);
-    return () => clearInterval(t);
+    let cancelled = false;
+    const timers: ReturnType<typeof setTimeout>[] = [];
+
+    function runLoop(loopNum: number) {
+      const off = offsets.current[loopNum % 4];
+      setTick(0);
+      setTotal(0);
+      setPulseIdx(-1);
+
+      timers.push(setTimeout(() => !cancelled && setTick(1), 800 + off));
+      timers.push(setTimeout(() => !cancelled && setTick(2), 1700 + off));
+      timers.push(
+        setTimeout(() => {
+          if (cancelled) return;
+          setTick(3);
+          setPulseIdx(2);
+          timers.push(setTimeout(() => setPulseIdx(-1), 700));
+        }, 2600 + off),
+      );
+      timers.push(setTimeout(() => !cancelled && setTick(4), 3700 + off));
+
+      timers.push(
+        setTimeout(() => {
+          if (cancelled) return;
+          const start = performance.now();
+          const target = 487.5;
+          const step = (now: number) => {
+            if (cancelled) return;
+            const t = Math.min(1, (now - start) / 800);
+            const eased = 1 - Math.pow(1 - t, 3);
+            setTotal(target * eased);
+            if (t < 1) requestAnimationFrame(step);
+            else setTotal(target);
+          };
+          requestAnimationFrame(step);
+        }, 1700 + off),
+      );
+
+      timers.push(
+        setTimeout(() => {
+          if (cancelled) return;
+          setLoop((l) => l + 1);
+          runLoop(loopNum + 1);
+        }, 6800 + off),
+      );
+    }
+
+    runLoop(0);
+    return () => {
+      cancelled = true;
+      timers.forEach((t) => clearTimeout(t));
+    };
   }, []);
 
   return (
-    <div className="relative w-full">
-      <div className="absolute -inset-6 bg-gradient-to-br from-[color:var(--accent)]/20 via-transparent to-transparent blur-2xl" aria-hidden />
-      <div className="relative bg-white rounded-2xl border border-[color:var(--rule)] shadow-[0_1px_0_0_rgba(0,0,0,0.04),0_8px_24px_-12px_rgba(26,26,26,0.18)] overflow-hidden">
-        <div className="px-5 py-3 border-b border-[color:var(--rule)] flex items-center justify-between bg-[color:var(--bg)]/40">
-          <div className="flex items-center gap-2">
-            <span className="w-2 h-2 rounded-full bg-[color:var(--accent)]" />
-            <span className="label !text-[10px]">Work order · Bay 2</span>
+    <div className="wo-wrap">
+      <div className="wo-glow" aria-hidden />
+      <div className="wo-card">
+        <div className="wo-head">
+          <div className="wo-head-left">
+            <span className="wo-dot" />
+            <span className="label" style={{ fontSize: 10 }}>Work order · Bay 2</span>
           </div>
-          <span className="label !text-[10px]">Live</span>
+          <span className="label" style={{ fontSize: 10 }}>Live · loop {loop + 1}</span>
         </div>
-
-        <div className="p-6">
-          <p className="font-display text-xl text-[color:var(--text)]">
-            RO #4127 <span className="text-[color:var(--muted)] text-base">· M. Hernandez</span>
-          </p>
-          <p className="text-sm text-[color:var(--muted)] mt-1">2018 Camry · LIC 8XYE423</p>
-
-          <ul className="mt-6 space-y-3">
-            {steps.map((s, i) => {
-              const isActive = active >= i;
+        <div className="wo-body">
+          <div className="wo-ro">
+            RO #4127 <span className="muted">· M. Hernandez</span>
+          </div>
+          <div className="wo-meta">2018 Camry · LIC 8XYE423</div>
+          <ul className="wo-list">
+            {items.map((s, i) => {
+              const on = tick > i;
+              const pulse = pulseIdx === i;
               return (
-                <li key={s.id} className="flex items-start gap-3">
-                  <motion.span
-                    initial={false}
-                    animate={{
-                      backgroundColor: isActive ? "var(--accent)" : "transparent",
-                      borderColor: isActive ? "var(--accent)" : "var(--rule)",
-                    }}
-                    className="mt-1.5 w-3 h-3 rounded-full border flex-shrink-0"
-                  />
-                  <div className="flex-1 min-w-0">
-                    <div className="flex items-baseline justify-between gap-3">
-                      <p className="font-medium text-[color:var(--text)] truncate">
-                        {s.line}
-                      </p>
-                      <AnimatePresence mode="wait">
-                        {isActive && (
-                          <motion.span
-                            key="time"
-                            initial={{ opacity: 0, y: -2 }}
-                            animate={{ opacity: 1, y: 0 }}
-                            exit={{ opacity: 0 }}
-                            className="label !text-[10px] !text-[color:var(--secondary)] flex-shrink-0"
-                          >
-                            ✓ {s.time}
-                          </motion.span>
-                        )}
-                      </AnimatePresence>
-                    </div>
-                    <p className="text-xs text-[color:var(--muted)] mt-0.5">
-                      {s.label}
-                    </p>
+                <li
+                  key={i}
+                  className={`wo-item ${on ? "is-on" : ""} ${pulse ? "is-pulse" : ""}`}
+                >
+                  <span className="wo-bullet" />
+                  <div>
+                    <div className="wo-line">{s.line}</div>
+                    <div className="wo-step">{s.step}</div>
                   </div>
+                  <span className="wo-time">✓ {s.time}</span>
                 </li>
               );
             })}
           </ul>
-
-          <div className="mt-6 pt-5 border-t border-[color:var(--rule)] flex items-center justify-between text-sm">
+          <div className="wo-rail">
+            {[0, 1, 2, 3].map((i) => (
+              <span key={i} className={tick > i ? "is-on" : ""} />
+            ))}
+          </div>
+          <div className="wo-total">
             <span className="label">Total</span>
-            <span className="font-display text-2xl">$487.50</span>
+            <span className="wo-total-amt">${total.toFixed(2)}</span>
           </div>
         </div>
       </div>
