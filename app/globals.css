@@ -967,6 +967,19 @@ h1, h2, h3, h4, .font-display {
   100% { transform: scale(3.2); opacity: 0; }
 }
 .trust-meta { font-size: 13px; color: var(--muted); margin-top: 4px; }
+.trust-partners-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 8px;
+}
+@media (max-width: 720px) {
+  .trust-partners-wrap { align-items: flex-start; }
+}
+.trust-partners-label {
+  font-size: 0.7rem;
+  letter-spacing: 0.22em;
+}
 .trust-partners {
   display: flex;
   flex-wrap: wrap;
