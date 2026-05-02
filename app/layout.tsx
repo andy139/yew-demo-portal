@@ -53,10 +53,11 @@ export default function RootLayout({
       className={`${instrumentSerif.variable} ${geist.variable} ${geistMono.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">
+        <a href="#main" className="skip-link">Skip to content</a>
         <ScrollProgress />
         <PageWipe />
         <Nav />
-        <main className="flex-1">{children}</main>
+        <main id="main" className="flex-1">{children}</main>
         <ThreeCTAStrip />
         <Footer />
         <BatchFoot />
