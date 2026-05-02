@@ -1004,6 +1004,15 @@ h1, h2, h3, h4, .font-display {
 }
 .section-meta { font-size: 14px; color: var(--muted); max-width: 26ch; }
 
+/* Subtle tonal zone for sections that need separation from page bg.
+   Anchors a shop-owner's eye on mobile so the page reads as zones, not
+   one infinite cream wall (kills the "false bottom" drop-off effect). */
+.zone-warm {
+  background: var(--bg-deep);
+  border-top: 1px solid var(--rule);
+  border-bottom: 1px solid var(--rule);
+}
+
 /* Audience cards ------------------------------------------------- */
 .audience-grid {
   display: grid;
@@ -1125,7 +1134,7 @@ h1, h2, h3, h4, .font-display {
 /* Three CTA strip ------------------------------------------------ */
 .three-cta {
   border-top: 1px solid var(--rule);
-  background: var(--bg);
+  background: var(--bg-deep);
 }
 .cta-grid {
   display: grid;
