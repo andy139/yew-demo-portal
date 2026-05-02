@@ -1,11 +1,13 @@
 import Link from "next/link";
 
 const links = [
-  { href: "/the-kit", label: "The Kit" },
-  { href: "/the-gateway", label: "The Gateway" },
-  { href: "/savings", label: "Savings" },
   { href: "/the-software", label: "Software" },
   { href: "/demo", label: "Live Demo" },
+  { href: "/savings", label: "Savings" },
+  { href: "/the-kit", label: "The Kit" },
+  { href: "/the-gateway", label: "The Gateway" },
+  { href: "/shops", label: "For shops" },
+  { href: "/partners", label: "For partners" },
   { href: "/story", label: "Story" },
 ];
 
@@ -19,7 +21,7 @@ export default function Nav() {
           </span>
           <span className="label hidden sm:inline">demo</span>
         </Link>
-        <nav className="hidden md:flex items-center gap-6 text-sm">
+        <nav className="hidden md:flex items-center gap-5 text-sm">
           {links.map((l) => (
             <Link
               key={l.href}

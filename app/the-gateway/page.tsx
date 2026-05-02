@@ -13,7 +13,7 @@ export default function Page() {
     <div className="max-w-6xl mx-auto px-6 py-20">
       <p className="label mb-6">The moat</p>
       <h1 className="font-display text-4xl md:text-6xl leading-tight max-w-4xl">
-        Charge from any bay. Reprint from the front counter. <em className="italic text-[color:var(--secondary)]">Reconcile from home.</em>
+        Charge from any bay. Reprint from the front counter. Reconcile from home.
       </h1>
       <p className="text-lg text-[color:var(--muted)] mt-6 max-w-2xl">
         Most software in this category puts the cashier on a tablet. Yew&apos;s gateway puts the terminals on the network: every PAX A80 in the shop is addressable from any computer on the LAN.
@@ -38,7 +38,7 @@ export default function Page() {
           <g>
             <rect x="350" y="150" width="120" height="60" rx="10" fill="#E8B84C" stroke="#D4A13A" strokeWidth="1.5" />
             <text x="410" y="175" textAnchor="middle" fontFamily="var(--font-mono), monospace" fontSize="9" fill="#1A1A1A" letterSpacing="2">YEW GATEWAY</text>
-            <text x="410" y="195" textAnchor="middle" fontFamily="var(--font-display), serif" fontSize="12" fill="#1A1A1A">LAN bridge</text>
+            <text x="410" y="195" textAnchor="middle" fontFamily="var(--font-display), serif" fontSize="12" fill="#1A1A1A">software</text>
           </g>
 
           {/* Connector counter -> gateway */}
@@ -76,7 +76,7 @@ export default function Page() {
           <p className="label mb-3">Tekmetric · Shopmonkey</p>
           <p className="font-display text-xl mb-2">Tablet-bound. One terminal per tablet.</p>
           <p className="text-sm text-[color:var(--muted)]">
-            Cashier UI lives on a tablet that pairs with one terminal. Need to charge from a different station? You don&apos;t.
+            Cashier UI lives on a tablet that pairs with one terminal. Charging from a different station means re-pairing, or a second tablet.
           </p>
         </div>
         <div className="rounded-2xl border-2 border-[color:var(--text)] bg-[color:var(--accent)]/10 p-7">

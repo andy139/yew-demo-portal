@@ -18,7 +18,7 @@ const panels = [
     title: "Yew gateway",
     sub: "Installer · runs on a computer you already own",
     body:
-      "The piece nobody else ships. Yew's gateway is software, not hardware. Run our installer on any always-on computer in the shop (desktop, mini-PC, the office machine) and it auto-detects the LAN, finds your A80s, registers them, and brings the cashier console online. Uptime tracks the host computer. Want set-it-and-forget-it? We'll ship a pre-imaged mini-PC. Most shops use what they have.",
+      "The piece most of this category misses. Yew's gateway is software, not hardware. Run our installer on any always-on computer in the shop (desktop, mini-PC, the office machine) and it auto-detects the LAN, finds your A80s, registers them, and brings the cashier console online. Uptime tracks the host computer. Want set-it-and-forget-it? We'll ship a pre-imaged mini-PC. Most shops use what they have.",
   },
   {
     label: "Software",
@@ -34,7 +34,7 @@ export default function Page() {
     <div className="max-w-6xl mx-auto px-6 py-20">
       <p className="label mb-6">The kit</p>
       <h1 className="font-display text-4xl md:text-6xl leading-tight max-w-4xl">
-        Two pieces of software. One piece of hardware. <em className="italic text-[color:var(--secondary)]">Installer-driven setup.</em>
+        Two pieces of software. One piece of hardware. Installer-driven setup.
       </h1>
       <p className="text-lg text-[color:var(--muted)] mt-6 max-w-2xl">
         The terminal is the only thing you have to buy from us. The gateway runs on a computer you already own.

@@ -23,7 +23,7 @@ export default function Home() {
               <Link href="/savings" className="btn-secondary">Calculate your savings</Link>
             </div>
             <p className="text-xs text-[color:var(--muted)] mt-6">
-              Live at A&amp;C Auto Clinic, San Francisco. <Link href="/story" className="underline decoration-[color:var(--secondary)] underline-offset-2 ml-1">Read the origin →</Link>
+              Live in production at A&amp;C Auto Clinic, San Francisco.
             </p>
           </div>
 

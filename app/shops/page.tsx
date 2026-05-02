@@ -63,7 +63,7 @@ export default function Page() {
           Already on ShopMonkey? <em className="italic text-[color:var(--secondary)]">Plug it into Yew.</em>
         </p>
         <p className="text-[color:var(--muted)] mt-4 max-w-2xl">
-          Yew connects to ShopMonkey via webhooks and API. Extra setup (we walk you through it), but once it&apos;s wired up, your most recent ShopMonkey work orders show up live in the Yew portal. The cashier picks the work order, picks cash or card, fires the charge. Refunds, batch closes, and reconciliations flow back to ShopMonkey automatically. No tab-switching, no double entry.
+          Yew connects to ShopMonkey over webhooks + API. We wire it up. Your recent work orders show up live in the Yew portal. Cashier picks the order, picks cash or card, fires the charge. Refunds, batch closes, and reconciliations flow back to ShopMonkey. No tab-switching. No double entry.
         </p>
         <p className="text-sm text-[color:var(--muted)] mt-4 max-w-2xl italic">
           (Shopmonkey-on-its-own works fine. The integration is for shops that want both dashboards in one place.)

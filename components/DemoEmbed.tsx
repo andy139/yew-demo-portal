@@ -30,10 +30,10 @@ export default function DemoEmbed() {
           <p className="label mb-3">Status</p>
           <h2 className="font-display text-3xl mb-3">Live demo is deploying.</h2>
           <p className="text-[color:var(--muted)] max-w-lg mx-auto">
-            The sandboxed cashier console + mock A80 simulator are spinning up on Vercel + Fly.io. Watch this space. or skip the wait and book a guided walkthrough.
+            The sandboxed cashier console + mock A80 simulator are spinning up on Vercel + Fly.io. Check back shortly, or book a guided walkthrough now.
           </p>
           <div className="mt-6 flex flex-wrap gap-3 justify-center">
-            <a href="/talk?audience=investor" className="btn-primary">Book a guided demo →</a>
+            <a href="/talk?audience=shop" className="btn-primary">Book a guided demo →</a>
             <a href="/the-software" className="btn-secondary">See the software tour</a>
           </div>
         </div>
