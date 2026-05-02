@@ -5,16 +5,22 @@ const ctas = [
     href: "/talk?audience=shop",
     title: "Pilot your shop",
     sub: "Drop-in setup. No reader rental.",
+    stat: "30 min",
+    statLabel: "to first sale",
   },
   {
     href: "/talk?audience=partner",
     title: "Become a partner",
     sub: "FAPS reps and hardware resellers.",
+    stat: "0",
+    statLabel: "deal-reg conflicts",
   },
   {
     href: "/talk?audience=investor",
     title: "Set up a call",
     sub: "Vertical SaaS with payments built in.",
+    stat: "6%",
+    statLabel: "Toast at IPO",
   },
 ];
 
@@ -34,6 +40,10 @@ export default function ThreeCTAStrip() {
               </div>
               <p className="cta-title">{c.title}</p>
               <p className="cta-sub">{c.sub}</p>
+              <div className="cta-stat">
+                <span className="cta-stat-num"><em>{c.stat}</em></span>
+                <span className="cta-stat-lbl">{c.statLabel}</span>
+              </div>
               <span className="corner-arrow">→</span>
             </Link>
           ))}

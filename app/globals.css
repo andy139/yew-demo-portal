@@ -1426,6 +1426,37 @@ body { padding-bottom: 80px; }
 }
 .cta-card:hover .corner-arrow { color: var(--text); transform: translateX(4px); }
 
+/* Inline stat under each three-cta card — surfaces the same anchor
+   number that crystallizes the matching subpage. Reinforces the
+   audience pitch in one repeated number. */
+.cta-stat {
+  margin-top: 22px;
+  padding-top: 14px;
+  border-top: 1px solid var(--rule);
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+}
+.cta-stat-num {
+  font-family: var(--font-display), Georgia, serif;
+  font-size: 28px;
+  line-height: 1;
+  letter-spacing: -0.025em;
+  font-variant-numeric: tabular-nums;
+  color: var(--text);
+}
+.cta-stat-num em {
+  font-style: italic;
+  color: var(--secondary);
+}
+.cta-stat-lbl {
+  font-family: var(--font-mono), monospace;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  font-size: 10px;
+  color: var(--muted);
+}
+
 /* Footer --------------------------------------------------------- */
 .foot {
   border-top: 1px solid var(--rule);
