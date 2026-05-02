@@ -9,6 +9,9 @@ export default function TrustStrip() {
             <p className="font-display text-lg">
               <span className="text-[color:var(--secondary)] italic">Bay Area</span> auto shops.
             </p>
+            <p className="text-sm text-[color:var(--muted)] mt-2">
+              San Francisco natives, building locally.
+            </p>
           </div>
           <div className="flex flex-wrap gap-x-6 gap-y-2 items-center">
             {partners.map((p) => (
