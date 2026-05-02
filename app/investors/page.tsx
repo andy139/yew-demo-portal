@@ -70,7 +70,7 @@ export default function Page() {
       </div>
 
       <div className="mt-16 flex flex-wrap gap-3">
-        <Link href="/talk?audience=investor" className="btn-primary">Talk to us →</Link>
+        <Link href="/talk?audience=investor" className="btn-primary">Set up a call →</Link>
         <Link href="/story" className="btn-secondary">Read the origin</Link>
       </div>
     </div>

@@ -18,8 +18,8 @@ const LINKS = {
     cta: "Open the partner form →",
   },
   investor: {
-    title: "Talk to investors",
-    sub: "Vertical SaaS with payments built in. 30-minute walkthrough.",
+    title: "Set up a call",
+    sub: "Vertical SaaS with payments built in. 30-minute walkthrough of where Yew is and where it's going.",
     href: "https://calendly.com/yew/investor",
     cta: "Book on the calendar →",
   },

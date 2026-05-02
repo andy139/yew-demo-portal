@@ -15,7 +15,7 @@ const ctas = [
   },
   {
     href: "/talk?audience=investor",
-    title: "Talk to investors",
+    title: "Set up a call",
     sub: "Vertical SaaS with payments built in.",
     icon: "chart",
   },
