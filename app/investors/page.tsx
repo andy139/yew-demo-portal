@@ -18,6 +18,13 @@ export default function Page() {
         The independent auto repair industry in the US is roughly 250,000 shops. Most are family-run. Most are on software they bought a decade ago. Toast did this for restaurants. yew. is doing it for the wrench-side of Main Street.
       </p>
 
+      <div className="subpage-stat">
+        <div className="num"><em>6%</em></div>
+        <div className="cap">
+          <strong>Toast&apos;s US restaurant penetration when it IPO&apos;d.</strong> Auto repair sits at near-zero today. The wedge is the rest of the industry, and yew. is the only stack purpose-built for the wrench-side counter.
+        </div>
+      </div>
+
       <Reveal threshold={0.15}>
       {/* Wedge */}
       <div className="mt-16 rounded-2xl border border-[color:var(--rule)] bg-white p-8 md:p-10">
