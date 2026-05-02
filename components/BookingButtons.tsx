@@ -9,19 +9,19 @@ const LINKS = {
     title: "Pilot your shop",
     sub: "Drop-in for FAPS-eligible family auto shops. We do the migration. You keep the counter running.",
     href: "https://tally.so/r/yew-pilot",
-    cta: "Open the pilot form →",
+    cta: "Open the pilot form",
   },
   partner: {
     title: "Become a partner",
     sub: "FAPS reps and hardware resellers, let's talk reseller economics + white-label hooks.",
     href: "https://tally.so/r/yew-partner",
-    cta: "Open the partner form →",
+    cta: "Open the partner form",
   },
   investor: {
     title: "Set up a call",
     sub: "Vertical SaaS with payments built in. 30-minute walkthrough of where Yew is and where it's going.",
     href: "https://calendly.com/yew/investor",
-    cta: "Book on the calendar →",
+    cta: "Book on the calendar",
   },
 } as const;
 
