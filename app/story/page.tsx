@@ -75,7 +75,7 @@ export default function Page() {
           The first version of Yew was for Frank: one shop, one cashier, one calculator we wanted to throw out a window. A&amp;C is customer zero. The next 50 are other family-run mechanic shops. Yew is the company that ships software for them.
         </p>
         <p>
-          We&apos;re San Francisco natives. Yew is built here, for shops here. This isn&apos;t a YC pitch deck and it&apos;s not an AI vibes-coded MVP. It&apos;s a software company. Family-run. Local. Talking to shop owners on their floor, not their LinkedIn.
+          Born and raised in San Francisco. Family ran. Yew is built here, for shops here. This isn&apos;t a YC pitch deck and it&apos;s not an AI vibes-coded MVP. It&apos;s a software company talking to shop owners on their floor, not their LinkedIn.
         </p>
       </div>
 

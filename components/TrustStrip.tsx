@@ -10,7 +10,7 @@ export default function TrustStrip() {
               <span className="text-[color:var(--secondary)] italic">Bay Area</span> auto shops.
             </p>
             <p className="text-sm text-[color:var(--muted)] mt-2">
-              San Francisco natives, building locally.
+              Born and raised in San Francisco. Family ran.
             </p>
           </div>
           <div className="flex flex-wrap gap-x-6 gap-y-2 items-center">
