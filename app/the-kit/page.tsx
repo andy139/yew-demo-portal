@@ -46,6 +46,13 @@ export default function Page() {
         The terminal is the only thing you have to buy from us. The gateway runs on a computer you already own.
       </p>
 
+      <div className="subpage-stat">
+        <div className="num"><em>3</em></div>
+        <div className="cap">
+          <strong>pieces in the kit.</strong> The PAX A80 (terminal), the gateway installer, the browser console. Two of three are software. The terminal is the only thing you have to buy.
+        </div>
+      </div>
+
       <div className="mt-16 grid md:grid-cols-3 gap-6">
         {panels.map((p, i) => (
           <Reveal key={p.title} delay={i * 90} threshold={0.15}>
