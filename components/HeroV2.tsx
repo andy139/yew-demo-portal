@@ -20,6 +20,7 @@ const SAVINGS_TARGET = 10800;
 export default function HeroV2() {
   const [isIn, setIsIn] = useState(false);
   const [savings, setSavings] = useState(0);
+  const [settled, setSettled] = useState(false);
   const statRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
@@ -43,8 +44,16 @@ export default function HeroV2() {
           const t = Math.min(1, (now - start) / duration);
           const eased = 1 - Math.pow(1 - t, 3);
           setSavings(Math.round(SAVINGS_TARGET * eased));
-          if (t < 1) raf = requestAnimationFrame(step);
-          else setSavings(SAVINGS_TARGET);
+          if (t < 1) {
+            raf = requestAnimationFrame(step);
+          } else {
+            setSavings(SAVINGS_TARGET);
+            // Settle pulse — brief scale + custard color flash on the
+            // count-up's landing beat. Removes after 800ms so the number
+            // returns to its resting style.
+            setSettled(true);
+            setTimeout(() => setSettled(false), 800);
+          }
         }
         raf = requestAnimationFrame(step);
       },
@@ -85,7 +94,9 @@ export default function HeroV2() {
 
             <div className="hero-stat" ref={statRef}>
               <div className="num">
-                <em>${savings.toLocaleString("en-US")}</em>
+                <em className={settled ? "is-settle" : ""}>
+                  ${savings.toLocaleString("en-US")}
+                </em>
                 <span className="num-per">/year</span>
               </div>
               <div className="stat-cap">
