@@ -23,7 +23,7 @@ export default function Home() {
               <Link href="/savings" className="btn-secondary">Calculate your savings</Link>
             </div>
             <p className="text-xs text-[color:var(--muted)] mt-6">
-              Live in production at A&amp;C Auto Clinic, San Francisco.
+              Live in production with a paying shop, San Francisco.
             </p>
           </div>
 

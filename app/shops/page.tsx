@@ -2,14 +2,14 @@ import Link from "next/link";
 
 export const metadata = {
   title: "For family auto shops | Yew",
-  description: "Counter-side software for family-run mechanic shops. Built for Frank's shop. Now your shop's.",
+  description: "Counter-side payments and software for family-run mechanic shops. FAPS Interchange-Plus. Optional ShopMonkey integration.",
 };
 
 const pains = [
   {
     quote: "Software I bought 10 years ago hasn't shipped a feature since.",
     answer:
-      "Yew ships weekly. Andy reads every shop owner email. The roadmap is set by what cashiers actually run into, not what looks good in a deck.",
+      "Yew ships weekly. We read every shop owner email. The roadmap is set by what cashiers actually run into, not what looks good in a deck.",
   },
   {
     quote: "I pay 2.9% + 30¢ to my processor and another $300/mo to my SMS.",

@@ -3,7 +3,7 @@ import Link from "next/link";
 export const metadata = {
   title: "Story | Yew",
   description:
-    "Why Yew exists. A specific work order at A&C Auto Clinic, the math the cashier did every time, and the fix.",
+    "Yew was built around a specific workflow problem at one auto shop. The math the cashier did every time, and the fix.",
 };
 
 export default function Page() {
@@ -11,7 +11,7 @@ export default function Page() {
     <article className="max-w-3xl mx-auto px-6 py-20">
       <p className="label mb-6">Story</p>
       <h1 className="font-display text-4xl md:text-6xl leading-tight">
-        I built Yew because <em className="italic text-[color:var(--secondary)]">my dad shouldn&apos;t have to type prices into a card terminal seven times a day.</em>
+        Yew was built around one specific workflow problem at one specific auto shop.
       </h1>
 
       <div className="mt-10 space-y-6 text-lg leading-relaxed text-[color:var(--text)]/90">
@@ -69,10 +69,10 @@ export default function Page() {
 
         {/* 6. Why this matters for Yew */}
         <p>
-          I sat behind that counter for less than three months. Long enough to ring up a couple hundred customers. Long enough to do the cash-discount math by hand more times than I could stand. Long enough to know Frank shouldn&apos;t still be doing it on his own a decade in. I went home and started writing.
+          Andy sat behind that counter for less than three months. Long enough to ring up a couple hundred customers. Long enough to do the cash-discount math by hand more times than anyone should. Long enough to see that the shop owner, Frank, shouldn&apos;t still be doing it on his own a decade in.
         </p>
         <p>
-          The first version of Yew was for Frank: one shop, one cashier, one calculator I wanted to throw out a window. A&amp;C is customer zero. The next 50 shops will be other family-run mechanic shops, built by someone who actually rang up the customer.
+          The first version of Yew was for Frank: one shop, one cashier, one calculator we wanted to throw out a window. A&amp;C is customer zero. The next 50 are other family-run mechanic shops. Yew is the company that ships software for them.
         </p>
       </div>
 

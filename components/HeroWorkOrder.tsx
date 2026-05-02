@@ -4,7 +4,7 @@ import { motion, AnimatePresence } from "motion/react";
 import { useEffect, useState } from "react";
 
 const steps = [
-  { id: 0, label: "Created", time: "12:14p", line: "RO #4127 · Andy's Camry" },
+  { id: 0, label: "Created", time: "12:14p", line: "RO #4127 · M. Hernandez 2018 Camry" },
   { id: 1, label: "Charged", time: "12:14p", line: "Brake job + alignment · $487.50" },
   { id: 2, label: "Approved", time: "12:14p", line: "→ Bay 2 terminal · approved" },
   { id: 3, label: "Settled", time: "next day", line: "Settled to FAPS · Interchange-Plus" },
@@ -34,9 +34,9 @@ export default function HeroWorkOrder() {
 
         <div className="p-6">
           <p className="font-display text-xl text-[color:var(--text)]">
-            RO #4127 <span className="text-[color:var(--muted)] text-base">· Andy&apos;s Camry</span>
+            RO #4127 <span className="text-[color:var(--muted)] text-base">· M. Hernandez</span>
           </p>
-          <p className="text-sm text-[color:var(--muted)] mt-1">2018 · LIC 8XYE423</p>
+          <p className="text-sm text-[color:var(--muted)] mt-1">2018 Camry · LIC 8XYE423</p>
 
           <ul className="mt-6 space-y-3">
             {steps.map((s, i) => {

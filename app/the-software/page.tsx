@@ -46,7 +46,7 @@ const tour = [
     title: "Diagnostics drawer",
     sub: "When something goes sideways",
     body:
-      "Sim status, terminal latency, recent frames. The same drawer Andy uses to debug a wedged terminal at A&C. every shop owner gets it. No more black-box payments.",
+      "Sim status, terminal latency, recent frames. The same drawer we use to debug a wedged terminal in production. Every shop owner gets it. No black-box payments.",
   },
 ];
 
