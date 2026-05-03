@@ -70,15 +70,15 @@ export default function Page() {
         <p className="label mb-6">Who we want to talk to</p>
         <ul className="space-y-4 text-[color:var(--text)]/90">
           <li className="flex gap-3">
-            <span className="text-[color:var(--secondary)] mt-1">·</span>
+            <span className="text-[color:var(--secondary)] mt-2 text-lg leading-none flex-shrink-0">•</span>
             <span><span className="font-medium">Family-shop owners</span> who already know the workflow problem and want to switch. Drop a statement, get a real quote.</span>
           </li>
           <li className="flex gap-3">
-            <span className="text-[color:var(--secondary)] mt-1">·</span>
+            <span className="text-[color:var(--secondary)] mt-2 text-lg leading-none flex-shrink-0">•</span>
             <span><span className="font-medium">FAPS reps</span> who want a software product to bring to their book. Splits negotiable, deal-reg honored.</span>
           </li>
           <li className="flex gap-3">
-            <span className="text-[color:var(--secondary)] mt-1">·</span>
+            <span className="text-[color:var(--secondary)] mt-2 text-lg leading-none flex-shrink-0">•</span>
             <span><span className="font-medium">Investors</span> who like Toast / ServiceTitan-shaped vertical SaaS with payments built in.</span>
           </li>
         </ul>
