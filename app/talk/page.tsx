@@ -30,9 +30,16 @@ export default function Page() {
         </Suspense>
       </div>
 
-      <div className="mt-20 rounded-2xl border border-[color:var(--rule)] bg-white p-8 md:p-10">
+      <div className="mt-20 rounded-2xl border border-[color:var(--rule)] bg-white p-6 sm:p-8 md:p-10">
         <p className="label mb-3">Prefer email?</p>
-        <p className="font-display text-2xl">
+        <p
+          className="font-display"
+          style={{
+            fontSize: "clamp(18px, 5.6vw, 28px)",
+            overflowWrap: "anywhere",
+            lineHeight: 1.2,
+          }}
+        >
           <a href="mailto:andy@yewsoftware.com" className="hover:text-[color:var(--secondary)] transition-colors">
             andy@yewsoftware.com
           </a>
