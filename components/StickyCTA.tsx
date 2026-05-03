@@ -45,11 +45,11 @@ const ROUTE_CTA: Record<string, Cta> = {
     label: "Try the live demo",
     stamp: "6 screens · 60s install",
   },
-  "/story": {
-    href: "/talk?audience=shop",
-    label: "Pilot your shop",
-    stamp: "A&C · Bayview SF",
-  },
+  // /story intentionally excluded — it's an editorial reading experience.
+  // The pull-quote ('I think we're $42 off somewhere. Doesn't matter.
+  // Bedtime.') sits at viewport-bottom positions during scroll and the
+  // sticky CTA was covering it on phones. The page already has explicit
+  // 'Pilot your shop' CTAs at the bottom of the article.
 };
 
 export default function StickyCTA() {
