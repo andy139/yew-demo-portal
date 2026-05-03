@@ -92,7 +92,7 @@ function Console() {
           <g key={i}>
             <line x1="56" x2="344" y1={y - 8} y2={y - 8} stroke="#D9D3C7" strokeWidth="0.8" />
             <text x="56" y={y + 6} fontFamily="Georgia, serif" fontSize="11" fill="#1A1A1A">RO #{4127 + i}</text>
-            <text x="120" y={y + 6} fontFamily="Inter, sans-serif" fontSize="9" fill="#6B6760">Brake job + alignment</text>
+            <text x="120" y={y + 6} fontFamily="var(--font-body), sans-serif" fontSize="9" fill="#6B6760">Brake job + alignment</text>
             <text x="320" y={y + 6} textAnchor="end" fontFamily="ui-monospace, monospace" fontSize="10" fill="#1A1A1A">${[487, 1204, 312][i]}.{[50, 16, 90][i]}</text>
             <text x="344" y={y + 6} textAnchor="end" fontFamily="ui-monospace, monospace" fontSize="9" fill={i === 0 ? "#8A4B2A" : "#9AA3AD"}>{i === 0 ? "✓" : i === 1 ? "•" : "·"}</text>
           </g>

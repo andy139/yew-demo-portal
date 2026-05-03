@@ -2,7 +2,7 @@ import { Suspense } from "react";
 import BookingButtons from "@/components/BookingButtons";
 
 export const metadata = {
-  title: "Talk to us | Yew",
+  title: "Talk to us | yew. payments",
   description: "Three doors: pilot your shop, become a partner, or talk to investors.",
 };
 
