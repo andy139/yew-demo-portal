@@ -1207,7 +1207,7 @@ body { padding-bottom: 80px; }
   background: color-mix(in oklab, #FFFFFF 50%, transparent);
 }
 .trust-inner {
-  padding: 36px 0;
+  padding-block: 36px;
   display: grid;
   grid-template-columns: auto 1fr;
   gap: 48px;
@@ -1545,7 +1545,7 @@ body { padding-bottom: 80px; }
   margin-top: 64px;
 }
 .foot-inner {
-  padding: 56px 0 24px;
+  padding-block: 56px 24px;
   display: grid;
   grid-template-columns: 1.5fr 1fr 1fr 1fr;
   gap: 32px;
@@ -1593,7 +1593,7 @@ body { padding-bottom: 80px; }
 }
 .foot-bottom {
   border-top: 1px solid var(--rule);
-  padding: 20px 0;
+  padding-block: 20px;
   display: flex;
   justify-content: space-between;
   font-size: 12px;
@@ -1968,7 +1968,7 @@ body { padding-bottom: 80px; }
 }
 
 /* Demo page ------------------------------------------------------ */
-.demo-shell { padding: 64px 0 40px; }
+.demo-shell { padding-block: 64px 40px; }
 .demo-frame {
   margin-top: 36px;
   border: 1px solid var(--rule);
