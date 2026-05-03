@@ -494,6 +494,11 @@ h1, h2, h3, h4, .font-display {
   align-items: center;
   gap: 10px;
 }
+@media (max-width: 380px) {
+  .stamp { letter-spacing: 0.16em; font-size: 0.62rem; gap: 8px; }
+  .stamp .stamp-rule { width: 18px; }
+  .batch-foot { letter-spacing: 0.16em; gap: 8px; }
+}
 .stamp .stamp-rule {
   width: 28px;
   height: 1px;
@@ -1692,8 +1697,9 @@ body { padding-bottom: 80px; }
 @media (max-width: 900px) { .calc-grid { grid-template-columns: 1fr; gap: 32px; } }
 
 .calc-input-block { display: flex; flex-direction: column; gap: 24px; min-width: 0; }
-.calc-input { position: relative; min-width: 0; }
+.calc-input { min-width: 0; }
 .calc-input .label { display: block; margin-bottom: 8px; }
+.calc-input .field-row { position: relative; }
 .calc-input .field {
   width: 100%;
   min-width: 0;
@@ -1713,22 +1719,30 @@ body { padding-bottom: 80px; }
 .calc-input .prefix {
   position: absolute;
   left: 18px;
-  top: 47px;
+  top: 50%;
+  transform: translateY(-50%);
   color: var(--muted);
   font-family: var(--font-display), Georgia, serif;
   font-size: 22px;
+  line-height: 1;
   pointer-events: none;
 }
 .calc-input.has-prefix .field { padding-left: 36px; }
 .calc-input .suffix {
   position: absolute;
   right: 18px;
-  top: 47px;
+  top: 50%;
+  transform: translateY(-50%);
   color: var(--muted);
   font-size: 16px;
+  line-height: 1;
   pointer-events: none;
 }
-.calc-input .hint { font-size: 12px; color: var(--muted); margin-top: 6px; }
+.calc-input .hint {
+  font-size: 12px;
+  color: var(--muted);
+  margin-top: 6px;
+}
 
 .calc-output {
   border: 1px solid var(--rule);
@@ -1737,6 +1751,12 @@ body { padding-bottom: 80px; }
   padding: 32px;
   display: flex;
   flex-direction: column;
+}
+@media (max-width: 540px) { .calc-output { padding: 22px 18px; } }
+@media (max-width: 380px) {
+  .calc-output { padding: 20px 14px; }
+  .calc-output .label { letter-spacing: 0.14em; font-size: 0.76rem; }
+  .calc-input .label { letter-spacing: 0.14em; font-size: 0.76rem; }
 }
 .calc-output .label { margin-bottom: 18px; }
 .calc-amount {
@@ -1972,6 +1992,7 @@ body { padding-bottom: 80px; }
   margin: 16px 0 24px;
 }
 @media (max-width: 540px) { .demo-main .stats { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 380px) { .demo-main .stats { grid-template-columns: 1fr; } }
 .demo-main .stat {
   padding: 16px;
   border: 1px solid var(--rule);

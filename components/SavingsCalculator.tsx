@@ -169,40 +169,46 @@ export default function SavingsCalculator() {
       <div className="calc-input-block">
         <div className="calc-input has-prefix">
           <label className="label">Monthly card volume</label>
-          <span className="prefix">$</span>
-          <input
-            className="field"
-            type="number"
-            inputMode="decimal"
-            value={volume}
-            onChange={(e) => setVolume(e.target.value)}
-          />
+          <div className="field-row">
+            <span className="prefix">$</span>
+            <input
+              className="field"
+              type="number"
+              inputMode="decimal"
+              value={volume}
+              onChange={(e) => setVolume(e.target.value)}
+            />
+          </div>
           <p className="hint">Total cards-paid revenue per month.</p>
         </div>
         <div className="calc-input has-prefix">
           <label className="label">Average ticket</label>
-          <span className="prefix">$</span>
-          <input
-            className="field"
-            type="number"
-            inputMode="decimal"
-            value={ticket}
-            onChange={(e) => setTicket(e.target.value)}
-          />
+          <div className="field-row">
+            <span className="prefix">$</span>
+            <input
+              className="field"
+              type="number"
+              inputMode="decimal"
+              value={ticket}
+              onChange={(e) => setTicket(e.target.value)}
+            />
+          </div>
           <p className="hint">Average repair-order amount.</p>
         </div>
         <div className="calc-input">
           <label className="label">Current effective rate</label>
-          <input
-            className="field"
-            type="number"
-            inputMode="decimal"
-            step="0.01"
-            value={rate}
-            onChange={(e) => setRate(e.target.value)}
-            style={{ paddingRight: 36 }}
-          />
-          <span className="suffix">%</span>
+          <div className="field-row">
+            <input
+              className="field"
+              type="number"
+              inputMode="decimal"
+              step="0.01"
+              value={rate}
+              onChange={(e) => setRate(e.target.value)}
+              style={{ paddingRight: 36 }}
+            />
+            <span className="suffix">%</span>
+          </div>
           <p className="hint">
             Look on your statement. Industry default for flat-rate processors is ~2.7%.
           </p>

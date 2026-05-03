@@ -11,7 +11,6 @@ const items = [
 
 export default function HeroWorkOrder() {
   const [tick, setTick] = useState(0);
-  const [loop, setLoop] = useState(0);
   const [pulseIdx, setPulseIdx] = useState(-1);
   const [total, setTotal] = useState(0);
   const offsets = useRef([0, 80, -60, 120]);
@@ -58,7 +57,6 @@ export default function HeroWorkOrder() {
       timers.push(
         setTimeout(() => {
           if (cancelled) return;
-          setLoop((l) => l + 1);
           runLoop(loopNum + 1);
         }, 6800 + off),
       );
@@ -80,7 +78,7 @@ export default function HeroWorkOrder() {
             <span className="wo-dot" />
             <span className="label" style={{ fontSize: 10 }}>Work order · Bay 2</span>
           </div>
-          <span className="label" style={{ fontSize: 10 }}>Live · loop {loop + 1}</span>
+          <span className="label" style={{ fontSize: 10 }}>Demo</span>
         </div>
         <div className="wo-body">
           <div className="wo-ro">
