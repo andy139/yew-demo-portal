@@ -2020,12 +2020,36 @@ body { padding-bottom: 80px; }
   margin-top: 6px;
 }
 .demo-main .table-scroll {
+  position: relative;
   overflow-x: auto;
   margin: 0 -18px;
   padding: 0 18px;
   -webkit-overflow-scrolling: touch;
+  /* Right-edge fade gradient signals 'more columns to the right'. Uses
+     a CSS mask so it follows the user's scroll position — fades into
+     transparent at the right when there's content past the visible
+     edge, fades to nothing when scrolled fully right. */
+  mask-image: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(0, 0, 0, 1) calc(100% - 32px),
+    rgba(0, 0, 0, 0) 100%
+  );
+  -webkit-mask-image: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(0, 0, 0, 1) calc(100% - 32px),
+    rgba(0, 0, 0, 0) 100%
+  );
 }
-@media (min-width: 721px) { .demo-main .table-scroll { margin: 0; padding: 0; } }
+@media (min-width: 721px) {
+  .demo-main .table-scroll {
+    margin: 0;
+    padding: 0;
+    mask-image: none;
+    -webkit-mask-image: none;
+  }
+}
 .demo-main table { width: 100%; border-collapse: collapse; font-size: 13px; }
 .demo-main th {
   font-family: var(--font-mono), monospace;
