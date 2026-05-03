@@ -27,11 +27,9 @@ const ROUTE_CTA: Record<string, Cta> = {
     label: "Set up a call",
     stamp: "30-min walkthrough",
   },
-  "/savings": {
-    href: "/talk?audience=shop",
-    label: "Send your statement",
-    stamp: "Custom quote · no commitment",
-  },
+  // /savings intentionally excluded — the calculator IS the conversion
+  // form with its own 'Send my statement' button. A sticky CTA sitting
+  // next to that button reads as duplicate noise on phones.
   "/the-gateway": {
     href: "/demo",
     label: "See the gateway in action",
