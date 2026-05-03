@@ -1,44 +1,41 @@
 import type { Metadata } from "next";
-import { Instrument_Serif, Geist, Geist_Mono } from "next/font/google";
+import { Fraunces, Instrument_Serif, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
-import Nav from "@/components/Nav";
-import Footer from "@/components/Footer";
-import ThreeCTAStrip from "@/components/ThreeCTAStrip";
-import PageWipe from "@/components/PageWipe";
-import StickyCTA from "@/components/StickyCTA";
-import BatchFoot from "@/components/BatchFoot";
-import ScrollProgress from "@/components/ScrollProgress";
+
+const fraunces = Fraunces({
+  variable: "--font-serif",
+  subsets: ["latin"],
+  style: ["normal", "italic"],
+  axes: ["SOFT", "WONK"],
+  display: "swap",
+});
 
 const instrumentSerif = Instrument_Serif({
-  variable: "--font-display",
+  variable: "--font-serif-italic",
   subsets: ["latin"],
   weight: "400",
   style: ["normal", "italic"],
   display: "swap",
 });
 
-const geist = Geist({
-  variable: "--font-body",
-  subsets: ["latin"],
-  display: "swap",
-});
-
-const geistMono = Geist_Mono({
+const jetbrainsMono = JetBrains_Mono({
   variable: "--font-mono",
   subsets: ["latin"],
+  weight: ["400", "500"],
   display: "swap",
 });
 
 export const metadata: Metadata = {
-  title: "yew. payments — software for family auto shops",
+  title: "yew. payments · card payments for independent auto shops",
   description:
-    "yew. payments. Drop-in payments + console for shops who'd rather work the counter than work the software. FAPS Interchange-Plus, no reader rental, charge from any bay.",
-  metadataBase: new URL("https://demo.yewsoftware.com"),
+    "Card payments for independent auto repair shops. PAX A80 terminal. Under 2% effective rate. Phone-based onboarding.",
+  metadataBase: new URL("https://pay.yewsoftware.com"),
   openGraph: {
-    title: "yew. payments — software for family auto shops",
+    title: "yew. payments — card payments for independent auto shops",
     description:
-      "Drop-in payments + console for shops who'd rather work the counter than work the software.",
+      "One terminal. Honest rates. Setup help on the phone, not in a chat widget.",
     type: "website",
+    url: "https://pay.yewsoftware.com",
   },
 };
 
@@ -50,18 +47,20 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${instrumentSerif.variable} ${geist.variable} ${geistMono.variable} h-full antialiased`}
+      className={`${fraunces.variable} ${instrumentSerif.variable} ${jetbrainsMono.variable} antialiased`}
     >
-      <body className="min-h-full flex flex-col">
-        <a href="#main" className="skip-link">Skip to content</a>
-        <ScrollProgress />
-        <PageWipe />
-        <Nav />
-        <main id="main" className="flex-1">{children}</main>
-        <ThreeCTAStrip />
-        <Footer />
-        <BatchFoot />
-        <StickyCTA />
+      <head>
+        <link rel="preconnect" href="https://api.fontshare.com" crossOrigin="" />
+        <link
+          rel="stylesheet"
+          href="https://api.fontshare.com/v2/css?f[]=general-sans@400,500,600,700&display=swap"
+        />
+      </head>
+      <body>
+        <a href="#main" className="skip-link">
+          Skip to content
+        </a>
+        {children}
       </body>
     </html>
   );

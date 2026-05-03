@@ -1,50 +1,24 @@
 "use client";
 
-import { useEffect, useRef, useState, type ReactNode } from "react";
+import { useEffect } from "react";
 
-type Props = {
-  children: ReactNode;
-  delay?: number;
-  threshold?: number;
-  className?: string;
-  as?: "div" | "section" | "p" | "li" | "article";
-};
-
-export default function Reveal({
-  children,
-  delay = 0,
-  threshold = 0.15,
-  className = "",
-  as = "div",
-}: Props) {
-  const ref = useRef<HTMLElement | null>(null);
-  const [shown, setShown] = useState(false);
-
+export default function Reveal() {
   useEffect(() => {
-    const el = ref.current;
-    if (!el) return;
+    const els = document.querySelectorAll<HTMLElement>("[data-reveal]");
+    if (!els.length) return;
     const io = new IntersectionObserver(
-      ([e]) => {
-        if (e.isIntersecting) {
-          setShown(true);
-          io.disconnect();
+      (entries) => {
+        for (const e of entries) {
+          if (e.isIntersecting) {
+            e.target.classList.add("in");
+            io.unobserve(e.target);
+          }
         }
       },
-      { threshold },
+      { threshold: 0.12, rootMargin: "0px 0px -40px 0px" }
     );
-    io.observe(el);
+    els.forEach((el) => io.observe(el));
     return () => io.disconnect();
-  }, [threshold]);
-
-  const Tag = as as "div";
-  return (
-    <Tag
-      // @ts-expect-error — generic ref across element tags
-      ref={ref}
-      className={`reveal ${shown ? "is-in" : ""} ${className}`}
-      style={delay ? { transitionDelay: `${delay}ms` } : undefined}
-    >
-      {children}
-    </Tag>
-  );
+  }, []);
+  return null;
 }
