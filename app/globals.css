@@ -1872,6 +1872,10 @@ body { padding-bottom: 80px; }
 .calc-cta-row .magnetic-wrap { flex: 0 0 auto; }
 @media (max-width: 540px) {
   .calc-cta-row { flex-direction: column; align-items: stretch; }
+  /* In flex-direction:column, `flex: 1 1 200px` on the input would stretch
+     it vertically to fill the column. Pin it to its natural content height
+     so the email field renders as a normal ~46px input, not a 200px block. */
+  .calc-cta-row input { flex: 0 0 auto; }
   .calc-cta-row .magnetic-wrap, .calc-cta-row .magnetic-wrap .magnetic { width: 100%; }
 }
 .magnetic-wrap { position: relative; }
