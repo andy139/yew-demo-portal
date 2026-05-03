@@ -71,11 +71,11 @@ export default function Page() {
         <div className="rounded-2xl border border-[color:var(--rule)] bg-white p-7">
           <p className="label mb-4">Talking points</p>
           <ul className="space-y-3 text-sm">
-            <li className="flex gap-3"><span className="text-[color:var(--secondary)]">·</span><span>Counter-side cashier console. not another tablet POS</span></li>
-            <li className="flex gap-3"><span className="text-[color:var(--secondary)]">·</span><span>Multi-bay terminal coverage on a single LAN gateway</span></li>
-            <li className="flex gap-3"><span className="text-[color:var(--secondary)]">·</span><span>FAPS-only today; Finix graduation is the architectural goal</span></li>
-            <li className="flex gap-3"><span className="text-[color:var(--secondary)]">·</span><span>Built on PAX POSLink SDK · Semi-Integrated architecture · PCI scope-reduced</span></li>
-            <li className="flex gap-3"><span className="text-[color:var(--secondary)]">·</span><span>Live in production with a paying shop, San Francisco</span></li>
+            <li className="flex gap-3"><span className="text-[color:var(--secondary)] mt-1 text-base leading-none flex-shrink-0">•</span><span>Counter-side cashier console. not another tablet POS</span></li>
+            <li className="flex gap-3"><span className="text-[color:var(--secondary)] mt-1 text-base leading-none flex-shrink-0">•</span><span>Multi-bay terminal coverage on a single LAN gateway</span></li>
+            <li className="flex gap-3"><span className="text-[color:var(--secondary)] mt-1 text-base leading-none flex-shrink-0">•</span><span>FAPS-only today; Finix graduation is the architectural goal</span></li>
+            <li className="flex gap-3"><span className="text-[color:var(--secondary)] mt-1 text-base leading-none flex-shrink-0">•</span><span>Built on PAX POSLink SDK · Semi-Integrated architecture · PCI scope-reduced</span></li>
+            <li className="flex gap-3"><span className="text-[color:var(--secondary)] mt-1 text-base leading-none flex-shrink-0">•</span><span>Live in production with a paying shop, San Francisco</span></li>
           </ul>
         </div>
       </div>
