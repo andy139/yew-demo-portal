@@ -79,8 +79,9 @@ export default function StickyCTA() {
           {cfg.stamp}
         </span>
       ) : null}
-      <Link href={cfg.href} className="btn-accent">
-        {cfg.label} <span className="btn-arrow">→</span>
+      <Link href={cfg.href} className="btn-accent" aria-label={cfg.label}>
+        <span className="sticky-cta-label">{cfg.label}</span>
+        <span className="btn-arrow">→</span>
       </Link>
     </div>
   );
