@@ -1274,8 +1274,8 @@ body { padding-bottom: 80px; }
 }
 
 /* Section heads -------------------------------------------------- */
-.section { padding: 96px 0; }
-@media (max-width: 720px) { .section { padding: 56px 0; } }
+.section { padding-block: 96px; }
+@media (max-width: 720px) { .section { padding-block: 56px; } }
 .section-head {
   display: grid;
   grid-template-columns: 1fr auto;
