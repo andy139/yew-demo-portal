@@ -5,7 +5,7 @@ The marketing / home website for **yew. payments**, the family-run payments + PO
 - **Production:** https://pay.yewsoftware.com
 - **Stack:** Next.js 16 (App Router) · React 19 · Tailwind v4
 
-This is the public-facing site (hero, pricing, FAQ). It is **not** the operator console (`/cashier`, `/(dashboard)`) — that lives in `yew-payments-app`. The live demo embedded in the "customer zero" card links to https://demo.yewsoftware.com.
+This is the public-facing site (hero, pricing, FAQ). It is **not** the operator console (`/cashier`, `/(dashboard)`) — that lives in `yew-payments-app`.
 
 ## Run locally
 

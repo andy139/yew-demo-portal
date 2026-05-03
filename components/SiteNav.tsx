@@ -22,8 +22,7 @@ export default function SiteNav() {
         </a>
         <nav className="nav-links" aria-label="Primary">
           <a
-            href="https://demo.yewsoftware.com"
-            target="_blank"
+            href="https://pay.yewsoftware.com"
             rel="noopener"
             className="nav-demo hide-sm"
           >

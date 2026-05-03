@@ -328,8 +328,7 @@ export default function Home() {
 
             <div className="cz-grid">
               <a
-                href="https://demo.yewsoftware.com"
-                target="_blank"
+                href="https://pay.yewsoftware.com"
                 rel="noopener"
                 className="cz-photo cz-demo reveal reveal-d1"
                 data-reveal
