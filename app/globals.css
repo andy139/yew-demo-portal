@@ -1500,6 +1500,12 @@ body { padding-bottom: 80px; }
   align-items: baseline;
   gap: 10px;
 }
+@media (max-width: 380px) {
+  /* Stat caption ('TO FIRST SALE' etc.) was getting half-covered by the
+     bottom-right sticky pill at small viewports. Stack vertically so the
+     caption sits below the number, away from the sticky's footprint. */
+  .cta-stat { flex-direction: column; align-items: flex-start; gap: 4px; }
+}
 .cta-stat-num {
   font-family: var(--font-display), Georgia, serif;
   font-size: 28px;
