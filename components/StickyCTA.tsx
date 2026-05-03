@@ -31,8 +31,11 @@ const ROUTE_CTA: Record<string, Cta> = {
   // form with its own 'Send my statement' button. A sticky CTA sitting
   // next to that button reads as duplicate noise on phones.
   "/the-gateway": {
+    // Page already has 'See the gateway in action →' as its bottom CTA,
+    // so the sticky uses different verb to avoid the duplicate-label
+    // moment when both are visible at the same scroll position.
     href: "/demo",
-    label: "See the gateway in action",
+    label: "Try the live demo",
     stamp: "Live preview",
   },
   "/the-kit": {
