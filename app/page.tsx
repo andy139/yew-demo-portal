@@ -30,7 +30,7 @@ export default function Home() {
           <div className="container hero-grid">
             <div className="hero-copy">
               <span className="eyebrow reveal" data-reveal>
-                yew<span className="yew-dot">.</span> pay · san francisco
+                yew<span className="yew-dot">.</span>{" "}pay · san francisco
                 &amp; bay area
               </span>
 
@@ -55,8 +55,8 @@ export default function Home() {
               <div className="hero-trust reveal reveal-d4" data-reveal>
                 <span className="dot" aria-hidden="true"></span>
                 <span>
-                  <b>Family-owned. Not AI.</b> We know your pain points &mdash;
-                  not some VC or AI cold-calling your shop.
+                  <b>Family-owned. Not AI.</b>{" "}We know your pain points
+                  &mdash; not some VC or AI cold-calling your shop.
                 </span>
               </div>
             </div>
@@ -321,7 +321,7 @@ export default function Home() {
 
               <div className="math-col win reveal reveal-d2" data-reveal>
                 <h4>
-                  yew<span className="yew-dot">.</span> pay
+                  yew<span className="yew-dot">.</span>{" "}pay
                 </h4>
                 <div className="rate">
                   <em>Around</em> 2%
@@ -593,7 +593,7 @@ export default function Home() {
             </div>
             <div className="foot-bottom">
               <span>
-                © 2026 yew<span className="yew-dot">.</span> pay · San
+                © 2026 yew<span className="yew-dot">.</span>{" "}pay · San
                 Francisco
               </span>
               <span>
