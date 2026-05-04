@@ -30,7 +30,8 @@ export default function Home() {
           <div className="container hero-grid">
             <div className="hero-copy">
               <span className="eyebrow reveal" data-reveal>
-                yew. pay · san francisco &amp; bay area
+                yew<span className="yew-dot">.</span> pay · san francisco
+                &amp; bay area
               </span>
 
               <h1 className="reveal reveal-d1" data-reveal>
@@ -171,7 +172,7 @@ export default function Home() {
                 </p>
                 <p>
                   Talks to your shop network over <b>PAX POSLink</b>. Live
-                  with <em>Shopmonkey</em> today &mdash; Tekmetric, AutoLeap,
+                  with <em>Shopmonkey</em>{" "}today &mdash; Tekmetric, AutoLeap,
                   and Mitchell1 are next.
                 </p>
                 <div className="meta">
@@ -319,7 +320,9 @@ export default function Home() {
               </div>
 
               <div className="math-col win reveal reveal-d2" data-reveal>
-                <h4>yew. pay</h4>
+                <h4>
+                  yew<span className="yew-dot">.</span> pay
+                </h4>
                 <div className="rate">
                   <em>Around</em> 2%
                 </div>
@@ -443,9 +446,18 @@ export default function Home() {
                     for major electronic distributors. Interchange-plus is
                     the same shape of problem. So I built him one: terminal
                     that talks straight to the shop system over POSLink,{" "}
-                    <em>IC+ pricing</em>, a real human on the phone. yew.
-                    payments is what came out of it. Now we&apos;re rolling
-                    it out to other shops too.
+                    <em>IC+ pricing</em>, a real human on the phone.{" "}
+                    <span
+                      className="wordmark wordmark-pop reveal"
+                      data-reveal
+                      aria-label="yew. pay"
+                    >
+                      <span>yew</span>
+                      <span className="dot" aria-hidden="true"></span>
+                      <span className="sub">pay</span>
+                    </span>{" "}
+                    is what came out of it. Now we&apos;re rolling it out to
+                    other shops too.
                   </p>
                 </div>
                 <div className="signoff">
@@ -553,10 +565,10 @@ export default function Home() {
                   <span className="sub">pay</span>
                 </span>
                 <p>
-                  A product of <em>yew.</em>, a family-run software company in
-                  San Francisco. The custard-colored dot is named for{" "}
-                  <em>Yvon</em>, the founder&apos;s sister, after her favorite
-                  dessert.
+                  A product of <em>yew<span className="yew-dot">.</span></em>,
+                  a family-run software company in San Francisco. The
+                  custard-colored dot is named for <em>Yvon</em>, the
+                  founder&apos;s sister, after her favorite dessert.
                 </p>
               </div>
               <div className="foot-cols">
@@ -580,7 +592,10 @@ export default function Home() {
               </div>
             </div>
             <div className="foot-bottom">
-              <span>© 2026 yew. pay · San Francisco</span>
+              <span>
+                © 2026 yew<span className="yew-dot">.</span> pay · San
+                Francisco
+              </span>
               <span>
                 <em>
                   Built by a family. On the phone. For shops run by other

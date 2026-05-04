@@ -1,6 +1,6 @@
 # yew. pay — marketing site
 
-The marketing / home website for **yew. pay**, the family-run payments + POSLink product for independent auto repair shops.
+The marketing / home website for **yew. pay**, the family-run payments + POSLink product for auto repair shops in San Francisco & the Bay Area.
 
 - **Production:** https://pay.yewsoftware.com
 - **Stack:** Next.js 16 (App Router) · React 19 · Tailwind v4

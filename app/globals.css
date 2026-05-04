@@ -107,6 +107,52 @@ button {
   letter-spacing: -0.01em;
 }
 
+/* inline brand-period — color any "yew." period custard wherever the
+   full wordmark structure would be too heavy (eyebrow labels, footer
+   bottom, prose). */
+.yew-dot {
+  color: var(--custard);
+  font-weight: 700;
+}
+
+/* "drop-in" animation for the wordmark dot — fires when the wordmark
+   scrolls into view (uses the same .in class the reveal observer
+   already toggles). The dot drops from above with a tiny bounce. */
+.wordmark-pop .dot {
+  transform: scale(0);
+  opacity: 0;
+  transform-origin: 50% 100%;
+}
+.wordmark-pop.in .dot {
+  animation: yewDotDrop 0.9s cubic-bezier(0.22, 1, 0.36, 1) 0.2s both;
+}
+@keyframes yewDotDrop {
+  0% {
+    transform: translate(0, -1.4em) scale(0);
+    opacity: 0;
+  }
+  55% {
+    transform: translate(0, 0.06em) scale(1.2);
+    opacity: 1;
+  }
+  78% {
+    transform: translate(0, -0.06em) scale(0.94);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(0, -0.04em) scale(1);
+    opacity: 1;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .wordmark-pop .dot,
+  .wordmark-pop.in .dot {
+    animation: none;
+    transform: translateY(-0.04em) scale(1);
+    opacity: 1;
+  }
+}
+
 .nav {
   position: sticky;
   top: 0;
