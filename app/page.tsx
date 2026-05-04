@@ -397,10 +397,10 @@ export default function Home() {
                 </h2>
 
                 <blockquote className="reveal reveal-d2" data-reveal>
-                  Old box had me ringing every job up twice &mdash; once on
-                  the terminal, then again in Shopmonkey. The new one does it
-                  in one shot, and we&apos;re paying almost a full point less.
-                  Nobody else even bothered to explain it.
+                  Andy drove down, plugged it in, and ran the first card with
+                  me at the counter. Saved about a grand a month and the box
+                  stopped making me re-key every total into Shopmonkey. First
+                  time anyone walked me through the actual rate.
                   <span className="who">
                     Owner. A&amp;C Auto Clinic. Bayview, SF
                   </span>
