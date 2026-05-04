@@ -30,7 +30,7 @@ export default function Home() {
           <div className="container hero-grid">
             <div className="hero-copy">
               <span className="eyebrow reveal" data-reveal>
-                yew. payments · san francisco &amp; bay area
+                yew. pay · san francisco &amp; bay area
               </span>
 
               <h1 className="reveal reveal-d1" data-reveal>
@@ -54,8 +54,8 @@ export default function Home() {
               <div className="hero-trust reveal reveal-d4" data-reveal>
                 <span className="dot" aria-hidden="true"></span>
                 <span>
-                  <b>Family-run. Not AI.</b> Built by one person who worked the
-                  counter, not by a chatbot.
+                  <b>Family-owned. Not AI.</b> We know your pain points &mdash;
+                  not some VC or AI cold-calling your shop.
                 </span>
               </div>
             </div>
@@ -68,22 +68,30 @@ export default function Home() {
           <div className="container">
             <div className="builton-row">
               <span className="builton-label">
-                integrates with the systems your shop already runs
+                integrates with POSLink systems
               </span>
               <div className="builton-marks">
-                <span className="builton-mark">
-                  <em>Shopmonkey</em>
-                </span>
-                <span className="builton-mark">Tekmetric</span>
-                <span className="builton-mark">
-                  <em>AutoLeap</em>
-                </span>
-                <span className="builton-mark">Mitchell1</span>
                 <span className="builton-mark">
                   PAX <span className="sm">A80 · A920</span>
                 </span>
                 <span className="builton-mark">
+                  <em>POSLink</em>
+                </span>
+                <span className="builton-mark">
+                  <em>Shopmonkey</em>{" "}
+                  <span className="sm">integrated</span>
+                </span>
+                <span className="builton-mark">
                   First American <em>Payment Systems</em>
+                </span>
+                <span className="builton-mark">
+                  Tekmetric <span className="sm">soon</span>
+                </span>
+                <span className="builton-mark">
+                  <em>AutoLeap</em> <span className="sm">soon</span>
+                </span>
+                <span className="builton-mark">
+                  Mitchell1 <span className="sm">soon</span>
                 </span>
               </div>
             </div>
@@ -162,17 +170,16 @@ export default function Home() {
                   Prints receipts. Ships pre-configured for your shop.
                 </p>
                 <p>
-                  Talks to your shop network over <b>PAX POSLink</b>, so it
-                  drops into <em>Shopmonkey, Tekmetric, AutoLeap, or
-                  Mitchell1</em> without a re-cert. Keep the ticket system you
-                  use today.
+                  Talks to your shop network over <b>PAX POSLink</b>. Live
+                  with <em>Shopmonkey</em> today &mdash; Tekmetric, AutoLeap,
+                  and Mitchell1 are next.
                 </p>
                 <div className="meta">
-                  <span className="chip">Shopmonkey</span>
-                  <span className="chip">Tekmetric</span>
-                  <span className="chip">AutoLeap</span>
-                  <span className="chip">Mitchell1</span>
+                  <span className="chip green">Shopmonkey · live</span>
                   <span className="chip">POSLink</span>
+                  <span className="chip custard">Tekmetric · soon</span>
+                  <span className="chip custard">AutoLeap · soon</span>
+                  <span className="chip custard">Mitchell1 · soon</span>
                 </div>
               </article>
 
@@ -312,7 +319,7 @@ export default function Home() {
               </div>
 
               <div className="math-col win reveal reveal-d2" data-reveal>
-                <h4>yew. payments</h4>
+                <h4>yew. pay</h4>
                 <div className="rate">
                   <em>Around</em> 2%
                 </div>
@@ -543,7 +550,7 @@ export default function Home() {
                 <span className="wordmark">
                   <span>yew</span>
                   <span className="dot" aria-hidden="true"></span>
-                  <span className="sub">payments</span>
+                  <span className="sub">pay</span>
                 </span>
                 <p>
                   A product of <em>yew.</em>, a family-run software company in
@@ -573,7 +580,7 @@ export default function Home() {
               </div>
             </div>
             <div className="foot-bottom">
-              <span>© 2026 yew. payments · San Francisco</span>
+              <span>© 2026 yew. pay · San Francisco</span>
               <span>
                 <em>
                   Built by a family. On the phone. For shops run by other

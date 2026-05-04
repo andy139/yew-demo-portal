@@ -145,7 +145,7 @@ button {
   opacity: 1;
 }
 .nav-cta {
-  background: var(--ink);
+  background: var(--green);
   color: var(--cream);
   padding: 11px 20px;
   border-radius: 999px;
@@ -155,7 +155,7 @@ button {
   transition: transform 0.15s ease, background 0.15s ease;
 }
 .nav-cta:hover {
-  background: var(--ink-2);
+  background: #1f4a2a;
   transform: translateY(-1px);
 }
 .nav-signin {

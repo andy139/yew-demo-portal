@@ -26,12 +26,12 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "yew. payments · card payments for auto shops",
+  title: "yew. pay · card payments for auto shops",
   description:
     "Card payments for auto repair shops. PAX A80 terminal. Honest rates. Phone-based onboarding.",
   metadataBase: new URL("https://pay.yewsoftware.com"),
   openGraph: {
-    title: "yew. payments — card payments for auto shops",
+    title: "yew. pay — card payments for auto shops",
     description:
       "Honest rates. Set up in person. Live in under an hour.",
     type: "website",

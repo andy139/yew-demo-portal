@@ -15,10 +15,10 @@ export default function SiteNav() {
   return (
     <header className={`nav${scrolled ? " scrolled" : ""}`} id="nav">
       <div className="container nav-row">
-        <a href="#" className="wordmark nav-mark" aria-label="yew. payments home">
+        <a href="#" className="wordmark nav-mark" aria-label="yew. pay home">
           <span>yew</span>
           <span className="dot" aria-hidden="true"></span>
-          <span className="sub">payments</span>
+          <span className="sub">pay</span>
         </a>
         <nav className="nav-links" aria-label="Primary">
           <a
