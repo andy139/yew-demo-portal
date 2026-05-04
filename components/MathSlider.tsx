@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 
-const DELTA_RATE = 0.01;
+const DELTA_RATE = 0.0075;
 const MONTHS = 12;
 const LONG_TERM_YEARS = 5;
 
@@ -51,14 +51,14 @@ export default function MathSlider() {
         <div>
           <div className="lbl">You&apos;d save, per year</div>
           <div className="val">
-            <span>{mounted ? fmtUSD(yearly) : "$9,600"}</span>
+            <span>{mounted ? fmtUSD(yearly) : "$7,200"}</span>
             <span className="yr">/ year</span>
           </div>
         </div>
         <div>
           <div className="lbl">Over five years</div>
           <div className="val">
-            <span>{mounted ? fmtUSD(fiveYr) : "$48,000"}</span>
+            <span>{mounted ? fmtUSD(fiveYr) : "$36,000"}</span>
           </div>
         </div>
       </div>

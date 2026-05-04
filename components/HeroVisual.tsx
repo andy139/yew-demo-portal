@@ -44,11 +44,11 @@ export default function HeroVisual() {
     <div className="hero-visual reveal reveal-d2" data-reveal ref={wrapRef}>
       <Image
         ref={imgRef}
-        src="/a80-product.png"
+        src="/a80.png"
         alt="PAX A80 payment terminal"
         className="hero-img"
-        width={900}
-        height={900}
+        width={1462}
+        height={1130}
         priority
       />
       <span className="hero-tag" aria-hidden="true">

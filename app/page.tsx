@@ -3,6 +3,7 @@ import HeroVisual from "@/components/HeroVisual";
 import MathSlider from "@/components/MathSlider";
 import FAQ from "@/components/FAQ";
 import Reveal from "@/components/Reveal";
+import PaxA80Terminal from "@/components/PaxA80Terminal";
 
 const ARROW = (
   <svg
@@ -33,12 +34,11 @@ export default function Home() {
               </span>
 
               <h1 className="reveal reveal-d1" data-reveal>
-                Card payments for <em>independent</em> auto shops.
+                Card payments for <em>auto shops</em>.
               </h1>
 
               <p className="sub reveal reveal-d2" data-reveal>
-                One terminal. <b>Honest rates.</b> Setup help on the phone, not
-                in a chat widget.
+                <b>Honest rates.</b> Set up in person. Live in under an hour.
               </p>
 
               <div className="cta-row reveal reveal-d3" data-reveal>
@@ -103,15 +103,15 @@ export default function Home() {
               <div className="promise-item reveal reveal-d1" data-reveal>
                 <div className="promise-k">Family-owned.</div>
                 <div className="promise-v">
-                  A small studio in San Francisco. No VCs, no board, no
-                  quarterly growth deck. We answer to the shops we serve.
+                  A San Francisco company. No VCs, no board, no quarterly
+                  growth deck. We answer to the shops we serve.
                 </div>
               </div>
               <div className="promise-item reveal reveal-d2" data-reveal>
                 <div className="promise-k">We treat you seriously.</div>
                 <div className="promise-v">
-                  The same engineering and design polish you&apos;d expect from
-                  a Stripe-class product. Built for you, not in spite of you.
+                  Industry-grade engineering and design. Built for you, not
+                  in spite of you.
                 </div>
               </div>
               <div className="promise-item reveal reveal-d3" data-reveal>
@@ -132,7 +132,7 @@ export default function Home() {
               &ldquo;
             </span>
             <p className="quote reveal reveal-d1" data-reveal>
-              Stripe and most flat-rate processors take almost <em>3%</em> on
+              Most flat-rate processors take almost <em>3%</em> on
               every swipe. That&apos;s a transmission rebuild a year, gone.
             </p>
           </div>
@@ -179,11 +179,12 @@ export default function Home() {
               <article className="card reveal reveal-d2" data-reveal>
                 <span className="num">02 / Rate</span>
                 <h3>
-                  Under <em>2%</em> effective.
+                  <em>Half a point</em> cheaper. At least.
                 </h3>
                 <p>
-                  Most shops save at least one full percentage point versus
-                  Stripe-class flat-rate processors at 2.7% to 2.9%.
+                  Most shops save <b>0.5 to 1 percentage point</b> versus
+                  flat-rate processors at 2.7% to 2.9%. Real number depends
+                  on your card mix.
                 </p>
                 <p>
                   Honest pricing on a single page. No surprise downgrades, no
@@ -191,7 +192,7 @@ export default function Home() {
                   out of.
                 </p>
                 <div className="meta">
-                  <span className="chip green">save ≥ 1pp</span>
+                  <span className="chip green">save 0.5–1 pp</span>
                   <span className="chip">one-page rate sheet</span>
                   <span className="chip">no junk fees</span>
                 </div>
@@ -291,16 +292,16 @@ export default function Home() {
               the math
             </span>
             <h2 className="h-section reveal reveal-d1" data-reveal>
-              What a <em>point</em> looks like.
+              What <em>half a point</em> looks like.
             </h2>
             <p className="lede reveal reveal-d2" data-reveal>
-              One percentage point sounds small. On a year of card volume it
-              isn&apos;t.
+              Half a percentage point sounds small. On a year of card volume
+              it isn&apos;t.
             </p>
 
             <div className="math-grid">
               <div className="math-col reveal reveal-d1" data-reveal>
-                <h4>Stripe and other flat-rate processors</h4>
+                <h4>Flat-rate processors</h4>
                 <div className="rate">
                   2.7%<span className="pct"> to 2.9%</span>
                 </div>
@@ -313,7 +314,7 @@ export default function Home() {
               <div className="math-col win reveal reveal-d2" data-reveal>
                 <h4>yew. payments</h4>
                 <div className="rate">
-                  <em>Under</em> 2%
+                  <em>Around</em> 2%
                 </div>
                 <p>
                   At least a point cheaper, usually more. Real number depends on
@@ -333,61 +334,27 @@ export default function Home() {
             </span>
 
             <div className="cz-grid">
-              <a
-                href="https://pay.yewsoftware.com"
-                rel="noopener"
-                className="cz-photo cz-demo reveal reveal-d1"
-                data-reveal
-              >
-                <div className="cz-demo-mini" aria-hidden="true">
-                  <div className="cz-demo-bar">
-                    <span className="cz-demo-dots">
-                      <i></i>
-                      <i></i>
-                      <i></i>
-                    </span>
-                    <span className="cz-demo-mark">yew. pay</span>
-                    <span className="cz-demo-live">
-                      <span className="cz-demo-pulse"></span>LIVE
-                    </span>
-                  </div>
-                  <div className="cz-demo-row">
-                    <span className="cz-demo-lbl">Charge</span>
-                    <span className="cz-demo-val">RO #4127</span>
-                  </div>
-                  <div className="cz-demo-grid">
-                    <div>
-                      <span className="cz-demo-k">Auth latency</span>
-                      <span className="cz-demo-v num">
-                        340<i>ms</i>
-                      </span>
-                    </div>
-                    <div>
-                      <span className="cz-demo-k">Effective rate</span>
-                      <span className="cz-demo-v num">
-                        1.82<i>%</i>
-                      </span>
-                    </div>
-                    <div>
-                      <span className="cz-demo-k">Saved vs flat</span>
-                      <span
-                        className="cz-demo-v num"
-                        style={{ color: "var(--custard)" }}
-                      >
-                        -0.78<i>%</i>
-                      </span>
-                    </div>
-                  </div>
-                  <div className="cz-demo-foot">
-                    <span>Counter Terminal #4127</span>
-                    <span className="num">$487.50</span>
-                  </div>
-                </div>
-                <span className="cz-demo-cta">
+              <div className="reveal reveal-d1" data-reveal>
+                <PaxA80Terminal />
+                <a
+                  href="https://pay.yewsoftware.com"
+                  rel="noopener"
+                  style={{
+                    display: "inline-flex",
+                    alignItems: "center",
+                    gap: 8,
+                    marginTop: 20,
+                    color: "var(--custard)",
+                    fontWeight: 600,
+                    fontSize: "14.5px",
+                    letterSpacing: "-0.005em",
+                    textDecoration: "none",
+                  }}
+                >
                   See it live on the counter
                   {ARROW}
-                </span>
-              </a>
+                </a>
+              </div>
 
               <div>
                 <span className="cz-tag reveal" data-reveal>
@@ -401,14 +368,14 @@ export default function Home() {
                 <blockquote className="reveal reveal-d2" data-reveal>
                   Replace with real quote.
                   <span className="who">
-                    Owner. A&amp;C Auto Clinic. Bayview, SF
+                    Owner. A&amp;C Auto Clinic. SF
                   </span>
                 </blockquote>
 
                 <div className="cz-stats reveal reveal-d3" data-reveal>
                   <div className="stat">
                     <div className="v num">
-                      22<em>yrs</em>
+                      30+<em>yrs</em>
                     </div>
                     <div className="l">in business</div>
                   </div>
@@ -452,62 +419,31 @@ export default function Home() {
               <div className="reveal reveal-d2" data-reveal>
                 <div className="body">
                   <p>
-                    My dad runs an auto shop in Bayview. I worked the counter
-                    for years.{" "}
-                    <em>Not the wrench side. The cashier side.</em> Ringing up
-                    brake jobs, printing receipts, rerunning swipes when the
-                    terminal dropped.
+                    My dad runs an auto shop in SF. I went down recently and
+                    watched him work — ringing customers up on an old{" "}
+                    <em>PAX S80</em>, then re-keying the same totals into his
+                    shop system <em>by hand</em>. Every ticket. Twice.
                   </p>
                   <p>
-                    For a decade I watched a flat-rate processor take 3% off the
-                    top of every credit card payment that came through that
-                    counter. Nobody on his side could explain why, or how to
-                    change it, or what the alternative was.
+                    He&apos;d looked at consolidating onto Shopmonkey. The
+                    bundled processing was <em>2.9% to 3.5%</em> — fixing the
+                    double-entry meant paying a full point more on every
+                    swipe. He was stuck.
                   </p>
                   <p>
-                    yew. payments is the thing I built to fix that for shops
-                    like his. <em>One family helping another</em>. Not an AI
-                    startup, not a venture pitch, not an offshore call center.
-                    The same engineering and design polish you&apos;d expect
-                    from a Stripe-class product. Built by one person, on the
-                    phone, for shops run by other families.
+                    I&apos;d spent three years as a software engineer at a
+                    <em> CPQ company</em>, building tiered-pricing systems
+                    for major electronic distributors. Interchange-plus is
+                    the same shape of problem. So I built him one: terminal
+                    that talks straight to the shop system over POSLink,{" "}
+                    <em>IC+ pricing</em>, a real human on the phone. yew.
+                    payments is what came out of it. Now we&apos;re rolling
+                    it out to other shops too.
                   </p>
                 </div>
                 <div className="signoff">
                   Andy Tran. Founder. San Francisco.
                 </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <section className="isnt" aria-label="What it isn't">
-          <div className="container">
-            <span className="eyebrow reveal" data-reveal>
-              honest about scope
-            </span>
-            <h2 className="h-section reveal reveal-d1" data-reveal>
-              What it <em>isn&apos;t</em>.
-            </h2>
-
-            <div className="isnt-grid">
-              <div className="isnt-item reveal reveal-d1" data-reveal>
-                <span className="lbl">not yet</span>
-                <div className="v">Online checkout.</div>
-                <p>
-                  Card-present only for now. If you take a deposit by phone
-                  today, you&apos;ll keep doing that the same way.
-                </p>
-              </div>
-
-              <div className="isnt-item reveal reveal-d3" data-reveal>
-                <span className="lbl">not for</span>
-                <div className="v">Shops under $20k a month.</div>
-                <p>
-                  At low volume, flat-rate processors are usually the right
-                  answer. We&apos;ll tell you that on the call instead of
-                  selling you something worse.
-                </p>
               </div>
             </div>
           </div>
@@ -521,9 +457,9 @@ export default function Home() {
 
             <div className="pricing-card reveal reveal-d1" data-reveal>
               <div className="big">
-                <em>Under 2%.</em>
+                <em>Half a point</em> cheaper than <em>you-know-who</em>.
                 <br />
-                At least a point cheaper than Stripe.
+                Sometimes more, depending on your card mix.
               </div>
               <p className="sub">
                 We&apos;ll send you a written rate sheet before you sign
@@ -610,7 +546,7 @@ export default function Home() {
                   <span className="sub">payments</span>
                 </span>
                 <p>
-                  A product of <em>yew.</em>, a family-run software studio in
+                  A product of <em>yew.</em>, a family-run software company in
                   San Francisco. The custard-colored dot is named for{" "}
                   <em>Yvon</em>, the founder&apos;s sister, after her favorite
                   dessert.
@@ -624,7 +560,7 @@ export default function Home() {
                   <a href="#book">Book a call</a>
                 </div>
                 <div className="foot-col">
-                  <h5>Studio</h5>
+                  <h5>Company</h5>
                   <a href="#origin">About</a>
                   <a href="#">Work</a>
                   <a href="mailto:hello@yew.dev">Contact</a>
