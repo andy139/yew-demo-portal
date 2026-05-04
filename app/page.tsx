@@ -30,7 +30,7 @@ export default function Home() {
           <div className="container hero-grid">
             <div className="hero-copy">
               <span className="eyebrow reveal" data-reveal>
-                yew. payments · live with first shop
+                yew. payments · san francisco &amp; bay area
               </span>
 
               <h1 className="reveal reveal-d1" data-reveal>
