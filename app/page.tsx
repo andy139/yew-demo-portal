@@ -492,16 +492,6 @@ export default function Home() {
 
             <div className="isnt-grid">
               <div className="isnt-item reveal reveal-d1" data-reveal>
-                <span className="lbl">not</span>
-                <div className="v">A point-of-sale system.</div>
-                <p>
-                  We don&apos;t manage your work orders, parts inventory, or
-                  technician hours. The terminal sits next to whatever you
-                  already use.
-                </p>
-              </div>
-
-              <div className="isnt-item reveal reveal-d2" data-reveal>
                 <span className="lbl">not yet</span>
                 <div className="v">Online checkout.</div>
                 <p>
@@ -536,9 +526,10 @@ export default function Home() {
                 At least a point cheaper than Stripe.
               </div>
               <p className="sub">
-                <b>$0 a month software.</b> Terminal included. We&apos;ll send
-                you a written rate sheet before you sign anything, in plain
-                English, on one page.
+                We&apos;ll send you a written rate sheet before you sign
+                anything, in plain English, on one page. Terminal and software
+                fees, if any, get spelled out there too &mdash; <b>no junk fees,
+                no surprises.</b>
               </p>
               <p className="pricing-fine">
                 Real number depends on your card mix. The full rate sheet is
