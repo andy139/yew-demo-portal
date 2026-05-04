@@ -68,20 +68,22 @@ export default function Home() {
           <div className="container">
             <div className="builton-row">
               <span className="builton-label">
-                built on systems your shop already trusts
+                integrates with the systems your shop already runs
               </span>
               <div className="builton-marks">
                 <span className="builton-mark">
-                  First American <em>Payment Systems</em>
+                  <em>Shopmonkey</em>
                 </span>
+                <span className="builton-mark">Tekmetric</span>
+                <span className="builton-mark">
+                  <em>AutoLeap</em>
+                </span>
+                <span className="builton-mark">Mitchell1</span>
                 <span className="builton-mark">
                   PAX <span className="sm">A80 · A920</span>
                 </span>
                 <span className="builton-mark">
-                  <em>Shopmonkey</em>
-                </span>
-                <span className="builton-mark">
-                  NEON <span className="sm">tab</span>
+                  First American <em>Payment Systems</em>
                 </span>
               </div>
             </div>
@@ -160,12 +162,16 @@ export default function Home() {
                   Prints receipts. Ships pre-configured for your shop.
                 </p>
                 <p>
-                  Talks to your shop network over <b>PAX POSLink</b>, so it can
-                  plug into a future ticket system without a re-cert.
+                  Talks to your shop network over <b>PAX POSLink</b>, so it
+                  drops into <em>Shopmonkey, Tekmetric, AutoLeap, or
+                  Mitchell1</em> without a re-cert. Keep the ticket system you
+                  use today.
                 </p>
                 <div className="meta">
-                  <span className="chip">Wi-Fi + Ethernet</span>
-                  <span className="chip">EMV + tap</span>
+                  <span className="chip">Shopmonkey</span>
+                  <span className="chip">Tekmetric</span>
+                  <span className="chip">AutoLeap</span>
+                  <span className="chip">Mitchell1</span>
                   <span className="chip">POSLink</span>
                 </div>
               </article>
