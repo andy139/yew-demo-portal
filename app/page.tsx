@@ -397,12 +397,13 @@ export default function Home() {
                 </h2>
 
                 <blockquote className="reveal reveal-d2" data-reveal>
-                  Andy drove down, plugged it in, and ran the first card with
-                  me at the counter. Saved about a grand a month and the box
-                  stopped making me re-key every total into Shopmonkey. First
-                  time anyone walked me through the actual rate.
+                  I built the whole thing at the front counter of my dad&apos;s
+                  shop. Two weeks to a basic ECR running on a PAX. Then I
+                  decided to keep going &mdash; built the rest of the app
+                  right on top of it. A&amp;C is customer zero because{" "}
+                  <em>A&amp;C is family</em>.
                   <span className="who">
-                    Owner. A&amp;C Auto Clinic. Bayview, SF
+                    Andy Tran. Founder. A&amp;C Auto Clinic. Bayview, SF
                   </span>
                 </blockquote>
 
