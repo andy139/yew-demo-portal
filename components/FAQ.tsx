@@ -15,7 +15,13 @@ const ITEMS: Item[] = [
   },
   {
     q: "How fast is funding?",
-    a: "Next business day. No rolling reserves, no hold periods, no first-month delays.",
+    a: (
+      <>
+        <em>T+1 or T+2</em> &mdash; your money hits your bank account within
+        one or two business days, depending on the processor we set you up
+        with. No rolling reserves, no hold periods, no first-month delays.
+      </>
+    ),
   },
   {
     q: "What about chargebacks?",

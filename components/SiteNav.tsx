@@ -42,7 +42,14 @@ export default function SiteNav() {
           >
             sign in
           </a>
-          <a href="#book" className="nav-cta">
+          <a
+            href={`mailto:andy@yewsoftware.com?subject=${encodeURIComponent(
+              "Setup call — yew. pay"
+            )}&body=${encodeURIComponent(
+              "Hi Andy,\n\nI'd like to set up yew. pay at my shop. A few quick details so you have what you need for the call:\n\nShop name:\nLocation:\nBest phone number:\nCurrent processor:\nApproximate monthly card volume:\n\nThanks!"
+            )}`}
+            className="nav-cta"
+          >
             book a call
           </a>
         </nav>

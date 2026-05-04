@@ -19,6 +19,22 @@ const ARROW = (
   </svg>
 );
 
+const BOOK_SUBJECT = "Setup call — yew. pay";
+const BOOK_BODY = `Hi Andy,
+
+I'd like to set up yew. pay at my shop. A few quick details so you have what you need for the call:
+
+Shop name:
+Location:
+Best phone number:
+Current processor:
+Approximate monthly card volume:
+
+Thanks!`;
+const BOOK_HREF = `mailto:andy@yewsoftware.com?subject=${encodeURIComponent(
+  BOOK_SUBJECT
+)}&body=${encodeURIComponent(BOOK_BODY)}`;
+
 export default function Home() {
   return (
     <>
@@ -43,7 +59,7 @@ export default function Home() {
               </p>
 
               <div className="cta-row reveal reveal-d3" data-reveal>
-                <a href="#book" className="cta-primary">
+                <a href={BOOK_HREF} className="cta-primary">
                   Book a setup call
                   {ARROW}
                 </a>
@@ -201,6 +217,7 @@ export default function Home() {
                 </p>
                 <div className="meta">
                   <span className="chip green">save 0.5–1 pp</span>
+                  <span className="chip">T+1 / T+2 funding</span>
                   <span className="chip">one-page rate sheet</span>
                   <span className="chip">no junk fees</span>
                 </div>
@@ -209,20 +226,23 @@ export default function Home() {
               <article className="card reveal reveal-d3" data-reveal>
                 <span className="num">03 / Setup</span>
                 <h3>
-                  A human, on the <em>phone</em>.
+                  <em>Andy</em> installs it. Live.
                 </h3>
                 <p>
-                  We walk you through plugging it in. By phone. Not by chatbot,
-                  not by ticket queue.
+                  Andy &mdash; the founder &mdash; drives to your shop and
+                  sets the terminal up on your counter himself. Bay Area, no
+                  charge.
                 </p>
                 <p>
-                  Most shops are live and swiping in under an hour. If something
-                  goes sideways, you call the same number.
+                  He stays until your first card swipes through. Most shops
+                  are live in under an hour. If anything goes sideways after,
+                  you call the same number.
                 </p>
                 <div className="meta">
+                  <span className="chip green">in person</span>
+                  <span className="chip">Bay Area</span>
                   <span className="chip custard">live in &lt; 1 hour</span>
                   <span className="chip">one phone number</span>
-                  <span className="chip">real human</span>
                 </div>
               </article>
             </div>
@@ -260,12 +280,12 @@ export default function Home() {
               <div className="step reveal reveal-d3" data-reveal>
                 <span className="step-num">03</span>
                 <h4>
-                  Plug it in. <em>Or I&apos;ll come do it.</em>
+                  <em>Andy</em> installs it. Live.
                 </h4>
                 <p>
-                  We&apos;re on the phone with you while you plug it in. If
-                  you&apos;d rather, I&apos;ll drive to your shop and set it up
-                  on the counter myself. Bay Area, no charge. Outside the Bay,
+                  Andy &mdash; the founder &mdash; drives to your shop and
+                  sets it up on your counter himself. Stays until the first
+                  swipe goes through. Bay Area, no charge. Outside the Bay,
                   we&apos;ll work it out.
                 </p>
               </div>
@@ -274,21 +294,22 @@ export default function Home() {
                 <span className="step-num">04</span>
                 <h4>You start swiping.</h4>
                 <p>
-                  Funds in your bank account next business day. No hold periods,
-                  no surprise reserves.
+                  Funds land in your bank account on <em>T+1 or T+2</em>{" "}
+                  &mdash; one or two business days. No hold periods, no
+                  surprise reserves.
                 </p>
               </div>
             </div>
 
             <div className="how-callout reveal reveal-d4" data-reveal>
               <div className="how-callout-k">
-                In-person setup, on the house.
+                Andy the founder installs it live.
               </div>
               <div className="how-callout-v">
-                If you&apos;re in the Bay Area, I&apos;ll drive to your shop and
-                install the terminal on your counter myself. Free. I&apos;ll
-                stand there until your first swipe goes through. That&apos;s not
-                a marketing promise, that&apos;s just how this works.
+                If you&apos;re in the Bay Area, Andy drives to your shop and
+                installs the terminal on your counter himself. Free. He stands
+                there until your first swipe goes through. That&apos;s not a
+                marketing promise &mdash; that&apos;s just how this works.
               </div>
             </div>
           </div>
@@ -376,9 +397,12 @@ export default function Home() {
                 </h2>
 
                 <blockquote className="reveal reveal-d2" data-reveal>
-                  Replace with real quote.
+                  Old box had me ringing every job up twice &mdash; once on
+                  the terminal, then again in Shopmonkey. The new one does it
+                  in one shot, and we&apos;re paying almost a full point less.
+                  Nobody else even bothered to explain it.
                   <span className="who">
-                    Owner. A&amp;C Auto Clinic. SF
+                    Owner. A&amp;C Auto Clinic. Bayview, SF
                   </span>
                 </blockquote>
 
@@ -492,7 +516,7 @@ export default function Home() {
                 call.
               </p>
               <div className="cta-row pricing-cta-row">
-                <a href="#book" className="cta-primary">
+                <a href={BOOK_HREF} className="cta-primary">
                   Book a setup call
                   {ARROW}
                 </a>
@@ -543,8 +567,8 @@ export default function Home() {
                 queue, not an offshore desk.
               </span>
               <div className="cta-row" style={{ marginTop: 24 }}>
-                <a href="#" className="cta-primary">
-                  Book online
+                <a href={BOOK_HREF} className="cta-primary">
+                  Email Andy
                   {ARROW}
                 </a>
                 <a href="mailto:hello@yew.dev" className="cta-secondary">
@@ -576,7 +600,7 @@ export default function Home() {
                   <h5>Product</h5>
                   <a href="#what">What you get</a>
                   <a href="#">Pricing</a>
-                  <a href="#book">Book a call</a>
+                  <a href={BOOK_HREF}>Book a call</a>
                 </div>
                 <div className="foot-col">
                   <h5>Company</h5>
