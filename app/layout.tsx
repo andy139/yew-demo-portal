@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Fraunces, Instrument_Serif, JetBrains_Mono } from "next/font/google";
+import { Fraunces } from "next/font/google";
 import "./globals.css";
 
 const fraunces = Fraunces({
@@ -10,21 +10,6 @@ const fraunces = Fraunces({
   display: "swap",
 });
 
-const instrumentSerif = Instrument_Serif({
-  variable: "--font-serif-italic",
-  subsets: ["latin"],
-  weight: "400",
-  style: ["normal", "italic"],
-  display: "swap",
-});
-
-const jetbrainsMono = JetBrains_Mono({
-  variable: "--font-mono",
-  subsets: ["latin"],
-  weight: ["400", "500"],
-  display: "swap",
-});
-
 export const metadata: Metadata = {
   title: "yew. pay · card payments for auto shops",
   description:
@@ -32,8 +17,7 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://pay.yewsoftware.com"),
   openGraph: {
     title: "yew. pay — card payments for auto shops",
-    description:
-      "Honest rates. Set up in person. Live in under an hour.",
+    description: "Honest rates. Set up in person. Live in under an hour.",
     type: "website",
     url: "https://pay.yewsoftware.com",
   },
@@ -45,10 +29,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html
-      lang="en"
-      className={`${fraunces.variable} ${instrumentSerif.variable} ${jetbrainsMono.variable} antialiased`}
-    >
+    <html lang="en" className={`${fraunces.variable} antialiased`}>
       <head>
         <link rel="preconnect" href="https://api.fontshare.com" crossOrigin="" />
         <link
