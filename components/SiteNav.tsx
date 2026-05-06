@@ -35,7 +35,7 @@ export default function SiteNav() {
             about
           </a>
           <a
-            href="https://app.yew.software/"
+            href="https://yew.cash/"
             className="nav-signin"
             target="_blank"
             rel="noopener"
